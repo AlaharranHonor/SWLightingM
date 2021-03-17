@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:star_worm_goop"
+    },
+    {
+      "item": "minecraft:end_stone_bricks"
+    }
+  ],
+  "result": {
+    "item": "swlm:star_worm_block_end_stone_bricks"
+  }
+}

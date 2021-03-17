@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:star_worm_block_birch_wood"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:birch_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:star_worm_block_dried_kelp"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:dried_kelp",
+    "count": 9
+  }
+}

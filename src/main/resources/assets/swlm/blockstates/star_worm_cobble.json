@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "swlm:block/star_worm_cobble" }
+    }
+}
