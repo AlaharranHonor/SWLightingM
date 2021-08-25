@@ -16,7 +16,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '1.16.3'
+version = '1.16.5'
 group = 'com.alaharranhonor.swlm' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'swlm'
 
@@ -92,7 +92,7 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.3-34.1.22'
+    minecraft 'net.minecraftforge:forge:1.16.5-36.2.0'
 
 }
 
