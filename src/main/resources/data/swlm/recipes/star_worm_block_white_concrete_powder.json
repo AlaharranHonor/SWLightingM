@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:star_worm_goop"
+    },
+    {
+      "item": "minecraft:white_concrete_powder"
+    }
+  ],
+  "result": {
+    "item": "swlm:star_worm_block_white_concrete_powder"
+  }
+}

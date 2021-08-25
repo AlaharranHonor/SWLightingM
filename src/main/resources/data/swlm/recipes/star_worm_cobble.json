@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"WWW",
+		"WCW",
+		"WWW"
+	],
+	"key": {
+		"W": {
+			"item": "swlm:star_worm"
+		},
+		"C": {
+			"item": "minecraft:cobblestone"
+		}
+	},
+	"result": {
+		"item": "swlm:star_worm_cobble",
+		"count": 2
+	}
+}

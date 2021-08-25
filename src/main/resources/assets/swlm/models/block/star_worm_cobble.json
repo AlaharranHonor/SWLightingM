@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "swlm:blocks/star_worm_cobble"
+    }
+}

@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "swlm:pestle_mortar"
+		},
+		{
+			"item": "swlm:star_worm"
+		}
+	],
+	"result": {
+		"item": "swlm:star_worm_goop"
+	}
+}

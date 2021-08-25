@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:star_worm_block_oak_wood"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:oak_planks",
+    "count": 4
+  }
+}

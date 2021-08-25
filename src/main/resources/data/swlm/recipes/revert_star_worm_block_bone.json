@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:star_worm_block_bone"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:bone_meal",
+    "count": 9
+  }
+}
