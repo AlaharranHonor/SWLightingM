@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:swlm_diamond"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:diamond",
+    "count": 9
+  }
+}

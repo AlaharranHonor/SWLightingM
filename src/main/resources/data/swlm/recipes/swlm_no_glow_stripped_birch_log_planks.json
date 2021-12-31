@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:swlm_stripped_birch_log"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:birch_planks",
+    "count": 4
+  }
+}

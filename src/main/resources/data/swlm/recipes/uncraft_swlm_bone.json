@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:swlm_bone"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:bone_meal",
+    "count": 9
+  }
+}
