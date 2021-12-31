@@ -4,6 +4,7 @@ import com.alaharranhonor.swlm.config.ConfigHolder;
 import com.alaharranhonor.swlm.util.init.BlockInit;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -41,5 +42,9 @@ public class SWLM
         public ItemStack createIcon() {
             return new ItemStack(BlockInit.STAR_WORM.get());
         }
-    };
+        @Override
+        public boolean hasSearchBar() {
+            return true;
+        }
+    }.setBackgroundImage(new ResourceLocation("minecraft", "textures/gui/container/creative_inventory/tab_item_search.png"));
 }
