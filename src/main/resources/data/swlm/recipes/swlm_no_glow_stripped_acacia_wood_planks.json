@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:swlm_stripped_acacia_wood"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:acacia_planks",
+    "count": 4
+  }
+}
