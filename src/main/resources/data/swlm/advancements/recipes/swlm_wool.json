@@ -1,0 +1,46 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "swlm:black_wool",
+      "swlm:blue_wool",
+      "swlm:brown_wool",
+      "swlm:cyan_wool",
+      "swlm:gray_wool",
+      "swlm:green_wool",
+      "swlm:light_blue_wool",
+      "swlm:light_gray_wool",
+      "swlm:lime_wool",
+      "swlm:magenta_wool",
+      "swlm:orange_wool",
+      "swlm:pink_wool",
+      "swlm:purple_wool",
+      "swlm:red_wool",
+      "swlm:yellow_wool"
+    ]
+  },
+  "criteria": {
+    "has_wool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:wool"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "swlm:black_wool"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_wool",
+      "has_the_recipe"
+    ]
+  ]
+}

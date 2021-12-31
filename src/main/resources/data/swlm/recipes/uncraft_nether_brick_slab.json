@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "nether_bricks",
+  "pattern":
+  [
+    "x  ",
+    "x  "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:nether_brick_slab"
+    }
+  },
+  "result":
+  {
+    "item": "minecraft:nether_bricks",
+    "count": 1
+  }
+}

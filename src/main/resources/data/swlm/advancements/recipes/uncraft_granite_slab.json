@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "swlm:uncraft_granite_slab"
+    ]
+  },
+  "criteria": {
+    "has_granite_slab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:granite_slab"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "swlm:uncraft_granite_slab"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_granite_slab",
+      "has_the_recipe"
+    ]
+  ]
+}
