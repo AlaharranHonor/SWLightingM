@@ -43,7 +43,10 @@ public class SWLM
         public ItemStack makeIcon() {
             return new ItemStack(BlockInit.STAR_WORM.get());
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8b6d272... Added search bar
         @Override
         public boolean hasSearchBar() {
             return true;
