@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "swlm:star_worm_block_oak_planks"
+          "name": "swlm:swlm_oak_planks"
         }
       ],
       "conditions": [

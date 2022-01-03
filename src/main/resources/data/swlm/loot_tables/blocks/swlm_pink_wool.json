@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "swlm:star_worm_block_pink_wool"
+          "name": "swlm:swlm_pink_wool"
         }
       ],
       "conditions": [

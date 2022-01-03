@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "swlm:star_worm_block_red_nether_bricks"
+          "name": "swlm:swlm_red_nether_bricks"
         }
       ],
       "conditions": [
