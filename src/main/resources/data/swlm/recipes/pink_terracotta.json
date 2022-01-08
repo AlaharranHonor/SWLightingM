@@ -10,10 +10,20 @@
     }
   ],
   "result": {
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/pink_terracotta.json
+    "item": "swlm:pink_terracotta"
+========
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
 <<<<<<< HEAD:src/main/resources/data/swlm/recipes/pink_terracotta.json
     "item": "swlm:pink_terracotta"
 =======
     "item": "swlm:swlm_pink_terracotta"
 >>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_pink_terracotta.json
+<<<<<<< HEAD
+=======
+>>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_pink_terracotta.json
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
   }
 }

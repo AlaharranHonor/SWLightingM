@@ -9,10 +9,20 @@
     }
   ],
   "result": {
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/smooth_stone.json
+    "item": "swlm:smooth_stone"
+========
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
 <<<<<<< HEAD:src/main/resources/data/swlm/recipes/smooth_stone.json
     "item": "swlm:smooth_stone"
 =======
     "item": "swlm:swlm_smooth_stone"
 >>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_smooth_stone.json
+<<<<<<< HEAD
+=======
+>>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_smooth_stone.json
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
   }
 }

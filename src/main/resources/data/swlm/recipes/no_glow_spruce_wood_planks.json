@@ -2,11 +2,23 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD:src/main/resources/data/swlm/recipes/no_glow_spruce_wood_planks.json
       "item": "swlm:spruce_wood"
 =======
       "item": "swlm:swlm_spruce_log"
 >>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_no_glow_spruce_log_planks.json
+=======
+<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/no_glow_spruce_wood_planks.json
+      "item": "swlm:spruce_wood"
+========
+<<<<<<< HEAD:src/main/resources/data/swlm/recipes/no_glow_stripped_spruce_wood_planks.json
+      "item": "swlm:stripped_spruce_wood"
+=======
+      "item": "swlm:swlm_spruce_wood"
+>>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_no_glow_spruce_wood_planks.json
+>>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_no_glow_spruce_wood_planks.json
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
     }
   ],
   "result":

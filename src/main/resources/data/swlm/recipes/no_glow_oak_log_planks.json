@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+<<<<<<< HEAD
   "group": "log_planks",
   "ingredients": [
     {
@@ -8,6 +9,19 @@
 =======
       "item": "swlm:swlm_stripped_oak_log"
 >>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_no_glow_stripped_oak_log_planks.json
+=======
+  "ingredients": [
+    {
+<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/no_glow_oak_log_planks.json
+      "item": "swlm:oak_log"
+========
+<<<<<<< HEAD:src/main/resources/data/swlm/recipes/no_glow_oak_wood_planks.json
+      "item": "swlm:oak_wood"
+=======
+      "item": "swlm:swlm_oak_log"
+>>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_no_glow_oak_log_planks.json
+>>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_no_glow_oak_log_planks.json
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
     }
   ],
   "result":

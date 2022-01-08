@@ -6,11 +6,23 @@
       "entries": [
         {
           "type": "minecraft:item",
+<<<<<<< HEAD
 <<<<<<< HEAD:src/main/resources/data/swlm/loot_tables/blocks/swlm_andesite.json
           "name": "swlm:star_worm_block_andesite"
 =======
           "name": "swlm:acacia_planks"
 >>>>>>> 1e6e236... what the hell is going on:src/main/resources/data/swlm/loot_tables/blocks/acacia_planks.json
+=======
+<<<<<<<< HEAD:src/main/resources/data/swlm/loot_tables/blocks/acacia_planks.json
+          "name": "swlm:acacia_planks"
+========
+<<<<<<< HEAD
+          "name": "swlm:purple_glazed_terracotta"
+=======
+          "name": "swlm:swlm_andesite"
+>>>>>>> ef87f1b... Renamed from star_worm_block to swlm
+>>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/loot_tables/blocks/swlm_andesite.json
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
         }
       ],
       "conditions": [

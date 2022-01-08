@@ -11,6 +11,9 @@ import java.util.Map;
 public class SWLMUtil {
     public static final Map<Item, Block> mappings = new HashMap<Item, Block>() {{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
         put(BlockInit.ACACIA_LOG_ITEM.get(), Blocks.ACACIA_LOG);
         put(BlockInit.BIRCH_LOG_ITEM.get(), Blocks.BIRCH_LOG);
         put(BlockInit.DARK_OAK_LOG_ITEM.get(), Blocks.DARK_OAK_LOG);
@@ -237,6 +240,7 @@ public class SWLMUtil {
         put(BlockInit.JUNGLE_LEAVES_ITEM.get(), Blocks.JUNGLE_LEAVES);
         put(BlockInit.OAK_LEAVES_ITEM.get(), Blocks.OAK_LEAVES);
         put(BlockInit.SPRUCE_LEAVES_ITEM.get(), Blocks.SPRUCE_LEAVES);
+<<<<<<< HEAD
 =======
         put(BlockInit.SWLM_ACACIA_LOG_ITEM.get(), Blocks.ACACIA_LOG);
         put(BlockInit.SWLM_BIRCH_LOG_ITEM.get(), Blocks.BIRCH_LOG);
@@ -465,6 +469,8 @@ public class SWLMUtil {
         put(BlockInit.SWLM_OAK_LEAVES_ITEM.get(), Blocks.OAK_LEAVES);
         put(BlockInit.SWLM_SPRUCE_LEAVES_ITEM.get(), Blocks.SPRUCE_LEAVES);
 >>>>>>> ee20f1e... Renamed star_worm_block to swlm
+=======
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
 
     }};
 

@@ -2,11 +2,23 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD:src/main/resources/data/swlm/recipes/no_glow_warped_hyphae_planks.json
       "item": "swlm:warped_hyphae"
 =======
       "item": "swlm:swlm_warped_hyphae"
 >>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_no_glow_warped_hyphae_planks.json
+=======
+<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/no_glow_warped_hyphae_planks.json
+      "item": "swlm:warped_hyphae"
+========
+<<<<<<< HEAD:src/main/resources/data/swlm/recipes/no_glow_warped_stem_planks.json
+      "item": "swlm:warped_stem"
+=======
+      "item": "swlm:swlm_warped_stem"
+>>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_no_glow_warped_stem_planks.json
+>>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_no_glow_warped_stem_planks.json
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
     }
   ],
   "result":

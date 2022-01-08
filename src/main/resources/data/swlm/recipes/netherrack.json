@@ -9,10 +9,20 @@
     }
   ],
   "result": {
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/netherrack.json
+    "item": "swlm:netherrack"
+========
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
 <<<<<<< HEAD:src/main/resources/data/swlm/recipes/netherrack.json
     "item": "swlm:netherrack"
 =======
     "item": "swlm:swlm_netherrack"
 >>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_netherrack.json
+<<<<<<< HEAD
+=======
+>>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_netherrack.json
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
   }
 }

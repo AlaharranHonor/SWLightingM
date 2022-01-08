@@ -10,9 +10,13 @@
   ],
   "result": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "item": "swlm:podzol"
 =======
     "item": "swlm:swlm_podzol"
 >>>>>>> 9b5e33d... Add more blocks
+=======
+    "item": "swlm:podzol"
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
   }
 }

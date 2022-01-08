@@ -10,10 +10,20 @@
     }
   ],
   "result": {
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/crimson_planks.json
+    "item": "swlm:crimson_planks"
+========
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
 <<<<<<< HEAD:src/main/resources/data/swlm/recipes/crimson_planks.json
     "item": "swlm:crimson_planks"
 =======
     "item": "swlm:swlm_crimson_planks"
 >>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_crimson_planks.json
+<<<<<<< HEAD
+=======
+>>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_crimson_planks.json
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
   }
 }

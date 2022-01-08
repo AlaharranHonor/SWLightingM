@@ -9,10 +9,20 @@
     }
   ],
   "result": {
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/chiseled_red_sandstone.json
+    "item": "swlm:chiseled_red_sandstone"
+========
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
 <<<<<<< HEAD:src/main/resources/data/swlm/recipes/chiseled_red_sandstone.json
     "item": "swlm:chiseled_red_sandstone"
 =======
     "item": "swlm:swlm_chiseled_red_sandstone"
 >>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_chiseled_red_sandstone.json
+<<<<<<< HEAD
+=======
+>>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_chiseled_red_sandstone.json
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
   }
 }

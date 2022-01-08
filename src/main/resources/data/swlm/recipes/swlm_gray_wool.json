@@ -9,10 +9,14 @@
     }
   ],
   "result": {
+<<<<<<< HEAD
 <<<<<<< HEAD:src/main/resources/data/swlm/recipes/swlm_gray_wool.json
     "item": "swlm:gray_wool"
 =======
     "item": "swlm:swlm_gray_wool"
 >>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/star_worm_block_gray_wool.json
+=======
+    "item": "swlm:gray_wool"
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
   }
 }

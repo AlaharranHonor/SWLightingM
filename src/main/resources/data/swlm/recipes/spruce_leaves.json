@@ -1,6 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
+<<<<<<< HEAD
   "group": "sw_leaves",
+=======
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
   "ingredients": [
     {
       "item": "swlm:star_worm_goop"

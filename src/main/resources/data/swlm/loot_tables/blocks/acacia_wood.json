@@ -6,11 +6,15 @@
       "entries": [
         {
           "type": "minecraft:item",
+<<<<<<< HEAD
 <<<<<<< HEAD:src/main/resources/data/swlm/loot_tables/blocks/swlm_bricks.json
           "name": "swlm:star_worm_block_bricks"
 =======
           "name": "swlm:acacia_wood"
 >>>>>>> 1e6e236... what the hell is going on:src/main/resources/data/swlm/loot_tables/blocks/acacia_wood.json
+=======
+          "name": "swlm:acacia_wood"
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
         }
       ],
       "conditions": [

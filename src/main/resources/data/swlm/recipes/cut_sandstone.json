@@ -9,10 +9,20 @@
     }
   ],
   "result": {
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/cut_sandstone.json
+    "item": "swlm:cut_sandstone"
+========
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
 <<<<<<< HEAD:src/main/resources/data/swlm/recipes/cut_sandstone.json
     "item": "swlm:cut_sandstone"
 =======
     "item": "swlm:swlm_cut_sandstone"
 >>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_cut_sandstone.json
+<<<<<<< HEAD
+=======
+>>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_cut_sandstone.json
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
   }
 }

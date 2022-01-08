@@ -10,10 +10,20 @@
     }
   ],
   "result": {
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/gray_concrete.json
+    "item": "swlm:gray_concrete"
+========
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
 <<<<<<< HEAD:src/main/resources/data/swlm/recipes/gray_concrete.json
     "item": "swlm:gray_concrete"
 =======
     "item": "swlm:swlm_gray_concrete"
 >>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_gray_concrete.json
+<<<<<<< HEAD
+=======
+>>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_gray_concrete.json
+>>>>>>> e06d41a... removed swlm_ in front of all registry names
   }
 }
