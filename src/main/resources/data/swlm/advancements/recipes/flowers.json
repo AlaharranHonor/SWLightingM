@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "swlm:dandelion",
+      "swlm:poppy",
+      "swlm:blue_orchid",
+      "swlm:allium",
+      "swlm:azure_bluet",
+      "swlm:red_tulip",
+      "swlm:orange_tulip",
+      "swlm:white_tulip",
+      "swlm:pink_tulip",
+      "swlm:oxeye_daisy",
+      "swlm:cornflower",
+      "swlm:lily_of_the_valley",
+      "swlm:wither_rose"
+    ]
+  },
+  "criteria": {
+    "has_wheat_seeds": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:wheat_seeds"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "swlm:dandelion"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_wheat_seeds",
+      "has_the_recipe"
+    ]
+  ]
+}

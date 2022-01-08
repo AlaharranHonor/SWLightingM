@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "flowers",
+  "ingredients": [
+    {
+      "item": "minecraft:red_tulip"
+    },
+    {
+      "item": "minecraft:wheat_seeds"
+    }
+  ],
+  "result": {
+    "item": "minecraft:red_tulip",
+    "count": 4
+  }
+}

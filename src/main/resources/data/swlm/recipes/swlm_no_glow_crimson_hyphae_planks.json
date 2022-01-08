@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:swlm_crimson_hyphae"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:crimson_planks",
+    "count": 4
+  }
+}

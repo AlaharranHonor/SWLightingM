@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "swlm:uncraft_purpur_stairs"
+    ]
+  },
+  "criteria": {
+    "has_purpur_stairs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:purpur_stairs"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "swlm:uncraft_purpur_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_purpur_stairs",
+      "has_the_recipe"
+    ]
+  ]
+}

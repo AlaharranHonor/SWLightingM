@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:swlm_stripped_jungle_log"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:jungle_planks",
+    "count": 4
+  }
+}

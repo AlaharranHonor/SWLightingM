@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mass_wool",
+  "pattern":
+  [
+    "yyy",
+    "yxy",
+    "yyy"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:red_dye"
+    },
+    "y":
+    {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "result":
+  {
+    "item": "minecraft:red_wool",
+    "count": 8
+  }
+}
