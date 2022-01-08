@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "swlm:swlm_clay"
+      "item": "swlm:clay"
     }
   ],
   "result":
