@@ -91,8 +91,17 @@ minecraft {
     }
 }
 
+repositories {
+    flatDir {
+        dirs 'lib'
+    }
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+}
+
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.0'
+    implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.16.5:3.0.35")
+    implementation fg.deobf("com.alaharranhonor.swem:swem-1.16.5-0.2.5.21-b")
 
 }
 
