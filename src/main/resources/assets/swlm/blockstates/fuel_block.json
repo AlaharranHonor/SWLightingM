@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model":  "swem:block/fuel_block" }
+  }
+}
