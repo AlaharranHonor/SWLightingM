@@ -446,12 +446,16 @@
   "block.swlm.white_stained_glass": "SW White Stained Glass",
   "block.swlm.yellow_stained_glass": "SW Yellow Stained Glass",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c637675... Updated names
   "block.swlm.light_rubber_mat": "SW Light Rubber Mat",
   "block.swlm.medium_rubber_mat": "SW Medium Rubber Mat",
   "block.swlm.dark_rubber_mat": "SW Dark Rubber Mat",
   "block.swlm.fuel_block": "SW Fuel Block",
   "block.swlm.whitewash_log": "SW Whitewash Log",
   "block.swlm.whitewash_plank": "SW Whitewash Plank",
+<<<<<<< HEAD
 =======
 >>>>>>> ee20f1e... Renamed star_worm_block to swlm
 =======
@@ -484,5 +488,7 @@
 >>>>>>> 9b5e33d... Add more blocks
 =======
 >>>>>>> e06d41a... removed swlm_ in front of all registry names
+=======
+>>>>>>> c637675... Updated names
   "itemGroup.SWLMTab": "SWLM"
 }
