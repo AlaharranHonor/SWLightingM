@@ -1,6 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6642ddc... Grouped some recipes
 "group": "stripped_planks",
   "ingredients": [
     {
