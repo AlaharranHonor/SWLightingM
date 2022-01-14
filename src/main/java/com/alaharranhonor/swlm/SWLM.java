@@ -38,10 +38,12 @@ public class SWLM
     {
     }
     public static final ItemGroup SWLMTAB = new ItemGroup("SWLMTab") {
+
         @Override
-        public ItemStack createIcon() {
+        public ItemStack makeIcon() {
             return new ItemStack(BlockInit.STAR_WORM.get());
         }
+
         @Override
         public boolean hasSearchBar() {
             return true;
