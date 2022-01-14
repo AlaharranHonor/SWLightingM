@@ -14,7 +14,7 @@ public class ConfigHelper {
 		// Vein Size
 		((OreFeatureConfig)((DecoratedFeatureConfig)((DecoratedFeatureConfig) SWLMOreGen.SWLM_COBBLE_ORE.config).feature.get().config).feature.get().config).size = ConfigHolder.SERVER.serverSWLMCobbleVeinSize.get();
 		// Vein Count
-		((FeatureSpreadConfig)((DecoratedFeatureConfig) SWLMOreGen.SWLM_COBBLE_ORE.config).decorator.config).func_242799_a().base = ConfigHolder.SERVER.serverSWLMCobbleVeinCount.get();
+		((FeatureSpreadConfig)((DecoratedFeatureConfig) SWLMOreGen.SWLM_COBBLE_ORE.config).decorator.config).count().baseValue = ConfigHolder.SERVER.serverSWLMCobbleVeinCount.get();
 		// Minimum Height the ore can spawn
 		((TopSolidRangeConfig)((DecoratedPlacementConfig)((DecoratedFeatureConfig)((DecoratedFeatureConfig) SWLMOreGen.SWLM_COBBLE_ORE.config).feature.get().config).decorator.config).inner.config).bottomOffset = ConfigHolder.SERVER.serverSWLMCobbleBottomHeight.get();
 		// Maximum Height the ore can spawn.
