@@ -16,6 +16,9 @@ public class ClientEventBusSubscriber {
     public static void onCLientSetup(FMLClientSetupEvent event) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d82565f... updated to parchment mappings
         RenderTypeLookup.setRenderLayer(BlockInit.ACACIA_LEAVES.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(BlockInit.BIRCH_LEAVES.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(BlockInit.DARK_OAK_LEAVES.get(), RenderType.cutout());
@@ -39,6 +42,7 @@ public class ClientEventBusSubscriber {
         RenderTypeLookup.setRenderLayer(BlockInit.WHITE_STAINED_GLASS.get(), RenderType.translucent());
         RenderTypeLookup.setRenderLayer(BlockInit.YELLOW_STAINED_GLASS.get(), RenderType.translucent());
         RenderTypeLookup.setRenderLayer(BlockInit.GRASS_BLOCK.get(), RenderType.cutoutMipped());
+<<<<<<< HEAD
 =======
         RenderTypeLookup.setRenderLayer(BlockInit.SWLM_ACACIA_LEAVES.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.SWLM_BIRCH_LEAVES.get(), RenderType.getCutout());
@@ -89,5 +93,7 @@ public class ClientEventBusSubscriber {
         RenderTypeLookup.setRenderLayer(BlockInit.YELLOW_STAINED_GLASS.get(), RenderType.getTranslucent());
         RenderTypeLookup.setRenderLayer(BlockInit.GRASS_BLOCK.get(), RenderType.getCutoutMipped());
 >>>>>>> e06d41a... removed swlm_ in front of all registry names
+=======
+>>>>>>> d82565f... updated to parchment mappings
     }
 }

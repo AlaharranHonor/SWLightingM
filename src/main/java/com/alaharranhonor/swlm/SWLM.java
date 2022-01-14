@@ -44,9 +44,13 @@ public class SWLM
             return new ItemStack(BlockInit.STAR_WORM.get());
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 8b6d272... Added search bar
+=======
+
+>>>>>>> d82565f... updated to parchment mappings
         @Override
         public boolean hasSearchBar() {
             return true;

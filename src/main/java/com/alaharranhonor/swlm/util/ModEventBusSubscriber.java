@@ -80,6 +80,7 @@ public class ModEventBusSubscriber {
 			BlockColors colors = event.getBlockColors();
 			colors.register((state, reader, pos, color) -> {
 <<<<<<< HEAD
+<<<<<<< HEAD
 				return reader != null && pos != null ? BiomeColors.getAverageFoliageColor(reader, pos) : FoliageColors.getDefaultColor();
 			}, BlockInit.ACACIA_LEAVES.get(), BlockInit.JUNGLE_LEAVES.get(), BlockInit.DARK_OAK_LEAVES.get(), BlockInit.OAK_LEAVES.get());
 			colors.register((state, reader, pos, color) -> {
@@ -93,19 +94,26 @@ public class ModEventBusSubscriber {
 			}, BlockInit.GRASS_BLOCK.get());
 =======
 				return reader != null && pos != null ? BiomeColors.getFoliageColor(reader, pos) : FoliageColors.getDefault();
+=======
+				return reader != null && pos != null ? BiomeColors.getAverageFoliageColor(reader, pos) : FoliageColors.getDefaultColor();
+>>>>>>> d82565f... updated to parchment mappings
 			}, BlockInit.ACACIA_LEAVES.get(), BlockInit.JUNGLE_LEAVES.get(), BlockInit.DARK_OAK_LEAVES.get(), BlockInit.OAK_LEAVES.get());
 			colors.register((state, reader, pos, color) -> {
-				return FoliageColors.getSpruce();
+				return FoliageColors.getEvergreenColor();
 			}, BlockInit.SPRUCE_LEAVES.get());
 			colors.register((state, reader, pos, color) -> {
-				return FoliageColors.getBirch();
+				return FoliageColors.getBirchColor();
 			}, BlockInit.BIRCH_LEAVES.get());
 			colors.register((state, reader, pos, color) -> {
+<<<<<<< HEAD
 				return reader != null && pos != null ? BiomeColors.getGrassColor(reader, pos) : GrassColors.get(0.5D, 1.0D);
 <<<<<<< HEAD
 			}, BlockInit.SWLM_GRASS_BLOCK.get());
 >>>>>>> 9b5e33d... Add more blocks
 =======
+=======
+				return reader != null && pos != null ? BiomeColors.getAverageGrassColor(reader, pos) : GrassColors.get(0.5D, 1.0D);
+>>>>>>> d82565f... updated to parchment mappings
 			}, BlockInit.GRASS_BLOCK.get());
 >>>>>>> e06d41a... removed swlm_ in front of all registry names
 		}
@@ -114,12 +122,16 @@ public class ModEventBusSubscriber {
 			ItemColors colors = event.getItemColors();
 			colors.register((stack, color) -> {
 <<<<<<< HEAD
+<<<<<<< HEAD
 				BlockState blockstate = ((BlockItem)stack.getItem()).getBlock().defaultBlockState();
 				return event.getBlockColors().getColor(blockstate, (IBlockDisplayReader)null, (BlockPos)null, color);
 			}, BlockInit.GRASS_BLOCK.get(), BlockInit.ACACIA_LEAVES.get(), BlockInit.JUNGLE_LEAVES.get(), BlockInit.DARK_OAK_LEAVES.get(), BlockInit.OAK_LEAVES.get(),
 					BlockInit.SPRUCE_LEAVES.get(), BlockInit.BIRCH_LEAVES.get());
 =======
 				BlockState blockstate = ((BlockItem)stack.getItem()).getBlock().getDefaultState();
+=======
+				BlockState blockstate = ((BlockItem)stack.getItem()).getBlock().defaultBlockState();
+>>>>>>> d82565f... updated to parchment mappings
 				return event.getBlockColors().getColor(blockstate, (IBlockDisplayReader)null, (BlockPos)null, color);
 <<<<<<< HEAD
 			}, BlockInit.SWLM_GRASS_BLOCK.get(), BlockInit.SWLM_ACACIA_LEAVES.get(), BlockInit.SWLM_JUNGLE_LEAVES.get(), BlockInit.SWLM_DARK_OAK_LEAVES.get(), BlockInit.SWLM_OAK_LEAVES.get(),
