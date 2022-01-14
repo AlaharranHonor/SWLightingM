@@ -10,7 +10,7 @@ issueTrackerURL="http://my.issue.tracker/"
 
 modId="swlm"
 
-version="1.16.5"
+version="${file.jarVersion}"
 
 displayName="Star Worm Lighting Mod"
 
