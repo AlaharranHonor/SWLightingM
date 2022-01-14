@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "modid": "swem",
+          "type": "forge:mod_loaded"
+        }
+      ],
+
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "group": "sw_rubber_mats",
+        "ingredients": [
+          {
+            "item": "swem:dark_rubber_mat"
+          },
+          {
+            "item": "swlm:star_worm_goop"
+          }
+        ],
+        "result": {
+          "item": "swlm:dark_rubber_mat"
+        }
+      }
+    }
+  ]
+}

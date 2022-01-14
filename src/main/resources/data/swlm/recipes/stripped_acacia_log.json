@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "sw_stripped_logs",
   "ingredients": [
     {
       "item": "swlm:star_worm_goop"
