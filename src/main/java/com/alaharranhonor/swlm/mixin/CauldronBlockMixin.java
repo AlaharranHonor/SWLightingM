@@ -25,23 +25,23 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class CauldronBlockMixin {
     @Final
     @Shadow
-    public static final IntegerProperty LEVEL = BlockStateProperties.LEVEL_0_3;
+    public static final IntegerProperty LEVEL = BlockStateProperties.LEVEL_CAULDRON;
 
 
     @Shadow public abstract void setWaterLevel(World worldIn, BlockPos pos, BlockState state, int level);
 
-    @Inject(at = @At("HEAD"), method = "Lnet/minecraft/block/CauldronBlock;onBlockActivated(Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/math/BlockRayTraceResult;)Lnet/minecraft/util/ActionResultType;", cancellable = true)
+    @Inject(at = @At("HEAD"), method = "use", cancellable = true)
     private void onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit, CallbackInfoReturnable<ActionResultType> callback) {
-        ItemStack stack = player.getHeldItem(handIn);
+        ItemStack stack = player.getItemInHand(handIn);
 
-        int i = state.get(LEVEL);
+        int i = state.getValue(LEVEL);
 
         Block foundBlock = SWLMUtil.mappings.get(stack.getItem());
 
         if (i > 0 && foundBlock != null) {
-            player.setHeldItem(handIn, new ItemStack(foundBlock));
+            player.setItemInHand(handIn, new ItemStack(foundBlock));
             this.setWaterLevel(worldIn, pos, state, i -1);
-            player.addStat(Stats.USE_CAULDRON);
+            player.awardStat(Stats.USE_CAULDRON);
             callback.setReturnValue(ActionResultType.CONSUME);
         }
 

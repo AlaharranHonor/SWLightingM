@@ -23,11 +23,11 @@ public class SWLMOreGen {
 
     protected static void initOverWorldFeatures() {
         if (SWLM_COBBLE_ORE == null) {
-            SWLM_COBBLE_ORE = OreGenUtils.buildOverWorldFeature(BlockInit.STAR_WORM_COBBLE.get().getDefaultState());
+            SWLM_COBBLE_ORE = OreGenUtils.buildOverWorldFeature(BlockInit.STAR_WORM_COBBLE.get().defaultBlockState());
         }
     }
 
     public static void generateOverworldOres(BiomeLoadingEvent event) {
-        event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SWLM_COBBLE_ORE);
+        event.getGeneration().addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, SWLM_COBBLE_ORE);
     }
 }

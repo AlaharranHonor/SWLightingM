@@ -1,22 +1,25 @@
 buildscript {
     repositories {
         maven { url = 'https://files.minecraftforge.net/maven' }
+        maven { url = 'https://maven.parchmentmc.org' }
         maven { url='https://repo.spongepowered.org/repository/maven-public/' }
         jcenter()
         mavenCentral()
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1+', changing: true
         classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
+        classpath 'org.parchmentmc:librarian:1.+'
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.parchmentmc.librarian.forgegradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '1.16.5'
+version = "${mc_version}-${mod_version}"
 group = 'com.alaharranhonor.swlm' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'swlm'
 
@@ -29,7 +32,7 @@ minecraft {
     // stable_#            Stables are built at the discretion of the MCP team.
     // Use non-default mappings at your own risk. they may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
-    mappings channel: 'snapshot', version: '20201028-1.16.3'
+    mappings channel: 'parchment', version: "${parchment_version}-${mc_version}"
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
     
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
@@ -101,7 +104,7 @@ repositories {
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.0'
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.16.5:3.0.35")
-    compileOnly fg.deobf("com.alaharranhonor.swem:swem-1.16.5-0.2.5.26-b")
+    implementation fg.deobf("com.alaharranhonor.swem:swem:${swem_version}")
 
 }
 
