@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "swlm:star_worm_block_light_gray_terracotta"
+          "name": "swlm:swlm_light_gray_terracotta"
         }
       ],
       "conditions": [
