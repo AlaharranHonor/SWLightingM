@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "swlm:swlm_dried_kelp"
+      "item": "swlm:dried_kelp"
     }
   ],
   "result":

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:star_worm_goop"
+    },
+    {
+      "item": "minecraft:birch_leaves"
+    }
+  ],
+  "result": {
+    "item": "swlm:birch_leaves"
+  }
+}
