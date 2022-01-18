@@ -456,6 +456,7 @@
   "block.swlm.whitewash_log": "SW Whitewash Log",
   "block.swlm.whitewash_plank": "SW Whitewash Plank",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ee20f1e... Renamed star_worm_block to swlm
 =======
@@ -490,5 +491,11 @@
 >>>>>>> e06d41a... removed swlm_ in front of all registry names
 =======
 >>>>>>> c637675... Updated names
+=======
+  "block.swlm.mossy_stone": "SW Mossy Stone",
+  "block.swlm.more_mossy_stone": "SW More Mossy Stone",
+  "block.swlm.mossy_andesite": "SW Mossy Andesite",
+  "block.swlm.more_mossy_andesite": "SW More Mossy Andesite",
+>>>>>>> 5099b77... Added glow versions of mossy stones
   "itemGroup.SWLMTab": "SWLM"
 }
