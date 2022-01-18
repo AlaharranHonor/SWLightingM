@@ -236,5 +236,9 @@
   "block.swlm.fuel_block": "SW Fuel Block",
   "block.swlm.whitewash_log": "SW Whitewash Log",
   "block.swlm.whitewash_plank": "SW Whitewash Plank",
+  "block.swlm.mossy_stone": "SW Mossy Stone",
+  "block.swlm.more_mossy_stone": "SW More Mossy Stone",
+  "block.swlm.mossy_andesite": "SW Mossy Andesite",
+  "block.swlm.more_mossy_andesite": "SW More Mossy Andesite",
   "itemGroup.SWLMTab": "SWLM"
 }

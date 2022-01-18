@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "modid": "swdm",
+          "type": "forge:mod_loaded"
+        }
+      ],
+
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "group": "sw_mossy_stone",
+        "ingredients": [
+          {
+            "item": "swdm:more_mossy_andesite"
+          },
+          {
+            "item": "swlm:star_worm_goop"
+          }
+        ],
+        "result": {
+          "item": "swlm:more_mossy_andesite"
+        }
+      }
+    }
+  ]
+}
