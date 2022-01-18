@@ -49,6 +49,8 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
+            args "--username", "Silverwolf114201", "--uuid", "2b6094b0-93cc-45ac-b64b-309ef224e4eb"
+
             mods {
                 examplemod {
                     source sourceSets.main
@@ -100,9 +102,10 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.5-36.2.0'
+    minecraft 'net.minecraftforge:forge:1.16.5-36.2.23'
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.16.5:3.0.35")
     implementation fg.deobf("com.alaharranhonor.swem:swem:${swem_version}")
+    implementation fg.deobf("com.alaharranhonor.swdm:swdm:${swdm_version}")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
 }
