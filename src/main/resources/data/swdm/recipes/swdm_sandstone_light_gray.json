@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "modid": "swdm",
+          "type": "forge:mod_loaded"
+        }
+      ],
+
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "group": "sw_sandstone",
+        "ingredients": [
+          {
+            "item": "swdm:sandstone_light_gray"
+          },
+          {
+            "item": "swlm:star_worm_goop"
+          }
+        ],
+        "result": {
+          "item": "swlm:sandstone_light_gray"
+        }
+      }
+    }
+  ]
+}

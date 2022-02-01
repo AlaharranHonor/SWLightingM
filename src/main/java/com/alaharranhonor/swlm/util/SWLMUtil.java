@@ -1,6 +1,9 @@
 package com.alaharranhonor.swlm.util;
 
+import com.alaharranhonor.swem.util.registry.SWEMBlocks;
 import com.alaharranhonor.swlm.util.init.BlockInit;
+import com.alaharranhonor.swlm.util.init.SWDMInit;
+import com.alaharranhonor.swlm.util.init.SWEMInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
@@ -472,6 +475,75 @@ public class SWLMUtil {
 =======
 >>>>>>> e06d41a... removed swlm_ in front of all registry names
 
+        put(SWEMInit.FUEL_BLOCK.getBlock().asItem(), SWEMBlocks.FUEL_BLOCK.get());
+        put(SWEMInit.WHITEWASH_PLANK.getBlock().asItem(), SWEMBlocks.WHITEWASH_PLANK.get());
+        put(SWEMInit.WHITEWASH_LOG.getBlock().asItem(), SWEMBlocks.WHITEWASH_LOG.get());
+        put(SWEMInit.RUBBER_MAT_LIGHT.getBlock().asItem(), SWEMBlocks.LIGHT_RUBBER_MAT.get());
+        put(SWEMInit.RUBBER_MAT_MEDIUM.getBlock().asItem(), SWEMBlocks.MEDIUM_RUBBER_MAT.get());
+        put(SWEMInit.RUBBER_MAT_DARK.getBlock().asItem(), SWEMBlocks.DARK_RUBBER_MAT.get());
+
+        put(SWDMInit.MOSSY_STONE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.MOSSY_STONE.get());
+        put(SWDMInit.MORE_MOSSY_STONE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.MORE_MOSSY_STONE.get());
+        put(SWDMInit.CRACKED_STONE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.CRACKED_STONE.get());
+        put(SWDMInit.MOSSY_ANDESITE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.MOSSY_ANDESITE.get());
+        put(SWDMInit.MORE_MOSSY_ANDESITE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.MORE_MOSSY_ANDESITE.get());
+        put(SWDMInit.CRACKED_ANDESITE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.CRACKED_ANDESITE.get());
+        put(SWDMInit.MOSSY_DIORITE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.MOSSY_DIORITE.get());
+        put(SWDMInit.MORE_MOSSY_DIORITE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.MORE_MOSSY_DIORITE.get());
+        put(SWDMInit.CRACKED_DIORITE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.CRACKED_DIORITE.get());
+        put(SWDMInit.MOSSY_GRANITE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.MOSSY_GRANITE.get());
+        put(SWDMInit.MORE_MOSSY_GRANITE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.MORE_MOSSY_GRANITE.get());
+        put(SWDMInit.CRACKED_GRANITE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.CRACKED_GRANITE.get());
+        put(SWDMInit.THATCH_BLOCK.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.THATCH_BLOCK.get());
+        put(SWDMInit.BAMBOO_BLOCK.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.BAMBOO_BLOCK.get());
+        put(SWDMInit.SAND_BLACK.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SAND_BLACK.get());
+        put(SWDMInit.SAND_BLUE_GRAY.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SAND_BLUE_GRAY.get());
+        put(SWDMInit.SAND_BROWN.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SAND_BROWN.get());
+        put(SWDMInit.SAND_DARK_BROWN.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SAND_DARK_BROWN.get());
+        put(SWDMInit.SAND_DUSTED_GRAY.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SAND_DUSTED_GRAY.get());
+        put(SWDMInit.SAND_GOLDEN.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SAND_GOLDEN.get());
+        put(SWDMInit.SAND_GRAY.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SAND_GRAY.get());
+        put(SWDMInit.SAND_LIGHT_GRAY.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SAND_LIGHT_GRAY.get());
+        put(SWDMInit.SAND_MUTED_BROWN.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SAND_MUTED_BROWN.get());
+        put(SWDMInit.SAND_VIVID_RED.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SAND_VIVID_RED.get());
+        put(SWDMInit.SAND_WHITE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SAND_WHITE.get());
+        put(SWDMInit.SANDSTONE_BLACK.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SANDSTONE_BLACK.get());
+        put(SWDMInit.SANDSTONE_BLUE_GRAY.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SANDSTONE_BLUE_GRAY.get());
+        put(SWDMInit.SANDSTONE_BROWN.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SANDSTONE_BROWN.get());
+        put(SWDMInit.SANDSTONE_DARK_BROWN.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SANDSTONE_DARK_BROWN.get());
+        put(SWDMInit.SANDSTONE_DUSTED_GRAY.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SANDSTONE_DUSTED_GRAY.get());
+        put(SWDMInit.SANDSTONE_GOLDEN.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SANDSTONE_GOLDEN.get());
+        put(SWDMInit.SANDSTONE_GRAY.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SANDSTONE_GRAY.get());
+        put(SWDMInit.SANDSTONE_LIGHT_GRAY.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SANDSTONE_LIGHT_GRAY.get());
+        put(SWDMInit.SANDSTONE_MUTED_BROWN.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SANDSTONE_MUTED_BROWN.get());
+        put(SWDMInit.SANDSTONE_VIVID_RED.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SANDSTONE_VIVID_RED.get());
+        put(SWDMInit.SANDSTONE_WHITE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.SANDSTONE_WHITE.get());
+        put(SWDMInit.BLACK_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.BLACK_DARK_PRISMARINE.get());
+        put(SWDMInit.BLUE_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.BLUE_DARK_PRISMARINE.get());
+        put(SWDMInit.BROWN_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.BROWN_DARK_PRISMARINE.get());
+        put(SWDMInit.CYAN_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.CYAN_DARK_PRISMARINE.get());
+        put(SWDMInit.GRAY_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.GRAY_DARK_PRISMARINE.get());
+        put(SWDMInit.GREEN_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.GREEN_DARK_PRISMARINE.get());
+        put(SWDMInit.LIGHT_BLUE_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.LIGHT_BLUE_DARK_PRISMARINE.get());
+        put(SWDMInit.LIGHT_GRAY_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.LIGHT_GRAY_DARK_PRISMARINE.get());
+        put(SWDMInit.LIME_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.LIME_DARK_PRISMARINE.get());
+        put(SWDMInit.MAGENTA_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.MAGENTA_DARK_PRISMARINE.get());
+        put(SWDMInit.ORANGE_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.ORANGE_DARK_PRISMARINE.get());
+        put(SWDMInit.PINK_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.PINK_DARK_PRISMARINE.get());
+        put(SWDMInit.PURPLE_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.PURPLE_DARK_PRISMARINE.get());
+        put(SWDMInit.RED_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.RED_DARK_PRISMARINE.get());
+        put(SWDMInit.WHITE_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.WHITE_DARK_PRISMARINE.get());
+        put(SWDMInit.YELLOW_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.YELLOW_DARK_PRISMARINE.get());
+        put(SWDMInit.CYAN_PRISMARINE_GLASS_BRICKS.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.CYAN_PRISMARINE_GLASS_BRICKS.get());
+        put(SWDMInit.LIGHT_STONE_BRICKS.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.LIGHT_STONE_BRICKS.get());
+        put(SWDMInit.MEDIUM_STONE_BRICKS.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.MEDIUM_STONE_BRICKS.get());
+        put(SWDMInit.DARK_STONE_BRICKS.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.DARK_STONE_BRICKS.get());
+        put(SWDMInit.LIGHT_BRICKS.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.LIGHT_BRICKS.get());
+        put(SWDMInit.MEDIUM_BRICKS.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.MEDIUM_BRICKS.get());
+        put(SWDMInit.DARK_BRICKS.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.DARK_BRICKS.get());
+        put(SWDMInit.LIGHT_CLAY_BLOCK.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.LIGHT_CLAY_BLOCK.get());
+        put(SWDMInit.MEDIUM_CLAY_BLOCK.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.MEDIUM_CLAY_BLOCK.get());
+        put(SWDMInit.DARK_CLAY_BLOCK.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.DARK_CLAY_BLOCK.get());
     }};
 
 
