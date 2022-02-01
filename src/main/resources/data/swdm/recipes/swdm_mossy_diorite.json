@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "modid": "swdm",
+          "type": "forge:mod_loaded"
+        }
+      ],
+
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "group": "sw_mossy_stone",
+        "ingredients": [
+          {
+            "item": "swdm:mossy_diorite"
+          },
+          {
+            "item": "swlm:star_worm_goop"
+          }
+        ],
+        "result": {
+          "item": "swlm:mossy_diorite"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "modid": "swdm",
+          "type": "forge:mod_loaded"
+        }
+      ],
+
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "group": "sw_dark_prismarine",
+        "ingredients": [
+          {
+            "item": "swdm:orange_dark_prismarine"
+          },
+          {
+            "item": "swlm:star_worm_goop"
+          }
+        ],
+        "result": {
+          "item": "swlm:orange_dark_prismarine"
+        }
+      }
+    }
+  ]
+}
