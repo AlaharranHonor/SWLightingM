@@ -5,14 +5,10 @@
       "item": "swlm:star_worm_goop"
     },
     {
-      "item": "minecraft:podzol"
+      "item": "minecraft:purple_stained_glass"
     }
   ],
   "result": {
-<<<<<<< HEAD
-    "item": "swlm:podzol"
-=======
-    "item": "swlm:swlm_podzol"
->>>>>>> 9b5e33d... Add more blocks
+    "item": "swlm:swlm_purple_stained_glass"
   }
 }

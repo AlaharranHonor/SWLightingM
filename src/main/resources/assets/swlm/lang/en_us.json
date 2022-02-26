@@ -409,6 +409,7 @@
   "item.swlm.star_worm": "Star Worm",
   "item.swlm.star_worm_goop": "Star Worm Goop",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "block.swlm.grass_block": "SW Grass Block",
   "block.swlm.dirt": "SW Dirt",
   "block.swlm.coarse_dirt": "SW Coarse Dirt",
@@ -443,5 +444,33 @@
   "block.swlm.whitewash_plank": "SW Whitewash Plank",
 =======
 >>>>>>> ee20f1e... Renamed star_worm_block to swlm
+=======
+  "block.swlm.swlm_grass_block": "SW Grass Block",
+  "block.swlm.swlm_dirt": "SW Dirt",
+  "block.swlm.swlm_coarse_dirt": "SW Coarse Dirt",
+  "block.swlm.swlm_podzol": "SW Podzol",
+  "block.swlm.swlm_acacia_leaves": "SW Acacia Leaves",
+  "block.swlm.swlm_birch_leaves": "SW Birch Leaves",
+  "block.swlm.swlm_dark_oak_leaves": "SW Dark Oak Leaves",
+  "block.swlm.swlm_jungle_leaves": "SW Jungle Leaves",
+  "block.swlm.swlm_oak_leaves": "SW Oak Leaves",
+  "block.swlm.swlm_spruce_leaves": "SW Spruce Leaves",
+  "block.swlm.swlm_black_stained_glass": "SW Black Stained Glass",
+  "block.swlm.swlm_blue_stained_glass": "SW Blue Stained Glass",
+  "block.swlm.swlm_brown_stained_glass": "SW Brown Stained Glass",
+  "block.swlm.swlm_cyan_stained_glass": "SW Cyan Stained Glass",
+  "block.swlm.swlm_gray_stained_glass": "SW Gray Stained Glass",
+  "block.swlm.swlm_green_stained_glass": "SW Green Stained Glass",
+  "block.swlm.swlm_light_blue_stained_glass": "SW Light Blue Stained Glass",
+  "block.swlm.swlm_light_gray_stained_glass": "SW Light Gray Stained Glass",
+  "block.swlm.swlm_lime_stained_glass": "SW Lime Stained Glass",
+  "block.swlm.swlm_magenta_stained_glass": "SW Magenta Stained Glass",
+  "block.swlm.swlm_orange_stained_glass": "SW Orange Stained Glass",
+  "block.swlm.swlm_pink_stained_glass": "SW Pink Stained Glass",
+  "block.swlm.swlm_purple_stained_glass": "SW Purple Stained Glass",
+  "block.swlm.swlm_red_stained_glass": "SW Red Stained Glass",
+  "block.swlm.swlm_white_stained_glass": "SW White Stained Glass",
+  "block.swlm.swlm_yellow_stained_glass": "SW Yellow Stained Glass",
+>>>>>>> 9b5e33d... Add more blocks
   "itemGroup.SWLMTab": "SWLM"
 }

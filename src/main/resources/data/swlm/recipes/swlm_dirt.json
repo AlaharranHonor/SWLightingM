@@ -9,6 +9,10 @@
     }
   ],
   "result": {
+<<<<<<< HEAD
     "item": "swlm:dirt"
+=======
+    "item": "swlm:swlm_dirt"
+>>>>>>> 9b5e33d... Add more blocks
   }
 }
