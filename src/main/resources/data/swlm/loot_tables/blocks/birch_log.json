@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+<<<<<<< HEAD:src/main/resources/data/swlm/loot_tables/blocks/swlm_coal.json
+          "name": "swlm:star_worm_block_coal"
+=======
+          "name": "swlm:birch_log"
+>>>>>>> 1e6e236... what the hell is going on:src/main/resources/data/swlm/loot_tables/blocks/birch_log.json
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

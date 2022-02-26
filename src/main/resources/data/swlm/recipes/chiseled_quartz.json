@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:star_worm_goop"
+    },
+    {
+      "item": "minecraft:chiseled_quartz_block"
+    }
+  ],
+  "result": {
+    "item": "swlm:chiseled_quartz"
+  }
+}
