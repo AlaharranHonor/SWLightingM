@@ -534,7 +534,7 @@ public class SWLMUtil {
         put(SWDMInit.RED_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.RED_DARK_PRISMARINE.get());
         put(SWDMInit.WHITE_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.WHITE_DARK_PRISMARINE.get());
         put(SWDMInit.YELLOW_DARK_PRISMARINE.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.YELLOW_DARK_PRISMARINE.get());
-        put(SWDMInit.CYAN_PRISMARINE_GLASS_BRICKS.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.CYAN_PRISMARINE_GLASS_BRICKS.get());
+        put(SWDMInit.CYAN_GLASS_BRICKS.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.CYAN_GLASS_BRICKS.get());
         put(SWDMInit.LIGHT_STONE_BRICKS.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.LIGHT_STONE_BRICKS.get());
         put(SWDMInit.MEDIUM_STONE_BRICKS.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.MEDIUM_STONE_BRICKS.get());
         put(SWDMInit.DARK_STONE_BRICKS.getBlock().asItem(), com.alaharranhonor.swdm.util.init.BlockInit.DARK_STONE_BRICKS.get());
