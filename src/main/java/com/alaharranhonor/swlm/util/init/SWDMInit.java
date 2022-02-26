@@ -66,7 +66,7 @@ public class SWDMInit {
 	public static Block RED_DARK_PRISMARINE;
 	public static Block WHITE_DARK_PRISMARINE;
 	public static Block YELLOW_DARK_PRISMARINE;
-	public static Block CYAN_PRISMARINE_GLASS_BRICKS;
+	public static Block CYAN_GLASS_BRICKS;
 	public static Block LIGHT_STONE_BRICKS;
 	public static Block MEDIUM_STONE_BRICKS;
 	public static Block DARK_STONE_BRICKS;
@@ -189,8 +189,8 @@ public class SWDMInit {
 			item.getRegistry().register(WHITE_DARK_PRISMARINE);
 			YELLOW_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("yellow_dark_prismarine");
 			item.getRegistry().register(YELLOW_DARK_PRISMARINE);
-			CYAN_PRISMARINE_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("cyan_prismarine_glass_bricks");
-			item.getRegistry().register(CYAN_PRISMARINE_GLASS_BRICKS);
+			CYAN_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("cyan_glass_bricks");
+			item.getRegistry().register(CYAN_GLASS_BRICKS);
 			LIGHT_STONE_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("light_stone_bricks");
 			item.getRegistry().register(LIGHT_STONE_BRICKS);
 			MEDIUM_STONE_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("medium_stone_bricks");
@@ -271,7 +271,7 @@ public class SWDMInit {
 			item.getRegistry().register(new BlockItem(RED_DARK_PRISMARINE, new Item.Properties().tab(SWLM.SWLMTAB)).setRegistryName(RED_DARK_PRISMARINE.getRegistryName()));
 			item.getRegistry().register(new BlockItem(WHITE_DARK_PRISMARINE, new Item.Properties().tab(SWLM.SWLMTAB)).setRegistryName(WHITE_DARK_PRISMARINE.getRegistryName()));
 			item.getRegistry().register(new BlockItem(YELLOW_DARK_PRISMARINE, new Item.Properties().tab(SWLM.SWLMTAB)).setRegistryName(YELLOW_DARK_PRISMARINE.getRegistryName()));
-			item.getRegistry().register(new BlockItem(CYAN_PRISMARINE_GLASS_BRICKS, new Item.Properties().tab(SWLM.SWLMTAB)).setRegistryName(CYAN_PRISMARINE_GLASS_BRICKS.getRegistryName()));
+			item.getRegistry().register(new BlockItem(CYAN_GLASS_BRICKS, new Item.Properties().tab(SWLM.SWLMTAB)).setRegistryName(CYAN_GLASS_BRICKS.getRegistryName()));
 			item.getRegistry().register(new BlockItem(LIGHT_STONE_BRICKS, new Item.Properties().tab(SWLM.SWLMTAB)).setRegistryName(LIGHT_STONE_BRICKS.getRegistryName()));
 			item.getRegistry().register(new BlockItem(MEDIUM_STONE_BRICKS, new Item.Properties().tab(SWLM.SWLMTAB)).setRegistryName(MEDIUM_STONE_BRICKS.getRegistryName()));
 			item.getRegistry().register(new BlockItem(DARK_STONE_BRICKS, new Item.Properties().tab(SWLM.SWLMTAB)).setRegistryName(DARK_STONE_BRICKS.getRegistryName()));
