@@ -6,7 +6,11 @@
       "entries": [
         {
           "type": "minecraft:item",
+<<<<<<< HEAD
           "name": "swlm:cracked_polished_blackstone_bricks"
+=======
+          "name": "swlm:swlm_acacia_planks"
+>>>>>>> ef87f1b... Renamed from star_worm_block to swlm
         }
       ],
       "conditions": [

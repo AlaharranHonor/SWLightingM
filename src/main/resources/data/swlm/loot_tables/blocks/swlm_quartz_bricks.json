@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "swlm:star_worm_block_quartz_bricks"
+          "name": "swlm:swlm_quartz_bricks"
         }
       ],
       "conditions": [

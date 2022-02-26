@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "swlm:star_worm_block_yellow_concrete_powder"
+          "name": "swlm:swlm_yellow_concrete_powder"
         }
       ],
       "conditions": [

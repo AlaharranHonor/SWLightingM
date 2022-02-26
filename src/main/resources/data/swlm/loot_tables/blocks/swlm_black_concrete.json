@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "swlm:star_worm_block_black_concrete"
+          "name": "swlm:swlm_black_concrete"
         }
       ],
       "conditions": [

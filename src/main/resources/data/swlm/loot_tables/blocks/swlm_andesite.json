@@ -6,7 +6,11 @@
       "entries": [
         {
           "type": "minecraft:item",
+<<<<<<< HEAD
           "name": "swlm:purple_glazed_terracotta"
+=======
+          "name": "swlm:swlm_andesite"
+>>>>>>> ef87f1b... Renamed from star_worm_block to swlm
         }
       ],
       "conditions": [

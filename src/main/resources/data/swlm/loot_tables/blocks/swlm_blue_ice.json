@@ -6,7 +6,11 @@
       "entries": [
         {
           "type": "minecraft:item",
+<<<<<<< HEAD
           "name": "swlm:orange_glazed_terracotta"
+=======
+          "name": "swlm:swlm_blue_ice"
+>>>>>>> ef87f1b... Renamed from star_worm_block to swlm
         }
       ],
       "conditions": [
