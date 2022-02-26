@@ -9,6 +9,10 @@
     }
   ],
   "result": {
+<<<<<<< HEAD:src/main/resources/data/swlm/recipes/swlm_lime_wool.json
     "item": "swlm:lime_wool"
+=======
+    "item": "swlm:swlm_lime_wool"
+>>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/star_worm_block_lime_wool.json
   }
 }

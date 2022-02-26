@@ -2,7 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
+<<<<<<< HEAD:src/main/resources/data/swlm/recipes/uncraft_swlm_dried_kelp.json
       "item": "swlm:dried_kelp"
+=======
+      "item": "swlm:swlm_dried_kelp"
+>>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/revert_star_worm_block_dried_kelp.json
     }
   ],
   "result":

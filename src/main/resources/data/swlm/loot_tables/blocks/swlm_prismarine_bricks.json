@@ -6,7 +6,15 @@
       "entries": [
         {
           "type": "minecraft:item",
+<<<<<<< HEAD
           "name": "swlm:star_worm_block_bricks"
+=======
+<<<<<<< HEAD:src/main/resources/data/swlm/loot_tables/blocks/swlm_bricks.json
+          "name": "swlm:star_worm_block_bricks"
+=======
+          "name": "swlm:acacia_wood"
+>>>>>>> 1e6e236... what the hell is going on:src/main/resources/data/swlm/loot_tables/blocks/acacia_wood.json
+>>>>>>> ee20f1e... Renamed star_worm_block to swlm
         }
       ],
       "conditions": [
