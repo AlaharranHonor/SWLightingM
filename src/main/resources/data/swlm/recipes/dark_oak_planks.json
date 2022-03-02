@@ -10,20 +10,14 @@
     }
   ],
   "result": {
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/dark_oak_planks.json
+
+
+
     "item": "swlm:dark_oak_planks"
-========
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/dark_oak_planks.json
-    "item": "swlm:dark_oak_planks"
-=======
-    "item": "swlm:swlm_dark_oak_planks"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_dark_oak_planks.json
-<<<<<<< HEAD
-=======
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_dark_oak_planks.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
+
+
   }
 }

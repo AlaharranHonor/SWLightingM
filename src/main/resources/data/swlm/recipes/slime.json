@@ -9,20 +9,15 @@
     }
   ],
   "result": {
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/slime.json
+
+
+
     "item": "swlm:slime"
-========
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/slime.json
-    "item": "swlm:slime"
-=======
-    "item": "swlm:swlm_slime"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_slime.json
-<<<<<<< HEAD
-=======
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_slime.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
+
+
+
   }
 }

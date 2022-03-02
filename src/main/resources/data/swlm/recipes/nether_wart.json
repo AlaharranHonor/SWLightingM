@@ -9,20 +9,15 @@
     }
   ],
   "result": {
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/nether_wart.json
+
+
+
     "item": "swlm:nether_wart"
-========
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/nether_wart.json
-    "item": "swlm:nether_wart"
-=======
-    "item": "swlm:swlm_nether_wart"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_nether_wart.json
-<<<<<<< HEAD
-=======
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_nether_wart.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
+
+
+
   }
 }

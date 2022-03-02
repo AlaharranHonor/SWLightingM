@@ -9,20 +9,14 @@
     }
   ],
   "result": {
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/gilded_blackstone.json
+
+
+
     "item": "swlm:gilded_blackstone"
-========
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/gilded_blackstone.json
-    "item": "swlm:gilded_blackstone"
-=======
-    "item": "swlm:swlm_gilded_blackstone"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_gilded_blackstone.json
-<<<<<<< HEAD
-=======
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_gilded_blackstone.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
+
+
   }
 }

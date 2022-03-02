@@ -9,20 +9,15 @@
     }
   ],
   "result": {
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/honeycomb.json
+
+
+
     "item": "swlm:honeycomb"
-========
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/honeycomb.json
-    "item": "swlm:honeycomb"
-=======
-    "item": "swlm:swlm_honeycomb"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_honeycomb.json
-<<<<<<< HEAD
-=======
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_honeycomb.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
+
+
+
   }
 }

@@ -6,23 +6,23 @@
       "entries": [
         {
           "type": "minecraft:item",
-<<<<<<< HEAD
-<<<<<<< HEAD:src/main/resources/data/swlm/loot_tables/blocks/swlm_acacia_wood.json
+
+
           "name": "swlm:star_worm_block_acacia_wood"
-=======
+
           "name": "swlm:black_terracotta"
->>>>>>> 1e6e236... what the hell is going on:src/main/resources/data/swlm/loot_tables/blocks/black_terracotta.json
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/loot_tables/blocks/black_terracotta.json
+
+
+
           "name": "swlm:black_terracotta"
-========
-<<<<<<< HEAD
+
+
           "name": "swlm:chiseled_polished_blackstone"
-=======
+
           "name": "swlm:swlm_acacia_wood"
->>>>>>> ef87f1b... Renamed from star_worm_block to swlm
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/loot_tables/blocks/swlm_acacia_wood.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
         }
       ],
       "conditions": [

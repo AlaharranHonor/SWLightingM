@@ -9,20 +9,16 @@
     }
   ],
   "result": {
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/obsidian.json
+
+
+
     "item": "swlm:obsidian"
-========
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/obsidian.json
-    "item": "swlm:obsidian"
-=======
-    "item": "swlm:swlm_obsidian"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_obsidian.json
-<<<<<<< HEAD
-=======
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_obsidian.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
+
+
+
+
   }
 }

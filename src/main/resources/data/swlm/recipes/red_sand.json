@@ -9,20 +9,15 @@
     }
   ],
   "result": {
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/red_sand.json
+
+
+
     "item": "swlm:red_sand"
-========
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/red_sand.json
-    "item": "swlm:red_sand"
-=======
-    "item": "swlm:swlm_red_sand"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_red_sand.json
-<<<<<<< HEAD
-=======
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_red_sand.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
+
+
+
   }
 }

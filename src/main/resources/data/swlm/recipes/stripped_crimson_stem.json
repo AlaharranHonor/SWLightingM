@@ -9,20 +9,14 @@
     }
   ],
   "result": {
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/stripped_crimson_stem.json
+
+
+
     "item": "swlm:stripped_crimson_stem"
-========
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/stripped_crimson_stem.json
-    "item": "swlm:stripped_crimson_stem"
-=======
-    "item": "swlm:swlm_stripped_crimson_stem"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_stripped_crimson_stem.json
-<<<<<<< HEAD
-=======
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_stripped_crimson_stem.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
+
+
   }
 }

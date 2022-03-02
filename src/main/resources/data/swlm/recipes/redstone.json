@@ -9,20 +9,16 @@
     }
   ],
   "result": {
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/redstone.json
+
+
+
     "item": "swlm:redstone"
-========
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/redstone.json
-    "item": "swlm:redstone"
-=======
-    "item": "swlm:swlm_redstone"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_redstone.json
-<<<<<<< HEAD
-=======
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_redstone.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
+
+
+
+
   }
 }

@@ -10,20 +10,13 @@
     }
   ],
   "result": {
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/magenta_concrete.json
+
+
+
     "item": "swlm:magenta_concrete"
-========
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/magenta_concrete.json
-    "item": "swlm:magenta_concrete"
-=======
-    "item": "swlm:swlm_magenta_concrete"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_magenta_concrete.json
-<<<<<<< HEAD
-=======
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_magenta_concrete.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
+
   }
 }

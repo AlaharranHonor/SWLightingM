@@ -10,20 +10,16 @@
     }
   ],
   "result": {
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/spruce_wood.json
+
+
+
     "item": "swlm:spruce_wood"
-========
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/spruce_wood.json
-    "item": "swlm:spruce_wood"
-=======
-    "item": "swlm:swlm_spruce_wood"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_spruce_wood.json
-<<<<<<< HEAD
-=======
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_spruce_wood.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
+
+
+
+
   }
 }

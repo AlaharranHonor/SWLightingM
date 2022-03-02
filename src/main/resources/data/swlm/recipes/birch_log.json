@@ -10,20 +10,14 @@
     }
   ],
   "result": {
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/birch_log.json
+
+
+
     "item": "swlm:birch_log"
-========
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/birch_log.json
-    "item": "swlm:birch_log"
-=======
-    "item": "swlm:swlm_birch_log"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_birch_log.json
-<<<<<<< HEAD
-=======
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_birch_log.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
+
+
   }
 }

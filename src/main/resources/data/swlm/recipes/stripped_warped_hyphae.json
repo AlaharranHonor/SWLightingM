@@ -9,20 +9,13 @@
     }
   ],
   "result": {
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/stripped_warped_hyphae.json
+
+
+
     "item": "swlm:stripped_warped_hyphae"
-========
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/stripped_warped_hyphae.json
-    "item": "swlm:stripped_warped_hyphae"
-=======
-    "item": "swlm:swlm_stripped_warped_hyphae"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_stripped_warped_hyphae.json
-<<<<<<< HEAD
-=======
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_stripped_warped_hyphae.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
+
   }
 }

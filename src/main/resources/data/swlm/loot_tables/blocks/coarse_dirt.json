@@ -6,23 +6,23 @@
       "entries": [
         {
           "type": "minecraft:item",
-<<<<<<< HEAD
-<<<<<<< HEAD:src/main/resources/data/swlm/loot_tables/blocks/swlm_basalt.json
+
+
           "name": "swlm:star_worm_block_basalt"
-=======
+
           "name": "swlm:coarse_dirt"
->>>>>>> 1e6e236... what the hell is going on:src/main/resources/data/swlm/loot_tables/blocks/coarse_dirt.json
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/loot_tables/blocks/coarse_dirt.json
+
+
+
           "name": "swlm:coarse_dirt"
-========
-<<<<<<< HEAD
+
+
           "name": "swlm:blue_glazed_terracotta"
-=======
+
           "name": "swlm:swlm_basalt"
->>>>>>> ef87f1b... Renamed from star_worm_block to swlm
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/loot_tables/blocks/swlm_basalt.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
         }
       ],
       "conditions": [

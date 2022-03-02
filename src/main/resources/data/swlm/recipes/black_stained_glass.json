@@ -1,13 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
   "group": "sw_stained_glass",
-=======
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-=======
-  "group": "sw_stained_glass",
->>>>>>> 6642ddc... Grouped some recipes
+
   "ingredients": [
     {
       "item": "swlm:star_worm_goop"

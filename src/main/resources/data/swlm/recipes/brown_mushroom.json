@@ -9,20 +9,14 @@
     }
   ],
   "result": {
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/brown_mushroom.json
+
+
+
     "item": "swlm:brown_mushroom"
-========
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/brown_mushroom.json
-    "item": "swlm:brown_mushroom"
-=======
-    "item": "swlm:swlm_brown_mushroom"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_brown_mushroom.json
-<<<<<<< HEAD
-=======
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_brown_mushroom.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
+
+
   }
 }

@@ -6,23 +6,23 @@
       "entries": [
         {
           "type": "minecraft:item",
-<<<<<<< HEAD
-<<<<<<< HEAD:src/main/resources/data/swlm/loot_tables/blocks/swlm_ice.json
+
+
           "name": "swlm:star_worm_block_ice"
-=======
+
           "name": "swlm:andesite"
->>>>>>> 1e6e236... what the hell is going on:src/main/resources/data/swlm/loot_tables/blocks/andesite.json
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/loot_tables/blocks/andesite.json
+
+
+
           "name": "swlm:andesite"
-========
-<<<<<<< HEAD
+
+
           "name": "swlm:acacia_log"
-=======
+
           "name": "swlm:swlm_ice"
->>>>>>> ef87f1b... Renamed from star_worm_block to swlm
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/loot_tables/blocks/swlm_ice.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
         }
       ],
       "conditions": [

@@ -1,12 +1,12 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-=======
+
+
+
+
+
+
   "itemGroup.SWLMTab": "SWLM",
->>>>>>> 9b957ca... Add glow versions of SWDM blocks
+
   "block.swlm.acacia_log": "SW Acacia log",
   "block.swlm.acacia_planks": "SW Acacia Wood Planks",
   "block.swlm.acacia_wood": "SW Acacia Wood",
@@ -208,8 +208,8 @@
   "block.swlm.yellow_glazed_terracotta": "SW Yellow Glazed Terracotta",
   "block.swlm.yellow_terracotta": "SW Yellow Terracotta",
   "block.swlm.yellow_wool": "SW Yellow Wool",
-<<<<<<< HEAD
-=======
+
+
   "block.swlm.swlm_acacia_log": "SW Acacia log",
   "block.swlm.swlm_acacia_planks": "SW Acacia Wood Planks",
   "block.swlm.swlm_acacia_wood": "SW Acacia Wood",
@@ -411,18 +411,18 @@
   "block.swlm.swlm_yellow_glazed_terracotta": "SW Yellow Glazed Terracotta",
   "block.swlm.swlm_yellow_terracotta": "SW Yellow Terracotta",
   "block.swlm.swlm_yellow_wool": "SW Yellow Wool",
->>>>>>> ee20f1e... Renamed star_worm_block to swlm
-=======
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
   "block.swlm.star_worm_cobble": "Star Worm Cobble",
   "item.swlm.pestle_mortar": "Mortar & Pestle",
   "item.swlm.star_worm": "Star Worm",
   "item.swlm.star_worm_goop": "Star Worm Goop",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
+
+
   "block.swlm.grass_block": "SW Grass Block",
   "block.swlm.dirt": "SW Dirt",
   "block.swlm.coarse_dirt": "SW Coarse Dirt",
@@ -449,26 +449,26 @@
   "block.swlm.red_stained_glass": "SW Red Stained Glass",
   "block.swlm.white_stained_glass": "SW White Stained Glass",
   "block.swlm.yellow_stained_glass": "SW Yellow Stained Glass",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c637675... Updated names
-=======
 
->>>>>>> 9b957ca... Add glow versions of SWDM blocks
+
+
+
+
+
+
+
   "block.swlm.light_rubber_mat": "SW Light Rubber Mat",
   "block.swlm.medium_rubber_mat": "SW Medium Rubber Mat",
   "block.swlm.dark_rubber_mat": "SW Dark Rubber Mat",
   "block.swlm.fuel_block": "SW Fuel Block",
   "block.swlm.whitewash_log": "SW Whitewash Log",
   "block.swlm.whitewash_plank": "SW Whitewash Plank",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ee20f1e... Renamed star_worm_block to swlm
-=======
+
+
+
+
+
+
   "block.swlm.swlm_grass_block": "SW Grass Block",
   "block.swlm.swlm_dirt": "SW Dirt",
   "block.swlm.swlm_coarse_dirt": "SW Coarse Dirt",
@@ -495,24 +495,24 @@
   "block.swlm.swlm_red_stained_glass": "SW Red Stained Glass",
   "block.swlm.swlm_white_stained_glass": "SW White Stained Glass",
   "block.swlm.swlm_yellow_stained_glass": "SW Yellow Stained Glass",
->>>>>>> 9b5e33d... Add more blocks
-=======
->>>>>>> e06d41a... removed swlm_ in front of all registry names
-=======
->>>>>>> c637675... Updated names
-=======
-=======
 
->>>>>>> 9b957ca... Add glow versions of SWDM blocks
+
+
+
+
+
+
+
+
   "block.swlm.mossy_stone": "SW Mossy Stone",
   "block.swlm.more_mossy_stone": "SW More Mossy Stone",
   "block.swlm.cracked_stone": "SW Cracked Stone",
   "block.swlm.mossy_andesite": "SW Mossy Andesite",
   "block.swlm.more_mossy_andesite": "SW More Mossy Andesite",
-<<<<<<< HEAD
->>>>>>> 5099b77... Added glow versions of mossy stones
+
+
   "itemGroup.SWLMTab": "SWLM"
-=======
+
   "block.swlm.cracked_andesite": "SW Cracked Andesite",
   "block.swlm.mossy_diorite": "SW Mossy Diorite",
   "block.swlm.more_mossy_diorite": "SW More Mossy Diorite",
@@ -570,5 +570,5 @@
   "block.swlm.light_clay_block": "SW Light Clay Block",
   "block.swlm.medium_clay_block": "SW Medium Clay Block",
   "block.swlm.dark_clay_block": "SW Dark Clay Block"
->>>>>>> 9b957ca... Add glow versions of SWDM blocks
+
 }

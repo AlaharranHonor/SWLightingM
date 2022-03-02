@@ -2,15 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/uncraft_swlm_diamond.json
+
+
       "item": "swlm:diamond"
-=======
-      "item": "swlm:swlm_diamond"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/revert_star_worm_block_diamond.json
-=======
-      "item": "swlm:diamond"
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
     }
   ],
   "result":

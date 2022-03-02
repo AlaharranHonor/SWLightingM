@@ -2,23 +2,12 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/no_glow_dark_oak_wood_planks.json
+
+
       "item": "swlm:dark_oak_wood"
-=======
-      "item": "swlm:swlm_dark_oak_log"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_no_glow_dark_oak_log_planks.json
-=======
-<<<<<<<< HEAD:src/main/resources/data/swlm/recipes/no_glow_dark_oak_wood_planks.json
-      "item": "swlm:dark_oak_wood"
-========
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/no_glow_stripped_dark_oak_wood_planks.json
-      "item": "swlm:stripped_dark_oak_wood"
-=======
-      "item": "swlm:swlm_dark_oak_wood"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/swlm_no_glow_dark_oak_wood_planks.json
->>>>>>>> e06d41a... removed swlm_ in front of all registry names:src/main/resources/data/swlm/recipes/swlm_no_glow_dark_oak_wood_planks.json
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
+
     }
   ],
   "result":

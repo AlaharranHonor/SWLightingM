@@ -2,15 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD:src/main/resources/data/swlm/recipes/uncraft_swlm_lapis.json
+
+
       "item": "swlm:lapis"
-=======
-      "item": "swlm:swlm_lapis"
->>>>>>> ee20f1e... Renamed star_worm_block to swlm:src/main/resources/data/swlm/recipes/revert_star_worm_block_lapis.json
-=======
-      "item": "swlm:lapis"
->>>>>>> e06d41a... removed swlm_ in front of all registry names
+
+
     }
   ],
   "result":
