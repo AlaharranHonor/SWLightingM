@@ -6,23 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-
-
-          "name": "swlm:star_worm_block_coal"
-
           "name": "swlm:birch_log"
-
-
-
-          "name": "swlm:birch_log"
-
-
-          "name": "swlm:blue_concrete_powder"
-
-          "name": "swlm:swlm_coal"
-
-
-
         }
       ],
       "conditions": [

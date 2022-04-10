@@ -1,19 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
-
-
-
-
   "group": "log_planks",
-
   "ingredients": [
     {
-
       "item": "swlm:birch_log"
-
-
-
-
     }
   ],
   "result":

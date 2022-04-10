@@ -14,11 +14,6 @@ public class ClientEventBusSubscriber {
 
     @SubscribeEvent
     public static void onCLientSetup(FMLClientSetupEvent event) {
-
-
-
-
-
         RenderTypeLookup.setRenderLayer(BlockInit.ACACIA_LEAVES.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(BlockInit.BIRCH_LEAVES.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(BlockInit.DARK_OAK_LEAVES.get(), RenderType.cutout());
@@ -42,9 +37,5 @@ public class ClientEventBusSubscriber {
         RenderTypeLookup.setRenderLayer(BlockInit.WHITE_STAINED_GLASS.get(), RenderType.translucent());
         RenderTypeLookup.setRenderLayer(BlockInit.YELLOW_STAINED_GLASS.get(), RenderType.translucent());
         RenderTypeLookup.setRenderLayer(BlockInit.GRASS_BLOCK.get(), RenderType.cutoutMipped());
-
-
-
-
     }
 }

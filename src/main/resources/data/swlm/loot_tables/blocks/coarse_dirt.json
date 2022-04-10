@@ -6,23 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-
-
-          "name": "swlm:star_worm_block_basalt"
-
           "name": "swlm:coarse_dirt"
-
-
-
-          "name": "swlm:coarse_dirt"
-
-
-          "name": "swlm:blue_glazed_terracotta"
-
-          "name": "swlm:swlm_basalt"
-
-
-
         }
       ],
       "conditions": [

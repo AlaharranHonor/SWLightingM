@@ -1,13 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
-
-
-
-
   "group": "log_planks",
   "ingredients": [
     {
-
       "item": "swlm:acacia_log"
     }
   ],

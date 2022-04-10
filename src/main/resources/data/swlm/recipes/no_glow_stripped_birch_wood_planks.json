@@ -1,11 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
-
   "ingredients": [
     {
-
       "item": "swlm:stripped_birch_wood"
-
     }
   ],
   "result":

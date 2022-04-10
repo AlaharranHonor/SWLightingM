@@ -6,23 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-
-
-          "name": "swlm:star_worm_block_acacia_planks"
-
           "name": "swlm:chiseled_sandstone"
-
-
-
-          "name": "swlm:chiseled_sandstone"
-
-
-          "name": "swlm:cracked_polished_blackstone_bricks"
-
-          "name": "swlm:swlm_acacia_planks"
-
-
-
         }
       ],
       "conditions": [

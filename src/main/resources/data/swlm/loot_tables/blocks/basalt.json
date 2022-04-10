@@ -6,23 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-
-
-          "name": "swlm:star_worm_block_clay"
-
           "name": "swlm:basalt"
-
-
-
-          "name": "swlm:basalt"
-
-
-          "name": "swlm:birch_planks"
-
-          "name": "swlm:swlm_clay"
-
-
-
         }
       ],
       "conditions": [

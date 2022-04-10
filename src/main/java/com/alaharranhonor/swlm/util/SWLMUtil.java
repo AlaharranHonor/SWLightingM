@@ -13,10 +13,6 @@ import java.util.Map;
 
 public class SWLMUtil {
     public static final Map<Item, Block> mappings = new HashMap<Item, Block>() {{
-
-
-
-
         put(BlockInit.ACACIA_LOG_ITEM.get(), Blocks.ACACIA_LOG);
         put(BlockInit.BIRCH_LOG_ITEM.get(), Blocks.BIRCH_LOG);
         put(BlockInit.DARK_OAK_LOG_ITEM.get(), Blocks.DARK_OAK_LOG);
@@ -243,10 +239,6 @@ public class SWLMUtil {
         put(BlockInit.JUNGLE_LEAVES_ITEM.get(), Blocks.JUNGLE_LEAVES);
         put(BlockInit.OAK_LEAVES_ITEM.get(), Blocks.OAK_LEAVES);
         put(BlockInit.SPRUCE_LEAVES_ITEM.get(), Blocks.SPRUCE_LEAVES);
-
-
-
-
 
         put(SWEMInit.FUEL_BLOCK.getBlock().asItem(), SWEMBlocks.FUEL_BLOCK.get());
         put(SWEMInit.WHITEWASH_PLANK.getBlock().asItem(), SWEMBlocks.WHITEWASH_PLANK.get());

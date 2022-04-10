@@ -1,10 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
-
-
   "group": "sw_stained_glass",
-
-
   "ingredients": [
     {
       "item": "swlm:star_worm_goop"

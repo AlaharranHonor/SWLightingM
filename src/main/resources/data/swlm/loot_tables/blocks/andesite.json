@@ -6,23 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-
-
-          "name": "swlm:star_worm_block_ice"
-
           "name": "swlm:andesite"
-
-
-
-          "name": "swlm:andesite"
-
-
-          "name": "swlm:acacia_log"
-
-          "name": "swlm:swlm_ice"
-
-
-
         }
       ],
       "conditions": [

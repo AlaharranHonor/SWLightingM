@@ -1,16 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
-
-
-
-
   "group": "log_planks",
   "ingredients": [
     {
-
       "item": "swlm:oak_log"
-
-
     }
   ],
   "result":

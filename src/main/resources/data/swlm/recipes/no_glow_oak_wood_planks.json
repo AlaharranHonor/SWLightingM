@@ -2,11 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-
-
       "item": "swlm:oak_wood"
-
-
     }
   ],
   "result":

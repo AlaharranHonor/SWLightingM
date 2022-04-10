@@ -6,23 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-
-
-          "name": "swlm:star_worm_block_blue_ice"
-
           "name": "swlm:blue_concrete"
-
-
-
-          "name": "swlm:blue_concrete"
-
-
-          "name": "swlm:orange_glazed_terracotta"
-
-          "name": "swlm:swlm_blue_ice"
-
-
-
         }
       ],
       "conditions": [

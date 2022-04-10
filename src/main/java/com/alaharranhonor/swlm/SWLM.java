@@ -44,13 +44,6 @@ public class SWLM
             return new ItemStack(BlockInit.STAR_WORM.get());
         }
 
-
-
-
-
-
-
-
         @Override
         public boolean hasSearchBar() {
             return true;

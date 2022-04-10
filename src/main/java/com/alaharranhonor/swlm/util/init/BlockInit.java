@@ -26,11 +26,6 @@ public class BlockInit {
     public static final RegistryObject<Block> STAR_WORM_COBBLE = BLOCKS.register("star_worm_cobble", () -> new Block(Block.Properties.copy(Blocks.STONE).lightLevel((state) -> 7)));
 
     // All star worm block variants
-
-
-
-
-
     public static final RegistryObject<Block> ACACIA_LOG = BLOCKS.register("acacia_log", () -> new RotatedPillarBlock(Block.Properties.copy(Blocks.ACACIA_LOG).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> BIRCH_LOG = BLOCKS.register("birch_log", () -> new RotatedPillarBlock(Block.Properties.copy(Blocks.BIRCH_LOG).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> DARK_OAK_LOG = BLOCKS.register("dark_oak_log", () -> new RotatedPillarBlock(Block.Properties.copy(Blocks.DARK_OAK_LOG).lightLevel((state) -> 15)));
@@ -61,7 +56,6 @@ public class BlockInit {
     public static final RegistryObject<Block> JUNGLE_PLANKS = BLOCKS.register("jungle_planks", () -> new Block(Block.Properties.copy(Blocks.JUNGLE_PLANKS).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> OAK_PLANKS = BLOCKS.register("oak_planks", () -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> SPRUCE_PLANKS = BLOCKS.register("spruce_planks", () -> new Block(Block.Properties.copy(Blocks.SPRUCE_PLANKS).lightLevel((state) -> 15)));
-
 
     public static final RegistryObject<Block> STONE = BLOCKS.register("stone", () -> new Block(Block.Properties.copy(Blocks.STONE).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> SMOOTH_STONE = BLOCKS.register("smooth_stone", () -> new Block(Block.Properties.copy(Blocks.SMOOTH_STONE).lightLevel((state) -> 15)));
@@ -242,22 +236,17 @@ public class BlockInit {
     public static final RegistryObject<Block> WHITE_WOOL = BLOCKS.register("white_wool", () -> new Block(Block.Properties.copy(Blocks.WHITE_WOOL).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> YELLOW_WOOL = BLOCKS.register("yellow_wool", () -> new Block(Block.Properties.copy(Blocks.YELLOW_WOOL).lightLevel((state) -> 15)));
 
-
-
     public static final RegistryObject<Block> ACACIA_LEAVES = BLOCKS.register("acacia_leaves", () -> new Block(Block.Properties.copy(Blocks.ACACIA_LEAVES).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> BIRCH_LEAVES = BLOCKS.register("birch_leaves", () -> new Block(Block.Properties.copy(Blocks.BIRCH_LEAVES).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> DARK_OAK_LEAVES = BLOCKS.register("dark_oak_leaves", () -> new Block(Block.Properties.copy(Blocks.DARK_OAK_LEAVES).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> JUNGLE_LEAVES = BLOCKS.register("jungle_leaves", () -> new Block(Block.Properties.copy(Blocks.JUNGLE_LEAVES).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> OAK_LEAVES = BLOCKS.register("oak_leaves", () -> new Block(Block.Properties.copy(Blocks.OAK_LEAVES).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> SPRUCE_LEAVES = BLOCKS.register("spruce_leaves", () -> new Block(Block.Properties.copy(Blocks.SPRUCE_LEAVES).lightLevel((state) -> 15)));
-
-
+    
     public static final RegistryObject<Block> GRASS_BLOCK = BLOCKS.register("grass_block", () -> new GrassBlock(Block.Properties.copy(Blocks.GRASS_BLOCK).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> COARSE_DIRT = BLOCKS.register("coarse_dirt", () -> new Block(Block.Properties.copy(Blocks.COARSE_DIRT).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> DIRT = BLOCKS.register("dirt", () -> new Block(Block.Properties.copy(Blocks.DIRT).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> PODZOL = BLOCKS.register("podzol", () -> new SnowyDirtBlock(Block.Properties.copy(Blocks.PODZOL).lightLevel((state) -> 15)));
-
-
 
     public static final RegistryObject<Block> BLACK_STAINED_GLASS = BLOCKS.register("black_stained_glass", () -> new StainedGlassBlock(DyeColor.BLACK, Block.Properties.copy(Blocks.BLACK_STAINED_GLASS).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> BLUE_STAINED_GLASS = BLOCKS.register("blue_stained_glass", () -> new StainedGlassBlock(DyeColor.BLUE, Block.Properties.copy(Blocks.BLUE_STAINED_GLASS).lightLevel((state) -> 15)));
@@ -484,7 +473,6 @@ public class BlockInit {
     public static final RegistryObject<Item> WHITE_WOOL_ITEM = ITEMS.register("white_wool", () -> new BlockItem(WHITE_WOOL.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> YELLOW_WOOL_ITEM = ITEMS.register("yellow_wool", () -> new BlockItem(YELLOW_WOOL.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
 
-
     public static final RegistryObject<Item> GRASS_BLOCK_ITEM = ITEMS.register("grass_block", () -> new BlockItem(GRASS_BLOCK.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> DIRT_ITEM = ITEMS.register("dirt", () -> new BlockItem(DIRT.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> COARSE_DIRT_ITEM = ITEMS.register("coarse_dirt", () -> new BlockItem(COARSE_DIRT.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
@@ -511,7 +499,6 @@ public class BlockInit {
     public static final RegistryObject<Item> RED_STAINED_GLASS_ITEM = ITEMS.register("red_stained_glass", () -> new BlockItem(RED_STAINED_GLASS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> WHITE_STAINED_GLASS_ITEM = ITEMS.register("white_stained_glass", () -> new BlockItem(WHITE_STAINED_GLASS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> YELLOW_STAINED_GLASS_ITEM = ITEMS.register("yellow_stained_glass", () -> new BlockItem(YELLOW_STAINED_GLASS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-
     
 }
 

@@ -31,19 +31,9 @@ public class ForgeBusEventSubscriber {
 	public static void onBlockMissingMappings(RegistryEvent.MissingMappings<Block> event) {
 		for (RegistryEvent.MissingMappings.Mapping<Block> mapping : event.getAllMappings()) {
 			if (mapping.key.getNamespace().equalsIgnoreCase("swem")) {
-
-
 				if (mapping.key.getPath().contains("star_worm_block")) {
 					mapping.remap(ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swlm", mapping.key.getPath().substring(16))));
 				}
-
-				mapping.remap(ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swlm", mapping.key.getPath().substring(16))));
-
-
-				if (mapping.key.getPath().contains("star_worm_block")) {
-					mapping.remap(ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swlm", mapping.key.getPath().substring(16))));
-				}
-
 			}
 		}
 	}
@@ -52,19 +42,9 @@ public class ForgeBusEventSubscriber {
 	public static void onItemMissingMappings(RegistryEvent.MissingMappings<Item> event) {
 		for (RegistryEvent.MissingMappings.Mapping<Item> mapping : event.getAllMappings()) {
 			if (mapping.key.getNamespace().equalsIgnoreCase("swem")) {
-
-
 				if (mapping.key.getPath().contains("star_worm_block")) {
 					mapping.remap(ForgeRegistries.ITEMS.getValue(new ResourceLocation("swlm", mapping.key.getPath().substring(16))));
 				}
-
-				mapping.remap(ForgeRegistries.ITEMS.getValue(new ResourceLocation("swlm", mapping.key.getPath().substring(16))));
-
-
-				if (mapping.key.getPath().contains("star_worm_block")) {
-					mapping.remap(ForgeRegistries.ITEMS.getValue(new ResourceLocation("swlm", mapping.key.getPath().substring(16))));
-				}
-
 			}
 		}
 	}
