@@ -33,8 +33,17 @@ public abstract class CauldronBlockMixin {
     @Inject(at = @At("HEAD"), method = "use", cancellable = true)
     private void onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit, CallbackInfoReturnable<ActionResultType> callback) {
         ItemStack stack = player.getItemInHand(handIn);
+        if (worldIn.isClientSide) {
+            callback.setReturnValue(ActionResultType.CONSUME);
+            return;
+        }
 
         int i = state.getValue(LEVEL);
+
+        if (stack.isEmpty()) {
+            callback.setReturnValue(ActionResultType.PASS);
+            return;
+        }
 
         Block foundBlock = SWLMUtil.mappings.get(stack.getItem());
 
