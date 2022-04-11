@@ -102,7 +102,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.5-36.2.23'
+    minecraft 'net.minecraftforge:forge:1.16.5-36.2.26'
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.16.5:3.0.35")
     implementation fg.deobf("com.alaharranhonor.swem:swem:${swem_version}")
     implementation fg.deobf("com.alaharranhonor.swdm:swdm:${swdm_version}")

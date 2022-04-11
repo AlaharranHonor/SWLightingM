@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "swdm:block/dark_stone_bricks"
+      "model": "swdm:block/dark_stone_brick"
     }
   }
 }

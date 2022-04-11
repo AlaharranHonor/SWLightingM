@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "swdm:block/light_bricks"
+      "model": "swdm:block/light_brick"
     }
   }
 }

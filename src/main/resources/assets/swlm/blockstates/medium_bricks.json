@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "swdm:block/medium_bricks"
+      "model": "swdm:block/medium_brick"
     }
   }
 }

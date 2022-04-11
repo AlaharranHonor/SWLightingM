@@ -1,15 +1,21 @@
 package com.alaharranhonor.swlm.util.init;
 
 import com.alaharranhonor.swlm.SWLM;
+import com.alaharranhonor.swlm.util.SWLMUtil;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Mod.EventBusSubscriber(modid = SWLM.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SWDMInit {
@@ -92,6 +98,75 @@ public class SWDMInit {
 	public static Block MEDIUM_CLAY_BLOCK;
 	public static Block DARK_CLAY_BLOCK;
 
+	public static void init() {
+		Map<Item, Block> swdmBlocks = new HashMap() {{
+			put(SWDMInit.MOSSY_STONE.getBlock().asItem(), ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "mossy_stone")));
+			put(SWDMInit.MORE_MOSSY_STONE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "more_mossy_stone")));
+			put(SWDMInit.CRACKED_STONE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cracked_stone")));
+			put(SWDMInit.MOSSY_ANDESITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "mossy_andesite")));
+			put(SWDMInit.MORE_MOSSY_ANDESITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "more_mossy_andesite")));
+			put(SWDMInit.CRACKED_ANDESITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cracked_andesite")));
+			put(SWDMInit.MOSSY_DIORITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "mossy_diorite")));
+			put(SWDMInit.MORE_MOSSY_DIORITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "more_mossy_diorite")));
+			put(SWDMInit.CRACKED_DIORITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cracked_diorite")));
+			put(SWDMInit.MOSSY_GRANITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "mossy_granite")));
+			put(SWDMInit.MORE_MOSSY_GRANITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "more_mossy_granite")));
+			put(SWDMInit.CRACKED_GRANITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cracked_granite")));
+			put(SWDMInit.THATCH_BLOCK.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "thatch_block")));
+			put(SWDMInit.BAMBOO_BLOCK.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "bamboo_block")));
+			put(SWDMInit.SAND_BLACK.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_black")));
+			put(SWDMInit.SAND_BLUE_GRAY.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_blue_gray")));
+			put(SWDMInit.SAND_BROWN.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_brown")));
+			put(SWDMInit.SAND_DARK_BROWN.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_dark_brown")));
+			put(SWDMInit.SAND_DUSTED_GRAY.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_dusted_gray")));
+			put(SWDMInit.SAND_GOLDEN.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_golden")));
+			put(SWDMInit.SAND_GRAY.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_gray")));
+			put(SWDMInit.SAND_LIGHT_GRAY.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_light_gray")));
+			put(SWDMInit.SAND_MUTED_BROWN.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_muted_brown")));
+			put(SWDMInit.SAND_VIVID_RED.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_vivid_red")));
+			put(SWDMInit.SAND_WHITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_white")));
+			put(SWDMInit.SANDSTONE_BLACK.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_black")));
+			put(SWDMInit.SANDSTONE_BLUE_GRAY.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_blue_gray")));
+			put(SWDMInit.SANDSTONE_BROWN.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_brown")));
+			put(SWDMInit.SANDSTONE_DARK_BROWN.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_dark_brown")));
+			put(SWDMInit.SANDSTONE_DUSTED_GRAY.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "standstone_dusted_gray")));
+			put(SWDMInit.SANDSTONE_GOLDEN.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "standstone_golden")));
+			put(SWDMInit.SANDSTONE_GRAY.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_gray")));
+			put(SWDMInit.SANDSTONE_LIGHT_GRAY.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_light_gray")));
+			put(SWDMInit.SANDSTONE_MUTED_BROWN.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_muted_brown")));
+			put(SWDMInit.SANDSTONE_VIVID_RED.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_vivid_rid")));
+			put(SWDMInit.SANDSTONE_WHITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_white")));
+			put(SWDMInit.BLACK_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "black_dark_prismarine")));
+			put(SWDMInit.BLUE_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "blue_dark_prismarine")));
+			put(SWDMInit.BROWN_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "brown_dark_prismarine")));
+			put(SWDMInit.CYAN_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cyan_dark_prismarine")));
+			put(SWDMInit.GRAY_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "gray_dark_prismarine")));
+			put(SWDMInit.GREEN_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "green_dark_prismarine")));
+			put(SWDMInit.LIGHT_BLUE_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "light_blue_dark_prismarine")));
+			put(SWDMInit.LIGHT_GRAY_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "light_gray_dark_prismarine")));
+			put(SWDMInit.LIME_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "lime_dark_prismarine")));
+			put(SWDMInit.MAGENTA_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "magenta_dark_prismarine")));
+			put(SWDMInit.ORANGE_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "orange_dark_prismarine")));
+			put(SWDMInit.PINK_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "pink_dark_prismarine")));
+			put(SWDMInit.PURPLE_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "purple_dark_prismarine")));
+			put(SWDMInit.RED_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "red_dark_prismarine")));
+			put(SWDMInit.WHITE_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "white_dark_prismarine")));
+			put(SWDMInit.YELLOW_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "yellow_dark_prismarine")));
+			put(SWDMInit.CYAN_GLASS_BRICKS.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cyan_glass_bricks")));
+			put(SWDMInit.LIGHT_STONE_BRICKS.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "light_stone_brick")));
+			put(SWDMInit.MEDIUM_STONE_BRICKS.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "medium_stone_brick")));
+			put(SWDMInit.DARK_STONE_BRICKS.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "dark_stone_brick")));
+			put(SWDMInit.LIGHT_BRICKS.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "light_brick")));
+			put(SWDMInit.MEDIUM_BRICKS.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "medium_brick")));
+			put(SWDMInit.DARK_BRICKS.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "dark_brick")));
+			put(SWDMInit.LIGHT_CLAY_BLOCK.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "light_clay_block")));
+			put(SWDMInit.MEDIUM_CLAY_BLOCK.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "medium_clay_block")));
+			put(SWDMInit.DARK_CLAY_BLOCK.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "dark_clay_block")));
+		}};
+
+		SWLMUtil.mappings.putAll(swdmBlocks);
+
+	}
 
 	/* Blocks are intialized first.
 	* Store the reference to the block, and then in the item initialization register the items and block items.

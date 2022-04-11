@@ -4,7 +4,9 @@ import com.alaharranhonor.swem.blocks.CareDoorBlock;
 import com.alaharranhonor.swem.blocks.FuelBlock;
 import com.alaharranhonor.swem.blocks.RubberMatBase;
 import com.alaharranhonor.swem.items.MedicalItem;
+import com.alaharranhonor.swem.util.registry.SWEMBlocks;
 import com.alaharranhonor.swlm.SWLM;
+import com.alaharranhonor.swlm.util.SWLMUtil;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
@@ -17,6 +19,9 @@ import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Mod.EventBusSubscriber(modid = SWLM.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SWEMInit {
 
@@ -28,6 +33,17 @@ public class SWEMInit {
 	public static Block WHITEWASH_LOG;
 	public static Block WHITEWASH_PLANK;
 
+	public static void init() {
+		Map<Item, Block> swemBlocks = new HashMap() {{
+			put(SWEMInit.FUEL_BLOCK.getBlock().asItem(), SWEMBlocks.FUEL_BLOCK.get());
+			put(SWEMInit.WHITEWASH_PLANK.getBlock().asItem(), SWEMBlocks.WHITEWASH_PLANK.get());
+			put(SWEMInit.WHITEWASH_LOG.getBlock().asItem(), SWEMBlocks.WHITEWASH_LOG.get());
+			put(SWEMInit.RUBBER_MAT_LIGHT.getBlock().asItem(), SWEMBlocks.LIGHT_RUBBER_MAT.get());
+			put(SWEMInit.RUBBER_MAT_MEDIUM.getBlock().asItem(), SWEMBlocks.MEDIUM_RUBBER_MAT.get());
+			put(SWEMInit.RUBBER_MAT_DARK.getBlock().asItem(), SWEMBlocks.DARK_RUBBER_MAT.get());
+		}};
+		SWLMUtil.mappings.putAll(swemBlocks);
+	}
 
 	/* Blocks are intialized first.
 	* Store the reference to the block, and then in the item initialization register the items and block items.
