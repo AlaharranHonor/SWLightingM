@@ -1,12 +1,9 @@
 package com.alaharranhonor.swlm.util;
 
-import com.alaharranhonor.swem.util.registry.SWEMBlocks;
 import com.alaharranhonor.swlm.util.init.BlockInit;
-import com.alaharranhonor.swlm.util.init.SWDMInit;
-import com.alaharranhonor.swlm.util.init.SWEMInit;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.Item;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.HashMap;
 import java.util.Map;

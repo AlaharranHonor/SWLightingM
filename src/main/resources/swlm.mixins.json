@@ -4,7 +4,7 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "swlm.refmap.json",
   "mixins": [
-    "CauldronBlockMixin"
+    "AbstractCauldronBlockMixin"
   ],
   "minVersion": "0.8"
 }

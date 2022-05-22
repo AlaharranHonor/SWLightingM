@@ -2,29 +2,21 @@ package com.alaharranhonor.swlm.util;
 
 import com.alaharranhonor.swlm.SWLM;
 import com.alaharranhonor.swlm.world.gen.SWLMOreGen;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.biome.Biome;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
 @Mod.EventBusSubscriber(modid = SWLM.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ForgeBusEventSubscriber {
 
 	@SubscribeEvent
-	public static void onBiomeLoading(BiomeLoadingEvent event) {
-		if (!SWLMOreGen.checkAndInitBiome(event)) {
-			return;
-		}
-		if (event.getCategory() == Biome.Category.NETHER) {
-			// Nether oregen
-		} else {
-			SWLMOreGen.generateOverworldOres(event);
-		}
+	public static void setup(FMLCommonSetupEvent event) {
+		event.enqueueWork(SWLMOreGen::registerConfiguredFeatures);
 	}
 
 	@SubscribeEvent

@@ -1,6 +1,6 @@
 modLoader="javafml" #mandatory
 
-loaderVersion="[36,)"
+loaderVersion="[40,)"
 
 license="All Rights Reserved"
 
@@ -31,13 +31,13 @@ SWLM is a function-focused lighting mod. Star Worms spawn below, mash them into 
 [[dependencies.swlm]]
     modId="forge"
     mandatory=true
-    versionRange="[36,)"
+    versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.swlm]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.5]"
+    versionRange="[1.18.2]"
     ordering="NONE"
     side="BOTH"
 [[dependencies.swlm]]
@@ -49,7 +49,7 @@ SWLM is a function-focused lighting mod. Star Worms spawn below, mash them into 
 [[dependencies.swlm]]
     modId="swdm"
     mandatory=false
-    versionRange="[1.16.5-2,]"
+    versionRange="[1.18.2-2,]"
     ordering="NONE"
     side="BOTH"
 

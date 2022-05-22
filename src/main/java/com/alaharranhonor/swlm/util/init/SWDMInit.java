@@ -2,12 +2,10 @@ package com.alaharranhonor.swlm.util.init;
 
 import com.alaharranhonor.swlm.SWLM;
 import com.alaharranhonor.swlm.util.SWLMUtil;
-import net.minecraft.block.*;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.ToolType;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
@@ -16,6 +14,12 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.SandBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 
 @Mod.EventBusSubscriber(modid = SWLM.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SWDMInit {
@@ -100,68 +104,68 @@ public class SWDMInit {
 
 	public static void init() {
 		Map<Item, Block> swdmBlocks = new HashMap() {{
-			put(SWDMInit.MOSSY_STONE.getBlock().asItem(), ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "mossy_stone")));
-			put(SWDMInit.MORE_MOSSY_STONE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "more_mossy_stone")));
-			put(SWDMInit.CRACKED_STONE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cracked_stone")));
-			put(SWDMInit.MOSSY_ANDESITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "mossy_andesite")));
-			put(SWDMInit.MORE_MOSSY_ANDESITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "more_mossy_andesite")));
-			put(SWDMInit.CRACKED_ANDESITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cracked_andesite")));
-			put(SWDMInit.MOSSY_DIORITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "mossy_diorite")));
-			put(SWDMInit.MORE_MOSSY_DIORITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "more_mossy_diorite")));
-			put(SWDMInit.CRACKED_DIORITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cracked_diorite")));
-			put(SWDMInit.MOSSY_GRANITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "mossy_granite")));
-			put(SWDMInit.MORE_MOSSY_GRANITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "more_mossy_granite")));
-			put(SWDMInit.CRACKED_GRANITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cracked_granite")));
-			put(SWDMInit.THATCH_BLOCK.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "thatch_block")));
-			put(SWDMInit.BAMBOO_BLOCK.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "bamboo_block")));
-			put(SWDMInit.SAND_BLACK.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_black")));
-			put(SWDMInit.SAND_BLUE_GRAY.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_blue_gray")));
-			put(SWDMInit.SAND_BROWN.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_brown")));
-			put(SWDMInit.SAND_DARK_BROWN.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_dark_brown")));
-			put(SWDMInit.SAND_DUSTED_GRAY.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_dusted_gray")));
-			put(SWDMInit.SAND_GOLDEN.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_golden")));
-			put(SWDMInit.SAND_GRAY.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_gray")));
-			put(SWDMInit.SAND_LIGHT_GRAY.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_light_gray")));
-			put(SWDMInit.SAND_MUTED_BROWN.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_muted_brown")));
-			put(SWDMInit.SAND_VIVID_RED.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_vivid_red")));
-			put(SWDMInit.SAND_WHITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_white")));
-			put(SWDMInit.SANDSTONE_BLACK.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_black")));
-			put(SWDMInit.SANDSTONE_BLUE_GRAY.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_blue_gray")));
-			put(SWDMInit.SANDSTONE_BROWN.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_brown")));
-			put(SWDMInit.SANDSTONE_DARK_BROWN.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_dark_brown")));
-			put(SWDMInit.SANDSTONE_DUSTED_GRAY.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "standstone_dusted_gray")));
-			put(SWDMInit.SANDSTONE_GOLDEN.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "standstone_golden")));
-			put(SWDMInit.SANDSTONE_GRAY.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_gray")));
-			put(SWDMInit.SANDSTONE_LIGHT_GRAY.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_light_gray")));
-			put(SWDMInit.SANDSTONE_MUTED_BROWN.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_muted_brown")));
-			put(SWDMInit.SANDSTONE_VIVID_RED.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_vivid_rid")));
-			put(SWDMInit.SANDSTONE_WHITE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_white")));
-			put(SWDMInit.BLACK_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "black_dark_prismarine")));
-			put(SWDMInit.BLUE_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "blue_dark_prismarine")));
-			put(SWDMInit.BROWN_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "brown_dark_prismarine")));
-			put(SWDMInit.CYAN_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cyan_dark_prismarine")));
-			put(SWDMInit.GRAY_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "gray_dark_prismarine")));
-			put(SWDMInit.GREEN_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "green_dark_prismarine")));
-			put(SWDMInit.LIGHT_BLUE_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "light_blue_dark_prismarine")));
-			put(SWDMInit.LIGHT_GRAY_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "light_gray_dark_prismarine")));
-			put(SWDMInit.LIME_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "lime_dark_prismarine")));
-			put(SWDMInit.MAGENTA_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "magenta_dark_prismarine")));
-			put(SWDMInit.ORANGE_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "orange_dark_prismarine")));
-			put(SWDMInit.PINK_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "pink_dark_prismarine")));
-			put(SWDMInit.PURPLE_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "purple_dark_prismarine")));
-			put(SWDMInit.RED_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "red_dark_prismarine")));
-			put(SWDMInit.WHITE_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "white_dark_prismarine")));
-			put(SWDMInit.YELLOW_DARK_PRISMARINE.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "yellow_dark_prismarine")));
-			put(SWDMInit.CYAN_GLASS_BRICKS.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cyan_glass_bricks")));
-			put(SWDMInit.LIGHT_STONE_BRICKS.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "light_stone_brick")));
-			put(SWDMInit.MEDIUM_STONE_BRICKS.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "medium_stone_brick")));
-			put(SWDMInit.DARK_STONE_BRICKS.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "dark_stone_brick")));
-			put(SWDMInit.LIGHT_BRICKS.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "light_brick")));
-			put(SWDMInit.MEDIUM_BRICKS.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "medium_brick")));
-			put(SWDMInit.DARK_BRICKS.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "dark_brick")));
-			put(SWDMInit.LIGHT_CLAY_BLOCK.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "light_clay_block")));
-			put(SWDMInit.MEDIUM_CLAY_BLOCK.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "medium_clay_block")));
-			put(SWDMInit.DARK_CLAY_BLOCK.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "dark_clay_block")));
+			put(SWDMInit.MOSSY_STONE.asItem(), ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "mossy_stone")));
+			put(SWDMInit.MORE_MOSSY_STONE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "more_mossy_stone")));
+			put(SWDMInit.CRACKED_STONE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cracked_stone")));
+			put(SWDMInit.MOSSY_ANDESITE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "mossy_andesite")));
+			put(SWDMInit.MORE_MOSSY_ANDESITE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "more_mossy_andesite")));
+			put(SWDMInit.CRACKED_ANDESITE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cracked_andesite")));
+			put(SWDMInit.MOSSY_DIORITE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "mossy_diorite")));
+			put(SWDMInit.MORE_MOSSY_DIORITE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "more_mossy_diorite")));
+			put(SWDMInit.CRACKED_DIORITE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cracked_diorite")));
+			put(SWDMInit.MOSSY_GRANITE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "mossy_granite")));
+			put(SWDMInit.MORE_MOSSY_GRANITE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "more_mossy_granite")));
+			put(SWDMInit.CRACKED_GRANITE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cracked_granite")));
+			put(SWDMInit.THATCH_BLOCK.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "thatch_block")));
+			put(SWDMInit.BAMBOO_BLOCK.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "bamboo_block")));
+			put(SWDMInit.SAND_BLACK.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_black")));
+			put(SWDMInit.SAND_BLUE_GRAY.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_blue_gray")));
+			put(SWDMInit.SAND_BROWN.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_brown")));
+			put(SWDMInit.SAND_DARK_BROWN.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_dark_brown")));
+			put(SWDMInit.SAND_DUSTED_GRAY.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_dusted_gray")));
+			put(SWDMInit.SAND_GOLDEN.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_golden")));
+			put(SWDMInit.SAND_GRAY.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_gray")));
+			put(SWDMInit.SAND_LIGHT_GRAY.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_light_gray")));
+			put(SWDMInit.SAND_MUTED_BROWN.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_muted_brown")));
+			put(SWDMInit.SAND_VIVID_RED.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_vivid_red")));
+			put(SWDMInit.SAND_WHITE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sand_white")));
+			put(SWDMInit.SANDSTONE_BLACK.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_black")));
+			put(SWDMInit.SANDSTONE_BLUE_GRAY.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_blue_gray")));
+			put(SWDMInit.SANDSTONE_BROWN.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_brown")));
+			put(SWDMInit.SANDSTONE_DARK_BROWN.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_dark_brown")));
+			put(SWDMInit.SANDSTONE_DUSTED_GRAY.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "standstone_dusted_gray")));
+			put(SWDMInit.SANDSTONE_GOLDEN.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "standstone_golden")));
+			put(SWDMInit.SANDSTONE_GRAY.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_gray")));
+			put(SWDMInit.SANDSTONE_LIGHT_GRAY.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_light_gray")));
+			put(SWDMInit.SANDSTONE_MUTED_BROWN.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_muted_brown")));
+			put(SWDMInit.SANDSTONE_VIVID_RED.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_vivid_rid")));
+			put(SWDMInit.SANDSTONE_WHITE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "sandstone_white")));
+			put(SWDMInit.BLACK_DARK_PRISMARINE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "black_dark_prismarine")));
+			put(SWDMInit.BLUE_DARK_PRISMARINE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "blue_dark_prismarine")));
+			put(SWDMInit.BROWN_DARK_PRISMARINE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "brown_dark_prismarine")));
+			put(SWDMInit.CYAN_DARK_PRISMARINE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cyan_dark_prismarine")));
+			put(SWDMInit.GRAY_DARK_PRISMARINE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "gray_dark_prismarine")));
+			put(SWDMInit.GREEN_DARK_PRISMARINE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "green_dark_prismarine")));
+			put(SWDMInit.LIGHT_BLUE_DARK_PRISMARINE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "light_blue_dark_prismarine")));
+			put(SWDMInit.LIGHT_GRAY_DARK_PRISMARINE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "light_gray_dark_prismarine")));
+			put(SWDMInit.LIME_DARK_PRISMARINE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "lime_dark_prismarine")));
+			put(SWDMInit.MAGENTA_DARK_PRISMARINE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "magenta_dark_prismarine")));
+			put(SWDMInit.ORANGE_DARK_PRISMARINE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "orange_dark_prismarine")));
+			put(SWDMInit.PINK_DARK_PRISMARINE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "pink_dark_prismarine")));
+			put(SWDMInit.PURPLE_DARK_PRISMARINE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "purple_dark_prismarine")));
+			put(SWDMInit.RED_DARK_PRISMARINE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "red_dark_prismarine")));
+			put(SWDMInit.WHITE_DARK_PRISMARINE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "white_dark_prismarine")));
+			put(SWDMInit.YELLOW_DARK_PRISMARINE.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "yellow_dark_prismarine")));
+			put(SWDMInit.CYAN_GLASS_BRICKS.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "cyan_glass_bricks")));
+			put(SWDMInit.LIGHT_STONE_BRICKS.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "light_stone_brick")));
+			put(SWDMInit.MEDIUM_STONE_BRICKS.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "medium_stone_brick")));
+			put(SWDMInit.DARK_STONE_BRICKS.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "dark_stone_brick")));
+			put(SWDMInit.LIGHT_BRICKS.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "light_brick")));
+			put(SWDMInit.MEDIUM_BRICKS.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "medium_brick")));
+			put(SWDMInit.DARK_BRICKS.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "dark_brick")));
+			put(SWDMInit.LIGHT_CLAY_BLOCK.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "light_clay_block")));
+			put(SWDMInit.MEDIUM_CLAY_BLOCK.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "medium_clay_block")));
+			put(SWDMInit.DARK_CLAY_BLOCK.asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swdm", "dark_clay_block")));
 		}};
 
 		SWLMUtil.mappings.putAll(swdmBlocks);
@@ -175,159 +179,159 @@ public class SWDMInit {
 	public static void intializeModBlocks(RegistryEvent.Register<Block> item) {
 		if (ModList.get().isLoaded("swdm")) {
 
-			MOSSY_STONE = new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("mossy_stone");
+			MOSSY_STONE = new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("mossy_stone"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(MOSSY_STONE);
-			MORE_MOSSY_STONE = new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("more_mossy_stone");
+			MORE_MOSSY_STONE = new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("more_mossy_stone"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(MORE_MOSSY_STONE);
-			CRACKED_STONE = new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("cracked_stone");
+			CRACKED_STONE = new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("cracked_stone"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(CRACKED_STONE);
-			MOSSY_ANDESITE = new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("mossy_andesite");
+			MOSSY_ANDESITE = new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("mossy_andesite"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(MOSSY_ANDESITE);
-			MORE_MOSSY_ANDESITE = new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("more_mossy_andesite");
+			MORE_MOSSY_ANDESITE = new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("more_mossy_andesite"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(MORE_MOSSY_ANDESITE);
-			CRACKED_ANDESITE = new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("cracked_andesite");
+			CRACKED_ANDESITE = new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("cracked_andesite"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(CRACKED_ANDESITE);
-			MOSSY_DIORITE = new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("mossy_diorite");
+			MOSSY_DIORITE = new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("mossy_diorite"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(MOSSY_DIORITE);
-			MORE_MOSSY_DIORITE = new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("more_mossy_diorite");
+			MORE_MOSSY_DIORITE = new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("more_mossy_diorite"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(MORE_MOSSY_DIORITE);
-			CRACKED_DIORITE = new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("cracked_diorite");
+			CRACKED_DIORITE = new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("cracked_diorite"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(CRACKED_DIORITE);
-			MOSSY_GRANITE = new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("mossy_granite");
+			MOSSY_GRANITE = new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("mossy_granite"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(MOSSY_GRANITE);
-			MORE_MOSSY_GRANITE = new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("more_mossy_granite");
+			MORE_MOSSY_GRANITE = new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("more_mossy_granite"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(MORE_MOSSY_GRANITE);
-			CRACKED_GRANITE = new Block(AbstractBlock.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("cracked_granite");
+			CRACKED_GRANITE = new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("cracked_granite"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(CRACKED_GRANITE);
-			THATCH_BLOCK = new RotatedPillarBlock(AbstractBlock.Properties.of(Material.PLANT).sound(SoundType.WET_GRASS).strength(0.5F).harvestTool(ToolType.HOE).lightLevel((state) -> 15)).setRegistryName("thatch_block");
+			THATCH_BLOCK = new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.WET_GRASS).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("thatch_block"); // .harvestTool(ToolType.HOE)
 			item.getRegistry().register(THATCH_BLOCK);
-			BAMBOO_BLOCK = new RotatedPillarBlock(AbstractBlock.Properties.of(Material.BAMBOO).sound(SoundType.BAMBOO).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("bamboo_block");
+			BAMBOO_BLOCK = new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.BAMBOO).sound(SoundType.BAMBOO).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("bamboo_block");
 			item.getRegistry().register(BAMBOO_BLOCK);
-			SAND_BLACK = new SandBlock(14406560, AbstractBlock.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_black");
+			SAND_BLACK = new SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_black");
 			item.getRegistry().register(SAND_BLACK);
-			SAND_BLUE_GRAY = new SandBlock(14406560, AbstractBlock.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_blue_gray");
+			SAND_BLUE_GRAY = new SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_blue_gray");
 			item.getRegistry().register(SAND_BLUE_GRAY);
-			SAND_BROWN = new SandBlock(14406560, AbstractBlock.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_brown");
+			SAND_BROWN = new SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_brown");
 			item.getRegistry().register(SAND_BROWN);
-			SAND_DARK_BROWN = new SandBlock(14406560, AbstractBlock.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_dark_brown");
+			SAND_DARK_BROWN = new SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_dark_brown");
 			item.getRegistry().register(SAND_DARK_BROWN);
-			SAND_DUSTED_GRAY = new SandBlock(14406560, AbstractBlock.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_dusted_gray");
+			SAND_DUSTED_GRAY = new SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_dusted_gray");
 			item.getRegistry().register(SAND_DUSTED_GRAY);
-			SAND_GOLDEN = new SandBlock(14406560, AbstractBlock.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_golden");
+			SAND_GOLDEN = new SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_golden");
 			item.getRegistry().register(SAND_GOLDEN);
-			SAND_GRAY = new SandBlock(14406560, AbstractBlock.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_gray");
+			SAND_GRAY = new SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_gray");
 			item.getRegistry().register(SAND_GRAY);
-			SAND_LIGHT_GRAY = new SandBlock(14406560, AbstractBlock.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_light_gray");
+			SAND_LIGHT_GRAY = new SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_light_gray");
 			item.getRegistry().register(SAND_LIGHT_GRAY);
-			SAND_MUTED_BROWN = new SandBlock(14406560, AbstractBlock.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_muted_brown");
+			SAND_MUTED_BROWN = new SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_muted_brown");
 			item.getRegistry().register(SAND_MUTED_BROWN);
-			SAND_VIVID_RED = new SandBlock(14406560, AbstractBlock.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_vivid_red");
+			SAND_VIVID_RED = new SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_vivid_red");
 			item.getRegistry().register(SAND_VIVID_RED);
-			SAND_WHITE = new SandBlock(14406560, AbstractBlock.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_white");
+			SAND_WHITE = new SandBlock(14406560, BlockBehaviour.Properties.of(Material.SAND).sound(SoundType.SAND).strength(0.5F).lightLevel((state) -> 15)).setRegistryName("sand_white");
 			item.getRegistry().register(SAND_WHITE);
-			SANDSTONE_BLACK = new Block(AbstractBlock.Properties.of(Material.STONE).strength(0.8F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_black");
+			SANDSTONE_BLACK = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.8F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_black"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(SANDSTONE_BLACK);
-			SANDSTONE_BLUE_GRAY = new Block(AbstractBlock.Properties.of(Material.STONE).strength(0.8F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_blue_gray");
+			SANDSTONE_BLUE_GRAY = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.8F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_blue_gray"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(SANDSTONE_BLUE_GRAY);
-			SANDSTONE_BROWN = new Block(AbstractBlock.Properties.of(Material.STONE).strength(0.8F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_brown");
+			SANDSTONE_BROWN = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.8F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_brown"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(SANDSTONE_BROWN);
-			SANDSTONE_DARK_BROWN = new Block(AbstractBlock.Properties.of(Material.STONE).strength(0.8F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_dark_brown");
+			SANDSTONE_DARK_BROWN = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.8F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_dark_brown"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(SANDSTONE_DARK_BROWN);
-			SANDSTONE_DUSTED_GRAY = new Block(AbstractBlock.Properties.of(Material.STONE).strength(0.8F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_dusted_gray");
+			SANDSTONE_DUSTED_GRAY = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.8F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_dusted_gray"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(SANDSTONE_DUSTED_GRAY);
-			SANDSTONE_GOLDEN = new Block(AbstractBlock.Properties.of(Material.STONE).strength(0.8F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_golden");
+			SANDSTONE_GOLDEN = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.8F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_golden"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(SANDSTONE_GOLDEN);
-			SANDSTONE_GRAY = new Block(AbstractBlock.Properties.of(Material.STONE).strength(0.8F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_gray");
+			SANDSTONE_GRAY = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.8F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_gray"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(SANDSTONE_GRAY);
-			SANDSTONE_LIGHT_GRAY = new Block(AbstractBlock.Properties.of(Material.STONE).strength(0.8F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_light_gray");
+			SANDSTONE_LIGHT_GRAY = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.8F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_light_gray"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(SANDSTONE_LIGHT_GRAY);
-			SANDSTONE_MUTED_BROWN = new Block(AbstractBlock.Properties.of(Material.STONE).strength(0.8F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_muted_brown");
+			SANDSTONE_MUTED_BROWN = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.8F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_muted_brown"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(SANDSTONE_MUTED_BROWN);
-			SANDSTONE_VIVID_RED = new Block(AbstractBlock.Properties.of(Material.STONE).strength(0.8F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_vivid_red");
+			SANDSTONE_VIVID_RED = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.8F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_vivid_red"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(SANDSTONE_VIVID_RED);
-			SANDSTONE_WHITE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(0.8F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_white");
+			SANDSTONE_WHITE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.8F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("sandstone_white"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(SANDSTONE_WHITE);
-			BLACK_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("black_dark_prismarine");
+			BLACK_DARK_PRISMARINE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("black_dark_prismarine"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(BLACK_DARK_PRISMARINE);
-			BLUE_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("blue_dark_prismarine");
+			BLUE_DARK_PRISMARINE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("blue_dark_prismarine"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(BLUE_DARK_PRISMARINE);
-			BROWN_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("brown_dark_prismarine");
+			BROWN_DARK_PRISMARINE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("brown_dark_prismarine"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(BROWN_DARK_PRISMARINE);
-			CYAN_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("cyan_dark_prismarine");
+			CYAN_DARK_PRISMARINE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("cyan_dark_prismarine"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(CYAN_DARK_PRISMARINE);
-			GRAY_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("gray_dark_prismarine");
+			GRAY_DARK_PRISMARINE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("gray_dark_prismarine"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(GRAY_DARK_PRISMARINE);
-			GREEN_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("green_dark_prismarine");
+			GREEN_DARK_PRISMARINE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("green_dark_prismarine"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(GREEN_DARK_PRISMARINE);
-			LIGHT_BLUE_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("light_blue_dark_prismarine");
+			LIGHT_BLUE_DARK_PRISMARINE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("light_blue_dark_prismarine"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(LIGHT_BLUE_DARK_PRISMARINE);
-			LIGHT_GRAY_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("light_gray_dark_prismarine");
+			LIGHT_GRAY_DARK_PRISMARINE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("light_gray_dark_prismarine"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(LIGHT_GRAY_DARK_PRISMARINE);
-			LIME_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("lime_dark_prismarine");
+			LIME_DARK_PRISMARINE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("lime_dark_prismarine"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(LIME_DARK_PRISMARINE);
-			MAGENTA_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("magenta_dark_prismarine");
+			MAGENTA_DARK_PRISMARINE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("magenta_dark_prismarine"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(MAGENTA_DARK_PRISMARINE);
-			ORANGE_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("orange_dark_prismarine");
+			ORANGE_DARK_PRISMARINE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("orange_dark_prismarine"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(ORANGE_DARK_PRISMARINE);
-			PINK_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("pink_dark_prismarine");
+			PINK_DARK_PRISMARINE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("pink_dark_prismarine"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(PINK_DARK_PRISMARINE);
-			PURPLE_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("purple_dark_prismarine");
+			PURPLE_DARK_PRISMARINE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("purple_dark_prismarine"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(PURPLE_DARK_PRISMARINE);
-			RED_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("red_dark_prismarine");
+			RED_DARK_PRISMARINE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("red_dark_prismarine"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(RED_DARK_PRISMARINE);
-			WHITE_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("white_dark_prismarine");
+			WHITE_DARK_PRISMARINE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("white_dark_prismarine"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(WHITE_DARK_PRISMARINE);
-			YELLOW_DARK_PRISMARINE = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("yellow_dark_prismarine");
+			YELLOW_DARK_PRISMARINE = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("yellow_dark_prismarine"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(YELLOW_DARK_PRISMARINE);
-			BLACK_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("black_glass_bricks");
+			BLACK_GLASS_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("black_glass_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(BLACK_GLASS_BRICKS);
-			BLUE_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("blue_glass_bricks");
+			BLUE_GLASS_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("blue_glass_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(BLUE_GLASS_BRICKS);
-			BROWN_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("brown_glass_bricks");
+			BROWN_GLASS_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("brown_glass_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(BROWN_GLASS_BRICKS);
-			CYAN_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("cyan_glass_bricks");
+			CYAN_GLASS_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("cyan_glass_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(CYAN_GLASS_BRICKS);
-			GRAY_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("gray_glass_bricks");
+			GRAY_GLASS_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("gray_glass_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(GRAY_GLASS_BRICKS);
-			GREEN_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("green_glass_bricks");
+			GREEN_GLASS_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("green_glass_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(GREEN_GLASS_BRICKS);
-			LIGHT_BLUE_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("light_blue_glass_bricks");
+			LIGHT_BLUE_GLASS_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("light_blue_glass_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(LIGHT_BLUE_GLASS_BRICKS);
-			LIGHT_GRAY_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("light_gray_glass_bricks");
+			LIGHT_GRAY_GLASS_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("light_gray_glass_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(LIGHT_GRAY_GLASS_BRICKS);
-			LIME_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("lime_glass_bricks");
+			LIME_GLASS_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("lime_glass_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(LIME_GLASS_BRICKS);
-			MAGENTA_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("magenta_glass_bricks");
+			MAGENTA_GLASS_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("magenta_glass_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(MAGENTA_GLASS_BRICKS);
-			ORANGE_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("orange_glass_bricks");
+			ORANGE_GLASS_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("orange_glass_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(ORANGE_GLASS_BRICKS);
-			PINK_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("pink_glass_bricks");
+			PINK_GLASS_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("pink_glass_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(PINK_GLASS_BRICKS);
-			PURPLE_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("purple_glass_bricks");
+			PURPLE_GLASS_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("purple_glass_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(PURPLE_GLASS_BRICKS);
-			RED_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("red_glass_bricks");
+			RED_GLASS_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("red_glass_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(RED_GLASS_BRICKS);
-			WHITE_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("white_glass_bricks");
+			WHITE_GLASS_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("white_glass_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(WHITE_GLASS_BRICKS);
-			YELLOW_GLASS_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("yellow_glass_bricks");
+			YELLOW_GLASS_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("yellow_glass_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(YELLOW_GLASS_BRICKS);
-			LIGHT_STONE_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("light_stone_bricks");
+			LIGHT_STONE_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("light_stone_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(LIGHT_STONE_BRICKS);
-			MEDIUM_STONE_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("medium_stone_bricks");
+			MEDIUM_STONE_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("medium_stone_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(MEDIUM_STONE_BRICKS);
-			DARK_STONE_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("dark_stone_bricks");
+			DARK_STONE_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("dark_stone_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(DARK_STONE_BRICKS);
-			LIGHT_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("light_bricks");
+			LIGHT_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("light_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(LIGHT_BRICKS);
-			MEDIUM_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("medium_bricks");
+			MEDIUM_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("medium_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(MEDIUM_BRICKS);
-			DARK_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("dark_bricks");
+			DARK_BRICKS = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("dark_bricks"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(DARK_BRICKS);
-			LIGHT_CLAY_BLOCK = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("light_clay_block");
+			LIGHT_CLAY_BLOCK = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("light_clay_block"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(LIGHT_CLAY_BLOCK);
-			MEDIUM_CLAY_BLOCK = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("medium_clay_block");
+			MEDIUM_CLAY_BLOCK = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("medium_clay_block"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(MEDIUM_CLAY_BLOCK);
-			DARK_CLAY_BLOCK = new Block(AbstractBlock.Properties.of(Material.STONE).strength(1.5F, 6.0F).harvestTool(ToolType.PICKAXE).harvestLevel(0).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("dark_clay_block");
+			DARK_CLAY_BLOCK = new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5F, 6.0F).requiresCorrectToolForDrops().lightLevel((state) -> 15)).setRegistryName("dark_clay_block"); // harvestTool(ToolType.PICKAXE).harvestLevel(0)
 			item.getRegistry().register(DARK_CLAY_BLOCK);
 		}
 	}

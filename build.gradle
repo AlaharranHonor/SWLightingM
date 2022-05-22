@@ -3,6 +3,7 @@ buildscript {
         maven { url = 'https://files.minecraftforge.net/maven' }
         maven { url = 'https://maven.parchmentmc.org' }
         maven { url='https://repo.spongepowered.org/repository/maven-public/' }
+        maven { url 'https://plugins.gradle.org/m2/' }
         jcenter()
         mavenCentral()
     }
@@ -10,20 +11,25 @@ buildscript {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1+', changing: true
         classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7.+'
         classpath 'org.parchmentmc:librarian:1.+'
+        classpath 'gradle.plugin.com.matthewprenger:CurseGradle:1.4.0'
+        classpath "net.dumbcode.gradlehook:GradleHook:1.3.1"
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
-// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
+apply plugin: 'com.matthewprenger.cursegradle'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
+apply plugin: "net.dumbcode.gradlehook"
 
-version = "${mc_version}-${mod_version}"
+apply from: 'https://raw.githubusercontent.com/SizableShrimp/Forge-Class-Remapper/main/classremapper.gradle'
+
+
 group = 'com.alaharranhonor.swlm' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'swlm'
 
-sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
+java.toolchain.languageVersion = JavaLanguageVersion.of(17) // MC 1.18.2 = Java 17
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
@@ -99,13 +105,19 @@ repositories {
         dirs 'lib'
     }
     maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.5-36.2.26'
-    implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.16.5:3.0.35")
-    implementation fg.deobf("com.alaharranhonor.swem:swem:${swem_version}")
-    implementation fg.deobf("com.alaharranhonor.swdm:swdm:${swdm_version}")
+    minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
+    //implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.16.5:3.0.35")
+    //implementation fg.deobf("com.alaharranhonor.swem:swem:${swem_version}")
+    //implementation fg.deobf("curse.maven:swdm-381070:${swdm_slug}")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
 }
@@ -147,5 +159,128 @@ publishing {
         maven {
             url "file:///${project.projectDir}/mcmodsrepo"
         }
+    }
+}
+
+// Thanks to McJty
+String getCurseforgeChangelogText() {
+    def changelogFile = file('changelog.txt')
+    String str = ''
+    int lineCount = 0
+    boolean done = false
+    changelogFile.eachLine {
+        if (done || it == null) {
+            return
+        }
+        if (it.size() > 1) {
+            def temp = it
+            if (lineCount == 0) {
+                temp = "${modname} ${version}"
+                temp = "<h2>$temp</h2>"
+            } else if (it.startsWith('-')) {
+                temp = "&nbsp;&nbsp;&nbsp;$temp"
+                temp = temp.replaceAll("(\\S+\\/\\S+)#([0-9]+)\\b", "<a href=\"https://github.com/\$1/issues/\$2\">\$0</a>");
+                temp = temp.replaceAll("#([0-9]+)\\b(?!<\\/a>)", "<a href=\"https://github.com/$github_project/issues/\$1\">\$0</a>");
+            } else {
+                temp = "<h4>$temp</h4>"
+            }
+            str += "$temp<br/>"
+            lineCount++
+            return
+        } else {
+            done = true
+        }
+    }
+    return str
+}
+
+String getDiscordChangelog() {
+    def changelogFile = file('changelog.txt')
+    String str = ''
+    int lineCount = 0
+    boolean done = false
+    changelogFile.eachLine {
+        if (done || it == null) {
+            return
+        }
+        if (it.size() > 1) {
+            def temp = it
+
+           if (it.startsWith('-')) {
+                temp = temp.replaceAll("(\\S+\\/\\S+)#([0-9]+)\\b", "[\$0](https://github.com/\$1/issues/\$2)");
+                temp = temp.replaceAll("#([0-9]+)\\b(?!\\))", "[\$0](https://github.com/$github_project/issues/\$1)");
+            }
+            str += "$temp\n"
+            lineCount++
+            return
+        } else {
+            done = true
+        }
+    }
+    return str
+}
+
+import com.matthewprenger.cursegradle.CurseArtifact
+def stabilitySuffix = ""
+
+tasks.curseforge.enabled = project.hasProperty('curseforge_key')
+
+
+curseforge {
+    if (project.hasProperty('curseforge_key')) {
+        apiKey = project.curseforge_key
+    }
+
+    project {
+
+        id = project.projectId
+        changelog = System.getenv('CHANGELOG') == null || System.getenv('CHANGELOG').equals('none') ? getCurseforgeChangelogText() : System.getenv('CHANGELOG')
+        changelogType = 'html'
+        releaseType = project.curse_type
+        addGameVersion project.mc_version
+        mainArtifact(jar) {
+            displayName = "${modname} - ${version}"
+        }
+        relations {
+            optionalDependency 'swdm'
+        }
+    }
+}
+
+
+tasks.getByName("curseforge").doLast {
+    if (project.hasProperty('swe_announcements_hook')) {
+        println "Preparing webhook"
+        def fileId = (tasks.getByName("curseforge$project.projectId").property("mainArtifact") as CurseArtifact).fileID
+        def curseforge_download = "https://www.curseforge.com/minecraft/mc-mods/$project.curseforge_slug/files/$fileId"
+        def release_url = curseforge_download
+        def discordChangelog = getDiscordChangelog()
+
+        def result = DiscordBuilder.createForm {
+            embed {
+                color = Integer.decode(project.project_color)
+                author {
+                    name = project.project_name + stabilitySuffix
+                    url = project.project_url
+                }
+                thumbnail { url = project.project_logo }
+                title = "$project.project_name $project.version Released"
+                url = release_url
+                field {
+                    name = "Changes:"
+                    value = discordChangelog
+                }
+                field {
+                    name = "Downloads:"
+                    value = "[$curseforge_emote CurseForge]($curseforge_download)"
+                }
+                footer {
+                    text = "A $project.loader_name Mod"
+                    icon_url = project.loader_icon
+                }
+            }
+        }.send(project.property('swe_announcements_hook'))
+
+        println "Discord Webhook Response: " + result.responseCode
     }
 }

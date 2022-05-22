@@ -1,19 +1,17 @@
 package com.alaharranhonor.swlm;
 
 import com.alaharranhonor.swlm.config.ConfigHolder;
-import com.alaharranhonor.swlm.util.init.BlockInit;
-import com.alaharranhonor.swlm.util.init.SWDMInit;
-import com.alaharranhonor.swlm.util.init.SWEMInit;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
+import com.alaharranhonor.swlm.util.init.*;
+import com.alaharranhonor.swlm.world.gen.SWLMOreGen;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -32,8 +30,11 @@ public class SWLM
         modEventBus.addListener(this::setup);
 
         BlockInit.init();
+        SWLMConfiguredFeature.CONFIGURED_FEATURES.register(modEventBus);
+        SWLMPlacedFeature.PLACED_FEATURES.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.addListener(SWLMOreGen::onBiomeLoadingEvent);
 
         modLoadingContext.registerConfig(ModConfig.Type.SERVER, ConfigHolder.SERVER_SPEC);
     }
@@ -47,19 +48,12 @@ public class SWLM
             SWEMInit.init();
         }
     }
-    public static final ItemGroup SWLMTAB = new ItemGroup("SWLMTab") {
+    public static final CreativeModeTab SWLMTAB = new CreativeModeTab("SWLMTab") {
 
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(BlockInit.STAR_WORM.get());
         }
-
-
-
-
-
-
-
 
         @Override
         public boolean hasSearchBar() {
