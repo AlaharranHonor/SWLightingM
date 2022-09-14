@@ -1,2 +1,2 @@
-1.18.2-1.1.1:
-- Ported to 1.18.2
+1.18.2-1.1.2:
+- Made Star Worm cobble drop Star worms instead of block.
