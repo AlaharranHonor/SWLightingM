@@ -23,7 +23,7 @@ public class BlockInit {
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
-    public static final RegistryObject<Block> STAR_WORM_COBBLE = BLOCKS.register("star_worm_cobble", () -> new Block(Block.Properties.copy(Blocks.STONE).lightLevel((state) -> 7)));
+    public static final RegistryObject<Block> STAR_WORM_COBBLE = BLOCKS.register("star_worm_cobble", () -> new Block(Block.Properties.copy(Blocks.STONE).harvestTool(ToolType.PICKAXE).harvestLevel(1).lightLevel((state) -> 7)));
 
     // All star worm block variants
     public static final RegistryObject<Block> ACACIA_LOG = BLOCKS.register("acacia_log", () -> new RotatedPillarBlock(Block.Properties.copy(Blocks.ACACIA_LOG).lightLevel((state) -> 15)));
@@ -215,7 +215,7 @@ public class BlockInit {
     public static final RegistryObject<Block> MAGENTA_CONCRETE = BLOCKS.register("magenta_concrete", () -> new Block(Block.Properties.copy(Blocks.MAGENTA_CONCRETE).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> ORANGE_CONCRETE = BLOCKS.register("orange_concrete", () -> new Block(Block.Properties.copy(Blocks.ORANGE_CONCRETE).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> PINK_CONCRETE = BLOCKS.register("pink_concrete", () -> new Block(Block.Properties.copy(Blocks.PINK_CONCRETE).lightLevel((state) -> 15)));
-    public static final RegistryObject<Block> PURPLE_CONCRETE= BLOCKS.register("purple_concrete", () -> new Block(Block.Properties.copy(Blocks.PURPLE_CONCRETE).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> PURPLE_CONCRETE = BLOCKS.register("purple_concrete", () -> new Block(Block.Properties.copy(Blocks.PURPLE_CONCRETE).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> RED_CONCRETE = BLOCKS.register("red_concrete", () -> new Block(Block.Properties.copy(Blocks.RED_CONCRETE).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> WHITE_CONCRETE = BLOCKS.register("white_concrete", () -> new Block(Block.Properties.copy(Blocks.WHITE_CONCRETE).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> YELLOW_CONCRETE = BLOCKS.register("yellow_concrete", () -> new Block(Block.Properties.copy(Blocks.YELLOW_CONCRETE).lightLevel((state) -> 15)));
@@ -242,7 +242,7 @@ public class BlockInit {
     public static final RegistryObject<Block> JUNGLE_LEAVES = BLOCKS.register("jungle_leaves", () -> new Block(Block.Properties.copy(Blocks.JUNGLE_LEAVES).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> OAK_LEAVES = BLOCKS.register("oak_leaves", () -> new Block(Block.Properties.copy(Blocks.OAK_LEAVES).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> SPRUCE_LEAVES = BLOCKS.register("spruce_leaves", () -> new Block(Block.Properties.copy(Blocks.SPRUCE_LEAVES).lightLevel((state) -> 15)));
-    
+
     public static final RegistryObject<Block> GRASS_BLOCK = BLOCKS.register("grass_block", () -> new GrassBlock(Block.Properties.copy(Blocks.GRASS_BLOCK).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> COARSE_DIRT = BLOCKS.register("coarse_dirt", () -> new Block(Block.Properties.copy(Blocks.COARSE_DIRT).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> DIRT = BLOCKS.register("dirt", () -> new Block(Block.Properties.copy(Blocks.DIRT).lightLevel((state) -> 15)));
@@ -264,7 +264,7 @@ public class BlockInit {
     public static final RegistryObject<Block> RED_STAINED_GLASS = BLOCKS.register("red_stained_glass", () -> new StainedGlassBlock(DyeColor.RED, Block.Properties.copy(Blocks.RED_STAINED_GLASS).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> WHITE_STAINED_GLASS = BLOCKS.register("white_stained_glass", () -> new StainedGlassBlock(DyeColor.WHITE, Block.Properties.copy(Blocks.WHITE_STAINED_GLASS).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> YELLOW_STAINED_GLASS = BLOCKS.register("yellow_stained_glass", () -> new StainedGlassBlock(DyeColor.YELLOW, Block.Properties.copy(Blocks.YELLOW_STAINED_GLASS).lightLevel((state) -> 15)));
-    
+
     public static final RegistryObject<Item> STAR_WORM = ITEMS.register("star_worm", () -> new Item(new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> STAR_WORM_GOOP = ITEMS.register("star_worm_goop", () -> new Item(new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> PESTLE_MORTAR = ITEMS.register("pestle_mortar", () -> new PestleMortarItem(new Item.Properties().stacksTo(1).tab(SWLM.SWLMTAB)));
@@ -323,9 +323,9 @@ public class BlockInit {
     public static final RegistryObject<Item> REDSTONE_ITEM = ITEMS.register("redstone", () -> new BlockItem(REDSTONE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> LAPIS_ITEM = ITEMS.register("lapis", () -> new BlockItem(LAPIS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> NETHERITE_ITEM = ITEMS.register("netherite", () -> new BlockItem(NETHERITE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> BONE_ITEM = ITEMS.register("bone", () -> new  BlockItem(BONE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> BONE_ITEM = ITEMS.register("bone", () -> new BlockItem(BONE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> GRAVEL_ITEM = ITEMS.register("gravel", () -> new BlockItem(GRAVEL.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> CLAY_ITEM= ITEMS.register("clay", () -> new BlockItem(CLAY.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> CLAY_ITEM = ITEMS.register("clay", () -> new BlockItem(CLAY.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> BRICKS_ITEM = ITEMS.register("bricks", () -> new BlockItem(BRICKS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> SAND_ITEM = ITEMS.register("sand", () -> new BlockItem(SAND.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> SANDSTONE_ITEM = ITEMS.register("sandstone", () -> new BlockItem(SANDSTONE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
@@ -357,22 +357,22 @@ public class BlockInit {
     public static final RegistryObject<Item> CRACKED_POLISHED_BLACKSTONE_BRICKS_ITEM = ITEMS.register("cracked_polished_blackstone_bricks", () -> new BlockItem(CRACKED_POLISHED_BLACKSTONE_BRICKS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> CHISELED_POLISHED_BLACKSTONE_ITEM = ITEMS.register("chiseled_polished_blackstone", () -> new BlockItem(CHISELED_POLISHED_BLACKSTONE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> GILDED_BLACKSTONE_ITEM = ITEMS.register("gilded_blackstone", () -> new BlockItem(GILDED_BLACKSTONE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> NETHER_WART_ITEM= ITEMS.register("nether_wart", () -> new BlockItem(NETHER_WART.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> CRIMSON_STEM_ITEM= ITEMS.register("crimson_stem", () -> new BlockItem(CRIMSON_STEM.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> STRIPPED_CRIMSON_STEM_ITEM= ITEMS.register("stripped_crimson_stem", () -> new BlockItem(STRIPPED_CRIMSON_STEM.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> CRIMSON_HYPHAE_ITEM= ITEMS.register("crimson_hyphae", () -> new BlockItem(CRIMSON_HYPHAE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> STRIPPED_CRIMSON_HYPHAE_ITEM= ITEMS.register("stripped_crimson_hyphae", () -> new BlockItem(STRIPPED_CRIMSON_HYPHAE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> CRIMSON_PLANKS_ITEM= ITEMS.register("crimson_planks", () -> new BlockItem(CRIMSON_PLANKS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> WARPED_WART_ITEM= ITEMS.register("warped_wart", () -> new BlockItem(WARPED_WART.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> WARPED_STEM_ITEM= ITEMS.register("warped_stem", () -> new BlockItem(WARPED_STEM.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> STRIPPED_WARPED_STEM_ITEM= ITEMS.register("stripped_warped_stem", () -> new BlockItem(STRIPPED_WARPED_STEM.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> WARPED_HYPHAE_ITEM= ITEMS.register("warped_hyphae", () -> new BlockItem(WARPED_HYPHAE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> STRIPPED_WARPED_HYPHAE_ITEM= ITEMS.register("stripped_warped_hyphae", () -> new BlockItem(STRIPPED_WARPED_HYPHAE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> WARPED_PLANKS_ITEM= ITEMS.register("warped_planks", () -> new BlockItem(WARPED_PLANKS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> NETHER_WART_ITEM = ITEMS.register("nether_wart", () -> new BlockItem(NETHER_WART.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> CRIMSON_STEM_ITEM = ITEMS.register("crimson_stem", () -> new BlockItem(CRIMSON_STEM.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> STRIPPED_CRIMSON_STEM_ITEM = ITEMS.register("stripped_crimson_stem", () -> new BlockItem(STRIPPED_CRIMSON_STEM.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> CRIMSON_HYPHAE_ITEM = ITEMS.register("crimson_hyphae", () -> new BlockItem(CRIMSON_HYPHAE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> STRIPPED_CRIMSON_HYPHAE_ITEM = ITEMS.register("stripped_crimson_hyphae", () -> new BlockItem(STRIPPED_CRIMSON_HYPHAE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> CRIMSON_PLANKS_ITEM = ITEMS.register("crimson_planks", () -> new BlockItem(CRIMSON_PLANKS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> WARPED_WART_ITEM = ITEMS.register("warped_wart", () -> new BlockItem(WARPED_WART.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> WARPED_STEM_ITEM = ITEMS.register("warped_stem", () -> new BlockItem(WARPED_STEM.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> STRIPPED_WARPED_STEM_ITEM = ITEMS.register("stripped_warped_stem", () -> new BlockItem(STRIPPED_WARPED_STEM.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> WARPED_HYPHAE_ITEM = ITEMS.register("warped_hyphae", () -> new BlockItem(WARPED_HYPHAE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> STRIPPED_WARPED_HYPHAE_ITEM = ITEMS.register("stripped_warped_hyphae", () -> new BlockItem(STRIPPED_WARPED_HYPHAE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> WARPED_PLANKS_ITEM = ITEMS.register("warped_planks", () -> new BlockItem(WARPED_PLANKS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> SOUL_SAND_ITEM = ITEMS.register("soul_sand", () -> new BlockItem(SOUL_SAND.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> SOUL_SOIL_ITEM = ITEMS.register("soul_soil", () -> new BlockItem(SOUL_SOIL.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> QUARTZ_ITEM = ITEMS.register("quartz", () -> new BlockItem(QUARTZ.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> QUARTZ_PILLAR_ITEM = ITEMS.register("quartz_pillar", () -> new  BlockItem(QUARTZ_PILLAR.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> QUARTZ_PILLAR_ITEM = ITEMS.register("quartz_pillar", () -> new BlockItem(QUARTZ_PILLAR.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> CHISELED_QUARTZ_ITEM = ITEMS.register("chiseled_quartz", () -> new BlockItem(CHISELED_QUARTZ.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> SMOOTH_QUARTZ_ITEM = ITEMS.register("smooth_quartz", () -> new BlockItem(SMOOTH_QUARTZ.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> QUARTZ_BRICKS_ITEM = ITEMS.register("quartz_bricks", () -> new BlockItem(QUARTZ_BRICKS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
@@ -408,16 +408,16 @@ public class BlockInit {
     public static final RegistryObject<Item> RED_TERRACOTTA_ITEM = ITEMS.register("red_terracotta", () -> new BlockItem(RED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> WHITE_TERRACOTTA_ITEM = ITEMS.register("white_terracotta", () -> new BlockItem(WHITE_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> YELLOW_TERRACOTTA_ITEM = ITEMS.register("yellow_terracotta", () -> new BlockItem(YELLOW_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> BLACK_GLAZED_TERRACOTTA_ITEM = ITEMS.register("black_glazed_terracotta", () -> new  BlockItem(BLACK_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> BLUE_GLAZED_TERRACOTTA_ITEM = ITEMS.register("blue_glazed_terracotta", () -> new  BlockItem(BLUE_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> BROWN_GLAZED_TERRACOTTA_ITEM = ITEMS.register("brown_glazed_terracotta", () -> new  BlockItem(BROWN_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> BLACK_GLAZED_TERRACOTTA_ITEM = ITEMS.register("black_glazed_terracotta", () -> new BlockItem(BLACK_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> BLUE_GLAZED_TERRACOTTA_ITEM = ITEMS.register("blue_glazed_terracotta", () -> new BlockItem(BLUE_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> BROWN_GLAZED_TERRACOTTA_ITEM = ITEMS.register("brown_glazed_terracotta", () -> new BlockItem(BROWN_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> CYAN_GLAZED_TERRACOTTA_ITEM = ITEMS.register("cyan_glazed_terracotta", () -> new BlockItem(CYAN_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> GRAY_GLAZED_TERRACOTTA_ITEM = ITEMS.register("gray_glazed_terracotta", () -> new BlockItem(GRAY_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> GREEN_GLAZED_TERRACOTTA_ITEM = ITEMS.register("green_glazed_terracotta", () -> new BlockItem(GREEN_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> LIGHT_BLUE_GLAZED_TERRACOTTA_ITEM = ITEMS.register("light_blue_glazed_terracotta", () -> new BlockItem(LIGHT_BLUE_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> LIGHT_GRAY_GLAZED_TERRACOTTA_ITEM = ITEMS.register("light_gray_glazed_terracotta", () -> new BlockItem(LIGHT_GRAY_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> LIME_GLAZED_TERRACOTTA_ITEM = ITEMS.register("lime_glazed_terracotta", () -> new BlockItem(LIME_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final	RegistryObject<Item> MAGENTA_GLAZED_TERRACOTTA_ITEM = ITEMS.register("magenta_glazed_terracotta", () -> new BlockItem(MAGENTA_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> MAGENTA_GLAZED_TERRACOTTA_ITEM = ITEMS.register("magenta_glazed_terracotta", () -> new BlockItem(MAGENTA_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> ORANGE_GLAZED_TERRACOTTA_ITEM = ITEMS.register("orange_glazed_terracotta", () -> new BlockItem(ORANGE_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> PINK_GLAZED_TERRACOTTA_ITEM = ITEMS.register("pink_glazed_terracotta", () -> new BlockItem(PINK_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> PURPLE_GLAZED_TERRACOTTA_ITEM = ITEMS.register("purple_glazed_terracotta", () -> new BlockItem(PURPLE_GLAZED_TERRACOTTA.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
@@ -434,7 +434,7 @@ public class BlockInit {
     public static final RegistryObject<Item> LIGHT_GRAY_CONCRETE_POWDER_ITEM = ITEMS.register("light_gray_concrete_powder", () -> new BlockItem(LIGHT_GRAY_CONCRETE_POWDER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> LIME_CONCRETE_POWDER_ITEM = ITEMS.register("lime_concrete_powder", () -> new BlockItem(LIME_CONCRETE_POWDER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> MAGENTA_CONCRETE_POWDER_ITEM = ITEMS.register("magenta_concrete_powder", () -> new BlockItem(MAGENTA_CONCRETE_POWDER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> ORANGE_CONCRETE_POWDER_ITEM= ITEMS.register("orange_concrete_powder", () -> new BlockItem(ORANGE_CONCRETE_POWDER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> ORANGE_CONCRETE_POWDER_ITEM = ITEMS.register("orange_concrete_powder", () -> new BlockItem(ORANGE_CONCRETE_POWDER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> PINK_CONCRETE_POWDER_ITEM = ITEMS.register("pink_concrete_powder", () -> new BlockItem(PINK_CONCRETE_POWDER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> PURPLE_CONCRETE_POWDER_ITEM = ITEMS.register("purple_concrete_powder", () -> new BlockItem(PURPLE_CONCRETE_POWDER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> RED_CONCRETE_POWDER_ITEM = ITEMS.register("red_concrete_powder", () -> new BlockItem(RED_CONCRETE_POWDER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
@@ -452,7 +452,7 @@ public class BlockInit {
     public static final RegistryObject<Item> MAGENTA_CONCRETE_ITEM = ITEMS.register("magenta_concrete", () -> new BlockItem(MAGENTA_CONCRETE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> ORANGE_CONCRETE_ITEM = ITEMS.register("orange_concrete", () -> new BlockItem(ORANGE_CONCRETE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> PINK_CONCRETE_ITEM = ITEMS.register("pink_concrete", () -> new BlockItem(PINK_CONCRETE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> PURPLE_CONCRETE_ITEM= ITEMS.register("purple_concrete", () -> new BlockItem(PURPLE_CONCRETE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> PURPLE_CONCRETE_ITEM = ITEMS.register("purple_concrete", () -> new BlockItem(PURPLE_CONCRETE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> RED_CONCRETE_ITEM = ITEMS.register("red_concrete", () -> new BlockItem(RED_CONCRETE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> WHITE_CONCRETE_ITEM = ITEMS.register("white_concrete", () -> new BlockItem(WHITE_CONCRETE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> YELLOW_CONCRETE_ITEM = ITEMS.register("yellow_concrete", () -> new BlockItem(YELLOW_CONCRETE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
@@ -499,7 +499,7 @@ public class BlockInit {
     public static final RegistryObject<Item> RED_STAINED_GLASS_ITEM = ITEMS.register("red_stained_glass", () -> new BlockItem(RED_STAINED_GLASS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> WHITE_STAINED_GLASS_ITEM = ITEMS.register("white_stained_glass", () -> new BlockItem(WHITE_STAINED_GLASS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> YELLOW_STAINED_GLASS_ITEM = ITEMS.register("yellow_stained_glass", () -> new BlockItem(YELLOW_STAINED_GLASS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    
+
 }
 
 
