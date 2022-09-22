@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "swlm:terracotta",
+    "swlm:white_terracotta",
+    "swlm:orange_terracotta",
+    "swlm:magenta_terracotta",
+    "swlm:light_blue_terracotta",
+    "swlm:yellow_terracotta",
+    "swlm:lime_terracotta",
+    "swlm:pink_terracotta",
+    "swlm:gray_terracotta",
+    "swlm:light_gray_terracotta",
+    "swlm:cyan_terracotta",
+    "swlm:purple_terracotta",
+    "swlm:blue_terracotta",
+    "swlm:brown_terracotta",
+    "swlm:green_terracotta",
+    "swlm:red_terracotta",
+    "swlm:black_terracotta"
+  ]
+}

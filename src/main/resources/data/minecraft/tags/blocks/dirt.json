@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "swlm:dirt",
+    "swlm:grass_block",
+    "swlm:podzol",
+    "swlm:coarse_dirt",
+    "swlm:mycelium",
+    "swlm:rooted_dirt",
+    "swlm:moss_block"
+  ]
+}

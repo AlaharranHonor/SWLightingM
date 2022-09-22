@@ -1,6 +1,26 @@
 {
+  "replace": false,
   "values": [
-    "swlm:star_worm_cobble"
-  ],
-  "replace": false
+    "swlm:star_worm_cobble",
+    "swlm:iron_block",
+    "swlm:raw_iron_block",
+    "swlm:lapis_block",
+    "swlm:copper_block",
+    "swlm:raw_copper_block",
+    "swlm:cut_copper",
+    "swlm:weathered_copper",
+    "swlm:weathered_cut_copper",
+    "swlm:oxidized_copper",
+    "swlm:oxidized_cut_copper",
+    "swlm:exposed_copper",
+    "swlm:exposed_cut_copper",
+    "swlm:waxed_copper_block",
+    "swlm:waxed_cut_copper",
+    "swlm:waxed_weathered_copper",
+    "swlm:waxed_weathered_cut_copper",
+    "swlm:waxed_exposed_copper",
+    "swlm:waxed_exposed_cut_copper",
+    "swlm:waxed_oxidized_copper",
+    "swlm:waxed_oxidized_cut_copper"
+  ]
 }

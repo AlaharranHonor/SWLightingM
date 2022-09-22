@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#swlm:sand",
+    "#swlm:dirt",
+    "swlm:bamboo",
+    "swlm:bamboo_sapling",
+    "swlm:gravel"
+  ]
+}

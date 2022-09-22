@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#swlm:dirt",
+    "#swlm:sand",
+    "#swlm:terracotta",
+    "swlm:snow_block"
+  ]
+}

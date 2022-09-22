@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "swlm:obsidian",
+    "swlm:crying_obsidian",
+    "swlm:netherite_block",
+    "swlm:respawn_anchor",
+    "swlm:ancient_debris"
+  ]
+}
