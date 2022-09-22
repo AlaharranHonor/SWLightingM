@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "swlm:nether_wart_block",
+    "swlm:warped_wart_block",
+    "swlm:hay_block",
+    "swlm:dried_kelp_block",
+    "swlm:shroomlight",
+    "swlm:sponge",
+    "swlm:wet_sponge",
+    "swlm:jungle_leaves",
+    "swlm:oak_leaves",
+    "swlm:spruce_leaves",
+    "swlm:dark_oak_leaves",
+    "swlm:acacia_leaves",
+    "swlm:birch_leaves",
+    "swlm:azalea_leaves",
+    "swlm:flowering_azalea_leaves",
+    "swlm:moss_block"
+  ]
+}

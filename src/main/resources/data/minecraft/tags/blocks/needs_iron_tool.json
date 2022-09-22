@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "swlm:diamond_block",
+    "swlm:emerald_block",
+    "swlm:gold_block",
+    "swlm:raw_gold_block"
+  ]
+}

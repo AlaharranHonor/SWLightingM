@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "swlm:bedrock",
+    "swlm:obsidian",
+    "swlm:crying_obsidian",
+    "swlm:end_stone"
+  ]
+}

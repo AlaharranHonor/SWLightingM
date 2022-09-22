@@ -20,6 +20,7 @@ public class ClientEventBusSubscriber {
         ItemBlockRenderTypes.setRenderLayer(BlockInit.JUNGLE_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.OAK_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.SPRUCE_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.GLASS.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.BLACK_STAINED_GLASS.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.BLUE_STAINED_GLASS.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.BROWN_STAINED_GLASS.get(), RenderType.translucent());

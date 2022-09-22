@@ -210,6 +210,7 @@ public class SWLMUtil {
         put(BlockInit.RED_WOOL_ITEM.get(), Blocks.RED_WOOL);
         put(BlockInit.WHITE_WOOL_ITEM.get(), Blocks.WHITE_WOOL);
         put(BlockInit.YELLOW_WOOL_ITEM.get(), Blocks.YELLOW_WOOL);
+        put(BlockInit.GLASS_ITEM.get(), Blocks.GLASS);
         put(BlockInit.BLACK_STAINED_GLASS_ITEM.get(), Blocks.BLACK_STAINED_GLASS);
         put(BlockInit.BLUE_STAINED_GLASS_ITEM.get(), Blocks.BLUE_STAINED_GLASS);
         put(BlockInit.BROWN_STAINED_GLASS_ITEM.get(), Blocks.BROWN_STAINED_GLASS);
