@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:emerald_block"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:emerald",
+    "count": 9
+  }
+}

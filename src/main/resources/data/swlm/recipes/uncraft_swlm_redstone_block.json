@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:redstone_block"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:redstone",
+    "count": 9
+  }
+}

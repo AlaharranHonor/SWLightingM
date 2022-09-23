@@ -4,6 +4,7 @@ import com.alaharranhonor.swlm.SWLM;
 import com.alaharranhonor.swlm.util.init.BlockInit;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -38,5 +39,8 @@ public class ClientEventBusSubscriber {
         ItemBlockRenderTypes.setRenderLayer(BlockInit.WHITE_STAINED_GLASS.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.YELLOW_STAINED_GLASS.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.GRASS_BLOCK.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.WARPED_NYLIUM.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.CRIMSON_NYLIUM.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.AZALEA_LEAVES.get(), RenderType.cutout());
     }
 }
