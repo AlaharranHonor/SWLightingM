@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "swlm:bricks"
+          "name": "swlm:prismarine_bricks"
         }
       ],
       "conditions": [

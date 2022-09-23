@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:star_worm_goop"
+    },
+    {
+      "item": "minecraft:iron_block"
+    }
+  ],
+  "result": {
+    "item": "swlm:iron_block"
+  }
+}

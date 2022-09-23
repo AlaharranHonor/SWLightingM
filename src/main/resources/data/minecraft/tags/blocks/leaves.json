@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "swlm:jungle_leaves",
+    "swlm:oak_leaves",
+    "swlm:spruce_leaves",
+    "swlm:dark_oak_leaves",
+    "swlm:acacia_leaves",
+    "swlm:birch_leaves",
+    "swlm:azalea_leaves",
+    "swlm:flowering_azalea_leaves"
+  ]
+}

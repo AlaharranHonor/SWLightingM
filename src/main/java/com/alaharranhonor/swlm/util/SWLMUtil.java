@@ -54,15 +54,15 @@ public class SWLMUtil {
         put(BlockInit.CRACKED_STONE_BRICKS_ITEM.get(), Blocks.CRACKED_STONE_BRICKS);
         put(BlockInit.MOSSY_STONE_BRICKS_ITEM.get(), Blocks.MOSSY_STONE_BRICKS);
         put(BlockInit.CHISELED_STONE_BRICKS_ITEM.get(), Blocks.CHISELED_STONE_BRICKS);
-        put(BlockInit.COAL_ITEM.get(), Blocks.COAL_BLOCK);
-        put(BlockInit.IRON_ITEM.get(), Blocks.IRON_BLOCK);
-        put(BlockInit.GOLD_ITEM.get(), Blocks.GOLD_BLOCK);
-        put(BlockInit.DIAMOND_ITEM.get(), Blocks.DIAMOND_BLOCK);
-        put(BlockInit.EMERALD_ITEM.get(), Blocks.EMERALD_BLOCK);
-        put(BlockInit.REDSTONE_ITEM.get(), Blocks.REDSTONE_BLOCK);
-        put(BlockInit.LAPIS_ITEM.get(), Blocks.LAPIS_BLOCK);
-        put(BlockInit.NETHERITE_ITEM.get(), Blocks.NETHERITE_BLOCK);
-        put(BlockInit.BONE_ITEM.get(), Blocks.BONE_BLOCK);
+        put(BlockInit.COAL_BLOCK_ITEM.get(), Blocks.COAL_BLOCK);
+        put(BlockInit.IRON_BLOCK_ITEM.get(), Blocks.IRON_BLOCK);
+        put(BlockInit.GOLD_BLOCK_ITEM.get(), Blocks.GOLD_BLOCK);
+        put(BlockInit.DIAMOND_BLOCK_ITEM.get(), Blocks.DIAMOND_BLOCK);
+        put(BlockInit.EMERALD_BLOCK_ITEM.get(), Blocks.EMERALD_BLOCK);
+        put(BlockInit.REDSTONE_BLOCK_ITEM.get(), Blocks.REDSTONE_BLOCK);
+        put(BlockInit.LAPIS_BLOCK_ITEM.get(), Blocks.LAPIS_BLOCK);
+        put(BlockInit.NETHERITE_BLOCK_ITEM.get(), Blocks.NETHERITE_BLOCK);
+        put(BlockInit.BONE_BLOCK_ITEM.get(), Blocks.BONE_BLOCK);
         put(BlockInit.GRAVEL_ITEM.get(), Blocks.GRAVEL);
         put(BlockInit.CLAY_ITEM.get(), Blocks.CLAY);
         put(BlockInit.BRICKS_ITEM.get(), Blocks.BRICKS);
@@ -80,10 +80,6 @@ public class SWLMUtil {
         put(BlockInit.PRISMARINE_BRICKS_ITEM.get(), Blocks.PRISMARINE_BRICKS);
         put(BlockInit.DARK_PRISMARINE_ITEM.get(), Blocks.DARK_PRISMARINE);
         put(BlockInit.DRIED_KELP_ITEM.get(), Blocks.DRIED_KELP_BLOCK);
-        put(BlockInit.DEAD_BRAIN_CORAL_ITEM.get(), Blocks.DEAD_BRAIN_CORAL_BLOCK);
-        put(BlockInit.DEAD_BUBBLE_CORAL_ITEM.get(), Blocks.DEAD_BUBBLE_CORAL_BLOCK);
-        put(BlockInit.DEAD_FIRE_CORAL_ITEM.get(), Blocks.DEAD_FIRE_CORAL_BLOCK);
-        put(BlockInit.DEAD_HORN_CORAL_ITEM.get(), Blocks.DEAD_HORN_CORAL_BLOCK);
         put(BlockInit.OBSIDIAN_ITEM.get(), Blocks.OBSIDIAN);
         put(BlockInit.NETHERRACK_ITEM.get(), Blocks.NETHERRACK);
         put(BlockInit.CHISELED_NETHER_BRICKS_ITEM.get(), Blocks.CHISELED_NETHER_BRICKS);
@@ -109,7 +105,7 @@ public class SWLMUtil {
         put(BlockInit.WARPED_PLANKS_ITEM.get(), Blocks.WARPED_PLANKS);
         put(BlockInit.SOUL_SAND_ITEM.get(), Blocks.SOUL_SAND);
         put(BlockInit.SOUL_SOIL_ITEM.get(), Blocks.SOUL_SOIL);
-        put(BlockInit.QUARTZ_ITEM.get(), Blocks.QUARTZ_BLOCK);
+        put(BlockInit.QUARTZ_BLOCK_ITEM.get(), Blocks.QUARTZ_BLOCK);
         put(BlockInit.QUARTZ_PILLAR_ITEM.get(), Blocks.QUARTZ_PILLAR);
         put(BlockInit.QUARTZ_BRICKS_ITEM.get(), Blocks.QUARTZ_BRICKS);
         put(BlockInit.CHISELED_QUARTZ_ITEM.get(), Blocks.CHISELED_QUARTZ_BLOCK);
@@ -122,12 +118,10 @@ public class SWLMUtil {
         put(BlockInit.PURPUR_PILLAR_ITEM.get(), Blocks.PURPUR_PILLAR);
         put(BlockInit.BROWN_MUSHROOM_ITEM.get(), Blocks.BROWN_MUSHROOM_BLOCK);
         put(BlockInit.RED_MUSHROOM_ITEM.get(), Blocks.RED_MUSHROOM_BLOCK);
-        put(BlockInit.SNOW_ITEM.get(), Blocks.SNOW_BLOCK);
+        put(BlockInit.SNOW_BLOCK_ITEM.get(), Blocks.SNOW_BLOCK);
         put(BlockInit.ICE_ITEM.get(), Blocks.ICE);
         put(BlockInit.PACKED_ICE_ITEM.get(), Blocks.PACKED_ICE);
         put(BlockInit.BLUE_ICE_ITEM.get(), Blocks.BLUE_ICE);
-        put(BlockInit.SLIME_ITEM.get(), Blocks.SLIME_BLOCK);
-        put(BlockInit.HONEY_ITEM.get(), Blocks.HONEY_BLOCK);
         put(BlockInit.HONEYCOMB_ITEM.get(), Blocks.HONEYCOMB_BLOCK);
         put(BlockInit.TERRACOTTA_ITEM.get(), Blocks.TERRACOTTA);
         put(BlockInit.BLACK_TERRACOTTA_ITEM.get(), Blocks.BLACK_TERRACOTTA);
@@ -237,6 +231,16 @@ public class SWLMUtil {
         put(BlockInit.JUNGLE_LEAVES_ITEM.get(), Blocks.JUNGLE_LEAVES);
         put(BlockInit.OAK_LEAVES_ITEM.get(), Blocks.OAK_LEAVES);
         put(BlockInit.SPRUCE_LEAVES_ITEM.get(), Blocks.SPRUCE_LEAVES);
+
+        put(BlockInit.BEDROCK_ITEM.get(), Blocks.BEDROCK);
+        put(BlockInit.CRIMSON_NYLIUM_ITEM.get(), Blocks.CRIMSON_NYLIUM);
+        put(BlockInit.CRYING_OBSIDIAN_ITEM.get(), Blocks.CRYING_OBSIDIAN);
+        put(BlockInit.POLISHED_BLACKSTONE_BRICKS_ITEM.get(), Blocks.POLISHED_BLACKSTONE_BRICKS);
+        put(BlockInit.WARPED_NYLIUM_ITEM.get(), Blocks.WARPED_NYLIUM);
+
+        put(BlockInit.AMETHYST_BLOCK_ITEM.get(), Blocks.AMETHYST_BLOCK);
+        put(BlockInit.AZALEA_LEAVES_ITEM.get(), Blocks.AZALEA_LEAVES);
+        put(BlockInit.CALCITE_ITEM.get(), Blocks.CALCITE);
 
 
     }};

@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "swlm:amethyst_block",
-    "swlm:budding_amethyst"
+    "swlm:amethyst_block"
   ]
 }

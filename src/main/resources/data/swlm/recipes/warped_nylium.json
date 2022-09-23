@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "sw_planks",
+  "ingredients": [
+    {
+      "item": "swlm:star_worm_goop"
+    },
+    {
+      "item": "minecraft:warped_nylium"
+    }
+  ],
+  "result": {
+    "item": "swlm:warped_nylium"
+  }
+}

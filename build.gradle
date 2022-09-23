@@ -55,7 +55,7 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
-            args "--username", "Silverwolf114201", "--uuid", "2b6094b0-93cc-45ac-b64b-309ef224e4eb"
+            args "--username", "Mothfet", "--uuid", "6bdf23ef-4fe3-4964-a166-59a4c3f830ab"
 
             mods {
                 examplemod {
