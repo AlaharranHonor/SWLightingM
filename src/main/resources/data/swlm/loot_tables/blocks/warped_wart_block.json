@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "swlm:warped_wart"
+          "name": "swlm:warped_wart_block"
         }
       ],
       "conditions": [

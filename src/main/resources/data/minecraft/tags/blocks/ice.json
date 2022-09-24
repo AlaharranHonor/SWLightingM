@@ -3,7 +3,6 @@
   "values": [
     "swlm:ice",
     "swlm:packed_ice",
-    "swlm:blue_ice",
-    "swlm:frosted_ice"
+    "swlm:blue_ice"
   ]
 }

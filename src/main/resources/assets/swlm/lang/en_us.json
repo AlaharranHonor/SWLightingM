@@ -185,7 +185,7 @@
   "block.swlm.warped_hyphae": "SW Warped Hyphae",
   "block.swlm.warped_planks": "SW Warped Planks",
   "block.swlm.warped_stem": "SW Warped Stem",
-  "block.swlm.warped_wart": "SW Warped Wart Block",
+  "block.swlm.warped_wart_block": "SW Warped Wart Block",
   "block.swlm.white_concrete": "SW White Concrete",
   "block.swlm.white_concrete_powder": "SW White Concrete Powder",
   "block.swlm.white_glazed_terracotta": "SW White Glazed Terracotta",
@@ -245,6 +245,7 @@
   "block.swlm.flowering_azalea_leaves": "SW Flowering Azalea Leaves",
   "block.swlm.moss_block": "SW Moss Block",
   "block.swlm.oxidized_copper": "SW Oxidized Copper",
+  "block.swlm.oxidized_cut_copper": "SW Oxidized Cut Copper",
   "block.swlm.polished_deepslate": "SW Polished Deepslate",
   "block.swlm.raw_copper_block": "SW Raw Copper Block",
   "block.swlm.raw_gold_block": "SW Raw Gold Block",
@@ -263,6 +264,7 @@
   "block.swlm.waxed_weathered_cut_copper": "SW Waxed Weathered Cut Copper",
   "block.swlm.weathered_copper": "SW Weathered Copper",
   "block.swlm.weathered_cut_copper": "SW Weathered Cut Copper",
+  "block.swlm.calcite": "SW Calcite",
 
   "block.swlm.bedrock": "SW Bedrock",
   "block.swlm.crimson_nylium": "SW Crimson Nylium",
@@ -353,5 +355,6 @@
   "block.swlm.dark_bricks": "SW Dark Bricks",
   "block.swlm.light_clay_block": "SW Light Clay Block",
   "block.swlm.medium_clay_block": "SW Medium Clay Block",
-  "block.swlm.dark_clay_block": "SW Dark Clay Block"
+  "block.swlm.dark_clay_block": "SW Dark Clay Block",
+  "block.swlm.deepslate_bricks": "SW Deepslate Bricks"
 }
