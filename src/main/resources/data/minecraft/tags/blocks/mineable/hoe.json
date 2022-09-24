@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "swlm:nether_wart_block",
+    "swlm:nether_wart",
     "swlm:warped_wart_block",
-    "swlm:dried_kelp_block",
+    "swlm:dried_kelp",
     "swlm:jungle_leaves",
     "swlm:oak_leaves",
     "swlm:spruce_leaves",

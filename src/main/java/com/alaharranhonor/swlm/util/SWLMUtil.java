@@ -97,7 +97,7 @@ public class SWLMUtil {
         put(BlockInit.CRIMSON_HYPHAE_ITEM.get(), Blocks.CRIMSON_HYPHAE);
         put(BlockInit.STRIPPED_CRIMSON_HYPHAE_ITEM.get(), Blocks.STRIPPED_CRIMSON_HYPHAE);
         put(BlockInit.CRIMSON_PLANKS_ITEM.get(), Blocks.CRIMSON_PLANKS);
-        put(BlockInit.WARPED_WART_ITEM.get(), Blocks.WARPED_WART_BLOCK);
+        put(BlockInit.WARPED_WART_BLOCK_ITEM.get(), Blocks.WARPED_WART_BLOCK);
         put(BlockInit.WARPED_STEM_ITEM.get(), Blocks.WARPED_STEM);
         put(BlockInit.STRIPPED_WARPED_STEM_ITEM.get(), Blocks.STRIPPED_WARPED_STEM);
         put(BlockInit.WARPED_HYPHAE_ITEM.get(), Blocks.WARPED_HYPHAE);
@@ -274,6 +274,7 @@ public class SWLMUtil {
         put(BlockInit.WAXED_EXPOSED_CUT_COPPER_ITEM.get(), Blocks.WAXED_EXPOSED_CUT_COPPER);
         put(BlockInit.WAXED_WEATHERED_COPPER_ITEM.get(), Blocks.WAXED_WEATHERED_COPPER);
         put(BlockInit.WAXED_WEATHERED_CUT_COPPER_ITEM.get(), Blocks.WAXED_WEATHERED_CUT_COPPER);
+        put(BlockInit.DEEPSLATE_BRICKS_ITEM.get(), Blocks.DEEPSLATE_BRICKS);
 
     }};
 

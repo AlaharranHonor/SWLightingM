@@ -5,10 +5,10 @@
       "tag": "swlm:star_worm_goop"
     },
     {
-      "item": "minecraft:warped_wart_block"
+      "item": "minecraft:deepslate_bricks"
     }
   ],
   "result": {
-    "item": "swlm:warped_wart"
+    "item": "swlm:deepslate_bricks"
   }
 }

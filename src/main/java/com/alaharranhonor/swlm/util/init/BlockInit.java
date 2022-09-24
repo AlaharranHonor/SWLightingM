@@ -64,6 +64,8 @@ public class BlockInit {
     public static final RegistryObject<Block> WAXED_EXPOSED_CUT_COPPER = BLOCKS.register("waxed_exposed_cut_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_EXPOSED_CUT_COPPER).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> WAXED_WEATHERED_COPPER = BLOCKS.register("waxed_weathered_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_COPPER).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> WAXED_WEATHERED_CUT_COPPER = BLOCKS.register("waxed_weathered_cut_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_CUT_COPPER).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> DEEPSLATE_BRICKS = BLOCKS.register("deepslate_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS).lightLevel((state) -> 15)));
+
 
     //1.16 UPDATE BLOCKS
     public static final RegistryObject<Block> BEDROCK = BLOCKS.register("bedrock", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEDROCK).lightLevel((state) -> 15)));
@@ -170,7 +172,7 @@ public class BlockInit {
     public static final RegistryObject<Block> CRIMSON_HYPHAE = BLOCKS.register("crimson_hyphae", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_HYPHAE).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> STRIPPED_CRIMSON_HYPHAE = BLOCKS.register("stripped_crimson_hyphae", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_CRIMSON_HYPHAE).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> CRIMSON_PLANKS = BLOCKS.register("crimson_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS).lightLevel((state) -> 15)));
-    public static final RegistryObject<Block> WARPED_WART = BLOCKS.register("warped_wart", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WARPED_WART_BLOCK).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> WARPED_WART_BLOCK = BLOCKS.register("warped_wart_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WARPED_WART_BLOCK).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> WARPED_STEM = BLOCKS.register("warped_stem", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_STEM).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> STRIPPED_WARPED_STEM = BLOCKS.register("stripped_warped_stem", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_STEM).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> WARPED_HYPHAE = BLOCKS.register("warped_hyphae", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_HYPHAE).lightLevel((state) -> 15)));
@@ -323,6 +325,10 @@ public class BlockInit {
 
     //** ITEMS START HERE**//
 
+    //AAH! A MOTH!
+    public static final RegistryObject<Item> GLOW_MOTH = ITEMS.register("glow_moth", () -> new Item(new Item.Properties().tab(SWLM.SWLMTAB)));
+
+
     //1.18 UPDATE ITEMS
     public static final RegistryObject<Item> AMETHYST_BLOCK_ITEM = ITEMS.register("amethyst_block", () -> new BlockItem(AMETHYST_BLOCK.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> AZALEA_LEAVES_ITEM = ITEMS.register("azalea_leaves", () -> new BlockItem(AZALEA_LEAVES.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
@@ -360,6 +366,7 @@ public class BlockInit {
     public static final RegistryObject<Item> WAXED_WEATHERED_CUT_COPPER_ITEM = ITEMS.register("waxed_weathered_cut_copper", () -> new BlockItem(WAXED_WEATHERED_CUT_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> WEATHERED_COPPER_ITEM = ITEMS.register("weathered_copper", () -> new BlockItem(WEATHERED_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> WEATHERED_CUT_COPPER_ITEM = ITEMS.register("weathered_cut_copper", () -> new BlockItem(WEATHERED_CUT_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> DEEPSLATE_BRICKS_ITEM = ITEMS.register("deepslate_bricks", () -> new BlockItem(DEEPSLATE_BRICKS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
 
 
     //1.16 UPDATE ITEMS
@@ -475,7 +482,7 @@ public class BlockInit {
     public static final RegistryObject<Item> CRIMSON_HYPHAE_ITEM= ITEMS.register("crimson_hyphae", () -> new BlockItem(CRIMSON_HYPHAE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> STRIPPED_CRIMSON_HYPHAE_ITEM= ITEMS.register("stripped_crimson_hyphae", () -> new BlockItem(STRIPPED_CRIMSON_HYPHAE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> CRIMSON_PLANKS_ITEM= ITEMS.register("crimson_planks", () -> new BlockItem(CRIMSON_PLANKS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
-    public static final RegistryObject<Item> WARPED_WART_ITEM= ITEMS.register("warped_wart", () -> new BlockItem(WARPED_WART.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> WARPED_WART_BLOCK_ITEM= ITEMS.register("warped_wart_block", () -> new BlockItem(WARPED_WART_BLOCK.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> WARPED_STEM_ITEM= ITEMS.register("warped_stem", () -> new BlockItem(WARPED_STEM.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> STRIPPED_WARPED_STEM_ITEM= ITEMS.register("stripped_warped_stem", () -> new BlockItem(STRIPPED_WARPED_STEM.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> WARPED_HYPHAE_ITEM= ITEMS.register("warped_hyphae", () -> new BlockItem(WARPED_HYPHAE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
