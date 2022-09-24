@@ -56,7 +56,14 @@ public class BlockInit {
     public static final RegistryObject<Block> TUFF = BLOCKS.register("tuff", () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> WEATHERED_COPPER = BLOCKS.register("weathered_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WEATHERED_COPPER).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> WEATHERED_CUT_COPPER = BLOCKS.register("weathered_cut_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WEATHERED_CUT_COPPER).lightLevel((state) -> 15)));
-
+    public static final RegistryObject<Block> WAXED_COPPER_BLOCK = BLOCKS.register("weathered_cut_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_COPPER_BLOCK).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> WAXED_CUT_COPPER = BLOCKS.register("weathered_cut_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_CUT_COPPER).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER = BLOCKS.register("weathered_cut_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_COPPER).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> WAXED_OXIDIZED_CUT_COPPER = BLOCKS.register("weathered_cut_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_CUT_COPPER).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> WAXED_EXPOSED_COPPER = BLOCKS.register("weathered_cut_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_EXPOSED_COPPER).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> WAXED_EXPOSED_CUT_COPPER = BLOCKS.register("weathered_cut_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_EXPOSED_CUT_COPPER).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> WAXED_WEATHERED_COPPER = BLOCKS.register("weathered_cut_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_COPPER).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> WAXED_WEATHERED_CUT_COPPER = BLOCKS.register("weathered_cut_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_CUT_COPPER).lightLevel((state) -> 15)));
 
     //1.16 UPDATE BLOCKS
     public static final RegistryObject<Block> BEDROCK = BLOCKS.register("bedrock", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEDROCK).lightLevel((state) -> 15)));
