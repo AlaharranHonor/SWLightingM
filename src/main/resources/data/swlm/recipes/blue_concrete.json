@@ -3,7 +3,7 @@
   "group": "sw_concrete",
   "ingredients": [
     {
-      "item": "swlm:star_worm_goop"
+      "tag": "swlm:star_worm_goop"
     },
     {
       "item": "minecraft:blue_concrete"

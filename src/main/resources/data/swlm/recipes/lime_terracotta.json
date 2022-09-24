@@ -3,7 +3,7 @@
   "group": "sw_terracotta",
   "ingredients": [
     {
-      "item": "swlm:star_worm_goop"
+      "tag": "swlm:star_worm_goop"
     },
     {
       "item": "minecraft:lime_terracotta"

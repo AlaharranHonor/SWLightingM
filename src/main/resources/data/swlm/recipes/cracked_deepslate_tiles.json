@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "swlm:star_worm_goop"
+    },
+    {
+      "item": "minecraft:cracked_deepslate_tiles"
+    }
+  ],
+  "result": {
+    "item": "swlm:cracked_deepslate_tiles"
+  }
+}

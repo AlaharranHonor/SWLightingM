@@ -17,7 +17,7 @@
             "item": "swem:fuel_block"
           },
           {
-            "item": "swlm:star_worm_goop"
+            "tag": "swlm:star_worm_goop"
           }
         ],
         "result": {
