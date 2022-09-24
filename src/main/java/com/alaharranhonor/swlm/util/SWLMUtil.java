@@ -265,6 +265,7 @@ public class SWLMUtil {
         put(BlockInit.TINTED_GLASS_ITEM.get(), Blocks.TINTED_GLASS);
         put(BlockInit.TUFF_ITEM.get(), Blocks.TUFF);
         put(BlockInit.WEATHERED_COPPER_ITEM.get(), Blocks.WEATHERED_COPPER);
+        put(BlockInit.WEATHERED_CUT_COPPER_ITEM.get(), Blocks.WEATHERED_CUT_COPPER);
         put(BlockInit.WAXED_COPPER_BLOCK_ITEM.get(), Blocks.WAXED_COPPER_BLOCK);
         put(BlockInit.WAXED_CUT_COPPER_ITEM.get(), Blocks.WAXED_CUT_COPPER);
         put(BlockInit.WAXED_OXIDIZED_COPPER_ITEM.get(), Blocks.WAXED_OXIDIZED_COPPER);
