@@ -1,0 +1,14 @@
+
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "swlm:star_worm_cobble"
+    },
+    {
+      "id": "swem:star_worm_cobble",
+      "required": false
+    }
+  ]
+
+}

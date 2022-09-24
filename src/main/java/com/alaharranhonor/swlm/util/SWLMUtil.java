@@ -241,7 +241,39 @@ public class SWLMUtil {
         put(BlockInit.AMETHYST_BLOCK_ITEM.get(), Blocks.AMETHYST_BLOCK);
         put(BlockInit.AZALEA_LEAVES_ITEM.get(), Blocks.AZALEA_LEAVES);
         put(BlockInit.CALCITE_ITEM.get(), Blocks.CALCITE);
-
+        put(BlockInit.CHISELED_DEEPSLATE_ITEM.get(), Blocks.CHISELED_DEEPSLATE);
+        put(BlockInit.COBBLED_DEEPSLATE_ITEM.get(), Blocks.COBBLED_DEEPSLATE);
+        put(BlockInit.CRACKED_DEEPSLATE_BRICKS_ITEM.get(), Blocks.CRACKED_DEEPSLATE_BRICKS);
+        put(BlockInit.CRACKED_DEEPSLATE_TILES_ITEM.get(), Blocks.CRACKED_DEEPSLATE_TILES);
+        put(BlockInit.COPPER_BLOCK_ITEM.get(), Blocks.COPPER_BLOCK);
+        put(BlockInit.CUT_COPPER_ITEM.get(), Blocks.CUT_COPPER);
+        put(BlockInit.DEEPSLATE_ITEM.get(), Blocks.DEEPSLATE);
+        put(BlockInit.DEEPSLATE_TILES_ITEM.get(), Blocks.DEEPSLATE_TILES);
+        put(BlockInit.DRIPSTONE_BLOCK_ITEM.get(), Blocks.DRIPSTONE_BLOCK);
+        put(BlockInit.EXPOSED_COPPER_ITEM.get(), Blocks.EXPOSED_COPPER);
+        put(BlockInit.EXPOSED_CUT_COPPER_ITEM.get(), Blocks.EXPOSED_CUT_COPPER);
+        put(BlockInit.FLOWERING_AZALEA_LEAVES_ITEM.get(), Blocks.FLOWERING_AZALEA_LEAVES);
+        put(BlockInit.MOSS_BLOCK_ITEM.get(), Blocks.MOSS_BLOCK);
+        put(BlockInit.OXIDIZED_COPPER_ITEM.get(), Blocks.OXIDIZED_COPPER);
+        put(BlockInit.OXIDIZED_CUT_COPPER_ITEM.get(), Blocks.OXIDIZED_CUT_COPPER);
+        put(BlockInit.POLISHED_DEEPSLATE_ITEM.get(), Blocks.POLISHED_DEEPSLATE);
+        put(BlockInit.RAW_COPPER_BLOCK_ITEM.get(), Blocks.RAW_COPPER_BLOCK);
+        put(BlockInit.RAW_GOLD_BLOCK_ITEM.get(), Blocks.RAW_GOLD_BLOCK);
+        put(BlockInit.RAW_IRON_BLOCK_ITEM.get(), Blocks.RAW_IRON_BLOCK);
+        put(BlockInit.ROOTED_DIRT_ITEM.get(), Blocks.ROOTED_DIRT);
+        put(BlockInit.SMOOTH_BASALT_ITEM.get(), Blocks.SMOOTH_BASALT);
+        put(BlockInit.TINTED_GLASS_ITEM.get(), Blocks.TINTED_GLASS);
+        put(BlockInit.TUFF_ITEM.get(), Blocks.TUFF);
+        put(BlockInit.WEATHERED_COPPER_ITEM.get(), Blocks.WEATHERED_COPPER);
+        put(BlockInit.WEATHERED_CUT_COPPER_ITEM.get(), Blocks.WEATHERED_CUT_COPPER);
+        put(BlockInit.WAXED_COPPER_BLOCK_ITEM.get(), Blocks.WAXED_COPPER_BLOCK);
+        put(BlockInit.WAXED_CUT_COPPER_ITEM.get(), Blocks.WAXED_CUT_COPPER);
+        put(BlockInit.WAXED_OXIDIZED_COPPER_ITEM.get(), Blocks.WAXED_OXIDIZED_COPPER);
+        put(BlockInit.WAXED_OXIDIZED_CUT_COPPER_ITEM.get(), Blocks.WAXED_OXIDIZED_CUT_COPPER);
+        put(BlockInit.WAXED_EXPOSED_COPPER_ITEM.get(), Blocks.WAXED_EXPOSED_COPPER);
+        put(BlockInit.WAXED_EXPOSED_CUT_COPPER_ITEM.get(), Blocks.WAXED_EXPOSED_CUT_COPPER);
+        put(BlockInit.WAXED_WEATHERED_COPPER_ITEM.get(), Blocks.WAXED_WEATHERED_COPPER);
+        put(BlockInit.WAXED_WEATHERED_CUT_COPPER_ITEM.get(), Blocks.WAXED_WEATHERED_CUT_COPPER);
 
     }};
 

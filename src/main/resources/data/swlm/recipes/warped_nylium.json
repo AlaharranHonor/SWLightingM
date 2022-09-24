@@ -3,7 +3,7 @@
   "group": "sw_planks",
   "ingredients": [
     {
-      "item": "swlm:star_worm_goop"
+      "tag": "swlm:star_worm_goop"
     },
     {
       "item": "minecraft:warped_nylium"

@@ -17,7 +17,7 @@
             "item": "swem:whitewash_log"
           },
           {
-            "item": "swlm:star_worm_goop"
+            "tag": "swlm:star_worm_goop"
           }
         ],
         "result": {

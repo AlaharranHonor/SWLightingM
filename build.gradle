@@ -58,7 +58,7 @@ minecraft {
             args "--username", "Mothfet", "--uuid", "6bdf23ef-4fe3-4964-a166-59a4c3f830ab"
 
             mods {
-                examplemod {
+                swlm {
                     source sourceSets.main
                 }
             }
@@ -74,7 +74,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                swlm {
                     source sourceSets.main
                 }
             }
@@ -89,10 +89,10 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/')
+            args '--mod', 'swlm', '--all', '--output', file('src/generated/resources/')
 
             mods {
-                examplemod {
+                swlm {
                     source sourceSets.main
                 }
             }

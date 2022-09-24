@@ -17,7 +17,7 @@
             "item": "swem:light_rubber_mat"
           },
           {
-            "item": "swlm:star_worm_goop"
+            "tag": "swlm:star_worm_goop"
           }
         ],
         "result": {

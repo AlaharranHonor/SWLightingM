@@ -17,7 +17,7 @@
             "item": "swdm:mossy_granite"
           },
           {
-            "item": "swlm:star_worm_goop"
+            "tag": "swlm:star_worm_goop"
           }
         ],
         "result": {

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "swlm:star_worm_goop"
+    },
+    {
+      "item": "minecraft:waxed_weathered_copper"
+    }
+  ],
+  "result": {
+    "item": "swlm:waxed_weathered_copper"
+  }
+}
