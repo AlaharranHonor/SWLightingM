@@ -31,6 +31,31 @@ public class BlockInit {
     public static final RegistryObject<Block> AMETHYST_BLOCK = BLOCKS.register("amethyst_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> AZALEA_LEAVES = BLOCKS.register("azalea_leaves", () -> new Block(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> CALCITE = BLOCKS.register("calcite", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CALCITE).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> CHISELED_DEEPSLATE = BLOCKS.register("chiseled_deepslate", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CHISELED_DEEPSLATE).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> COBBLED_DEEPSLATE = BLOCKS.register("cobbled_deepslate", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> CRACKED_DEEPSLATE_BRICKS = BLOCKS.register("cracked_deepslate_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRACKED_DEEPSLATE_BRICKS).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> CRACKED_DEEPSLATE_TILES = BLOCKS.register("cracked_deepslate_tiles", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRACKED_DEEPSLATE_TILES).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> COPPER_BLOCK = BLOCKS.register("copper_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> CUT_COPPER = BLOCKS.register("cut_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CUT_COPPER).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> DEEPSLATE = BLOCKS.register("deepslate", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> DEEPSLATE_TILES = BLOCKS.register("deepslate_tiles", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> DRIPSTONE_BLOCK = BLOCKS.register("dripstone_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> EXPOSED_COPPER = BLOCKS.register("exposed_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.EXPOSED_COPPER).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> EXPOSED_CUT_COPPER = BLOCKS.register("exposed_cut_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.EXPOSED_CUT_COPPER).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> FLOWERING_AZALEA_LEAVES = BLOCKS.register("flowering_azalea_leaves", () -> new Block(BlockBehaviour.Properties.copy(Blocks.FLOWERING_AZALEA_LEAVES).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> MOSS_BLOCK = BLOCKS.register("moss_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> OXIDIZED_COPPER = BLOCKS.register("oxidized_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OXIDIZED_COPPER).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> OXIDIZED_CUT_COPPER = BLOCKS.register("oxidized_cut_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OXIDIZED_CUT_COPPER).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> POLISHED_DEEPSLATE = BLOCKS.register("polished_deepslate", () -> new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_DEEPSLATE).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> RAW_COPPER_BLOCK = BLOCKS.register("raw_copper_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_COPPER_BLOCK).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> RAW_GOLD_BLOCK = BLOCKS.register("raw_gold_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_GOLD_BLOCK).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> RAW_IRON_BLOCK = BLOCKS.register("raw_iron_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> ROOTED_DIRT = BLOCKS.register("rooted_dirt", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ROOTED_DIRT).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> SMOOTH_BASALT = BLOCKS.register("smooth_basalt", () -> new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_BASALT).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> TINTED_GLASS = BLOCKS.register("tinted_glass", () -> new Block(BlockBehaviour.Properties.copy(Blocks.TINTED_GLASS).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> TUFF = BLOCKS.register("tuff", () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> WEATHERED_COPPER = BLOCKS.register("weathered_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WEATHERED_COPPER).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> WEATHERED_CUT_COPPER = BLOCKS.register("weathered_cut_copper", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WEATHERED_CUT_COPPER).lightLevel((state) -> 15)));
 
 
     //1.16 UPDATE BLOCKS
@@ -295,6 +320,39 @@ public class BlockInit {
     public static final RegistryObject<Item> AMETHYST_BLOCK_ITEM = ITEMS.register("amethyst_block", () -> new BlockItem(AMETHYST_BLOCK.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> AZALEA_LEAVES_ITEM = ITEMS.register("azalea_leaves", () -> new BlockItem(AZALEA_LEAVES.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> CALCITE_ITEM = ITEMS.register("calcite", () -> new BlockItem(CALCITE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> CHISELED_DEEPSLATE_ITEM = ITEMS.register("chiseled_deepslate", () -> new BlockItem(CHISELED_DEEPSLATE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> COBBLED_DEEPSLATE_ITEM = ITEMS.register("cobbled_deepslate", () -> new BlockItem(COBBLED_DEEPSLATE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> CRACKED_DEEPSLATE_BRICKS_ITEM = ITEMS.register("cracked_deepslate_bricks", () -> new BlockItem(CRACKED_DEEPSLATE_BRICKS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> CRACKED_DEEPSLATE_TILES_ITEM = ITEMS.register("cracked_deepslate_tiles", () -> new BlockItem(CRACKED_DEEPSLATE_TILES.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> COPPER_BLOCK_ITEM = ITEMS.register("copper_block", () -> new BlockItem(COPPER_BLOCK.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> CUT_COPPER_ITEM = ITEMS.register("cut_copper", () -> new BlockItem(CUT_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> DEEPSLATE_ITEM = ITEMS.register("deepslate", () -> new BlockItem(DEEPSLATE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> DEEPSLATE_TILES_ITEM = ITEMS.register("deepslate_tiles", () -> new BlockItem(DEEPSLATE_TILES.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> DRIPSTONE_BLOCK_ITEM = ITEMS.register("dripstone_block", () -> new BlockItem(DRIPSTONE_BLOCK.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> EXPOSED_COPPER_ITEM = ITEMS.register("exposed_copper", () -> new BlockItem(EXPOSED_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> EXPOSED_CUT_COPPER_ITEM = ITEMS.register("exposed_cut_copper", () -> new BlockItem(EXPOSED_CUT_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> FLOWERING_AZALEA_LEAVES_ITEM = ITEMS.register("flowering_azalea_leaves", () -> new BlockItem(FLOWERING_AZALEA_LEAVES.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> MOSS_BLOCK_ITEM = ITEMS.register("moss_block", () -> new BlockItem(MOSS_BLOCK.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> OXIDIZED_COPPER_ITEM = ITEMS.register("oxidized_copper", () -> new BlockItem(OXIDIZED_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> OXIDIZED_CUT_COPPER_ITEM = ITEMS.register("oxidized_cut_copper", () -> new BlockItem(OXIDIZED_CUT_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> POLISHED_DEEPSLATE_ITEM = ITEMS.register("polished_deepslate", () -> new BlockItem(POLISHED_DEEPSLATE.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> RAW_COPPER_BLOCK_ITEM = ITEMS.register("raw_copper_block", () -> new BlockItem(RAW_COPPER_BLOCK.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> RAW_GOLD_BLOCK_ITEM = ITEMS.register("raw_gold_block", () -> new BlockItem(RAW_GOLD_BLOCK.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> RAW_IRON_BLOCK_ITEM = ITEMS.register("raw_iron_block", () -> new BlockItem(RAW_IRON_BLOCK.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> ROOTED_DIRT_ITEM = ITEMS.register("rooted_dirt", () -> new BlockItem(ROOTED_DIRT.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> SMOOTH_BASALT_ITEM = ITEMS.register("smooth_basalt", () -> new BlockItem(SMOOTH_BASALT.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> TINTED_GLASS_ITEM = ITEMS.register("tinted_glass", () -> new BlockItem(TINTED_GLASS.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> TUFF_ITEM = ITEMS.register("tuff", () -> new BlockItem(TUFF.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> WAXED_COPPER_BLOCK_ITEM = ITEMS.register("waxed_copper_block", () -> new BlockItem(WAXED_COPPER_BLOCK.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> WAXED_CUT_COPPER_ITEM = ITEMS.register("waxed_cut_copper", () -> new BlockItem(WAXED_CUT_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> WAXED_EXPOSED_COPPER_ITEM = ITEMS.register("waxed_exposed_copper", () -> new BlockItem(WAXED_EXPOSED_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> WAXED_EXPOSED_CUT_COPPER_ITEM = ITEMS.register("waxed_exposed_cut_copper", () -> new BlockItem(WAXED_EXPOSED_CUT_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> WAXED_OXIDIZED_COPPER_ITEM = ITEMS.register("waxed_oxidized_copper", () -> new BlockItem(WAXED_OXIDIZED_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> WAXED_OXIDIZED_CUT_COPPER_ITEM = ITEMS.register("waxed_oxidized_cut_copper", () -> new BlockItem(WAXED_OXIDIZED_CUT_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> WAXED_WEATHERED_COPPER_ITEM = ITEMS.register("waxed_weathered_copper", () -> new BlockItem(WAXED_WEATHERED_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> WAXED_WEATHERED_CUT_COPPER_ITEM = ITEMS.register("waxed_weathered_cut_copper", () -> new BlockItem(WAXED_WEATHERED_CUT_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> WEATHERED_COPPER_ITEM = ITEMS.register("weathered_copper", () -> new BlockItem(WEATHERED_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
+    public static final RegistryObject<Item> WEATHERED_CUT_COPPER_ITEM = ITEMS.register("weathered_cut_copper", () -> new BlockItem(WEATHERED_CUT_COPPER.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
 
 
     //1.16 UPDATE ITEMS

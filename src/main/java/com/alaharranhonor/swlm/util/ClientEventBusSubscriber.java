@@ -42,5 +42,7 @@ public class ClientEventBusSubscriber {
         ItemBlockRenderTypes.setRenderLayer(BlockInit.WARPED_NYLIUM.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.CRIMSON_NYLIUM.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.AZALEA_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.FLOWERING_AZALEA_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.TINTED_GLASS.get(), RenderType.translucent());
     }
 }
