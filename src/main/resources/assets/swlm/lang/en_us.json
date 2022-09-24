@@ -356,5 +356,8 @@
   "block.swlm.light_clay_block": "SW Light Clay Block",
   "block.swlm.medium_clay_block": "SW Medium Clay Block",
   "block.swlm.dark_clay_block": "SW Dark Clay Block",
-  "block.swlm.deepslate_bricks": "SW Deepslate Bricks"
+  "block.swlm.deepslate_bricks": "SW Deepslate Bricks",
+
+  "item.swlm.glow_moth": "Glow Moth",
+  "tooltip.swlm.glow_moth.tooltip": "A light eating moth. It never runs out of moth!"
 }

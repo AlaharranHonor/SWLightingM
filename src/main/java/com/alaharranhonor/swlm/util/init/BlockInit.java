@@ -325,6 +325,10 @@ public class BlockInit {
 
     //** ITEMS START HERE**//
 
+    //AAH! A MOTH!
+    public static final RegistryObject<Item> GLOW_MOTH = ITEMS.register("glow_moth", () -> new Item(new Item.Properties().tab(SWLM.SWLMTAB)));
+
+
     //1.18 UPDATE ITEMS
     public static final RegistryObject<Item> AMETHYST_BLOCK_ITEM = ITEMS.register("amethyst_block", () -> new BlockItem(AMETHYST_BLOCK.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
     public static final RegistryObject<Item> AZALEA_LEAVES_ITEM = ITEMS.register("azalea_leaves", () -> new BlockItem(AZALEA_LEAVES.get(), new Item.Properties().tab(SWLM.SWLMTAB)));
