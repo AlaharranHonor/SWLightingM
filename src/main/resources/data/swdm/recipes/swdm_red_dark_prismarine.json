@@ -17,7 +17,7 @@
             "item": "swdm:red_dark_prismarine"
           },
           {
-            "item": "swlm:star_worm_goop"
+            "tag": "swlm:star_worm_goop"
           }
         ],
         "result": {

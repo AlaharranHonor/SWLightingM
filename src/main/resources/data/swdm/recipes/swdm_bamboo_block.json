@@ -16,7 +16,7 @@
             "item": "swdm:bamboo_block"
           },
           {
-            "item": "swlm:star_worm_goop"
+            "tag": "swlm:star_worm_goop"
           }
         ],
         "result": {

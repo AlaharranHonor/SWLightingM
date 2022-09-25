@@ -17,7 +17,7 @@
             "item": "swdm:sand_dark_brown"
           },
           {
-            "item": "swlm:star_worm_goop"
+            "tag": "swlm:star_worm_goop"
           }
         ],
         "result": {

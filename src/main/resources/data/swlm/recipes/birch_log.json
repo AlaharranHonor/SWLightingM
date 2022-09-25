@@ -3,7 +3,7 @@
   "group": "sw_logs",
   "ingredients": [
     {
-      "item": "swlm:star_worm_goop"
+      "tag": "swlm:star_worm_goop"
     },
     {
       "item": "minecraft:birch_log"

@@ -17,7 +17,7 @@
             "item": "swdm:gray_glass_bricks"
           },
           {
-            "item": "swlm:star_worm_goop"
+            "tag": "swlm:star_worm_goop"
           }
         ],
         "result": {

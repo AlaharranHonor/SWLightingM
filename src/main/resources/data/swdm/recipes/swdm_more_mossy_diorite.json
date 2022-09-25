@@ -17,7 +17,7 @@
             "item": "swdm:more_mossy_diorite"
           },
           {
-            "item": "swlm:star_worm_goop"
+            "tag": "swlm:star_worm_goop"
           }
         ],
         "result": {

@@ -17,7 +17,7 @@
             "item": "swdm:cracked_stone"
           },
           {
-            "item": "swlm:star_worm_goop"
+            "tag": "swlm:star_worm_goop"
           }
         ],
         "result": {
