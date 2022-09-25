@@ -17,7 +17,7 @@
             "item": "swdm:sandstone_blue_gray"
           },
           {
-            "item": "swlm:star_worm_goop"
+            "tag": "swlm:star_worm_goop"
           }
         ],
         "result": {

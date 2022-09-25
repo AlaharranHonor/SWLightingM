@@ -17,7 +17,7 @@
             "item": "swem:whitewash_plank"
           },
           {
-            "item": "swlm:star_worm_goop"
+            "tag": "swlm:star_worm_goop"
           }
         ],
         "result": {

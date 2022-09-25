@@ -3,7 +3,7 @@
   "group": "sw_wood",
   "ingredients": [
     {
-      "item": "swlm:star_worm_goop"
+      "tag": "swlm:star_worm_goop"
     },
     {
       "item": "minecraft:dark_oak_wood"

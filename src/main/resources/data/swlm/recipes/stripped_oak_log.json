@@ -3,7 +3,7 @@
   "group": "sw_stripped_logs",
   "ingredients": [
     {
-      "item": "swlm:star_worm_goop"
+      "tag": "swlm:star_worm_goop"
     },
     {
       "item": "minecraft:stripped_oak_log"
