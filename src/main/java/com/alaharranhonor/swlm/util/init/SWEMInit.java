@@ -1,17 +1,15 @@
 package com.alaharranhonor.swlm.util.init;
 
-import com.alaharranhonor.swem.blocks.CareDoorBlock;
-import com.alaharranhonor.swem.blocks.FuelBlock;
-import com.alaharranhonor.swem.blocks.RubberMatBase;
-import com.alaharranhonor.swem.items.MedicalItem;
-import com.alaharranhonor.swem.util.registry.SWEMBlocks;
 import com.alaharranhonor.swlm.SWLM;
 import com.alaharranhonor.swlm.util.SWLMUtil;
-import net.minecraft.block.*;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.RotatedPillarBlock;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.DyeColor;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -35,12 +33,12 @@ public class SWEMInit {
 
 	public static void init() {
 		Map<Item, Block> swemBlocks = new HashMap() {{
-			put(SWEMInit.FUEL_BLOCK.getBlock().asItem(), SWEMBlocks.FUEL_BLOCK.get());
-			put(SWEMInit.WHITEWASH_PLANK.getBlock().asItem(), SWEMBlocks.WHITEWASH_PLANK.get());
-			put(SWEMInit.WHITEWASH_LOG.getBlock().asItem(), SWEMBlocks.WHITEWASH_LOG.get());
-			put(SWEMInit.RUBBER_MAT_LIGHT.getBlock().asItem(), SWEMBlocks.LIGHT_RUBBER_MAT.get());
-			put(SWEMInit.RUBBER_MAT_MEDIUM.getBlock().asItem(), SWEMBlocks.MEDIUM_RUBBER_MAT.get());
-			put(SWEMInit.RUBBER_MAT_DARK.getBlock().asItem(), SWEMBlocks.DARK_RUBBER_MAT.get());
+			put(SWEMInit.FUEL_BLOCK.getBlock().asItem(), ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swem", "fuel_block")));
+			put(SWEMInit.WHITEWASH_PLANK.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swem", "whitewash_plank")));
+			put(SWEMInit.WHITEWASH_LOG.getBlock().asItem(), ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swem", "whitewash_log")));
+			put(SWEMInit.RUBBER_MAT_LIGHT.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swem", "light_rubber_mat")));
+			put(SWEMInit.RUBBER_MAT_MEDIUM.getBlock().asItem(), ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swem", "medium_rubber_mat")));
+			put(SWEMInit.RUBBER_MAT_DARK.getBlock().asItem(), ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swem", "darK_rubber_mat")));
 		}};
 		SWLMUtil.mappings.putAll(swemBlocks);
 	}
