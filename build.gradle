@@ -19,7 +19,6 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = "${mc_version}-${mod_version}"
 group = 'com.alaharranhonor.swlm' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'swlm'
 
@@ -108,7 +107,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.5-36.2.34'
+    minecraft "net.minecraftforge:forge:1.16.5-${forge_version}"
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.16.5:3.0.92")
 
     //implementation fg.deobf("curse.maven:swem-582697:4005312")
@@ -240,6 +239,7 @@ curseforge {
         }
         relations {
             optionalDependency 'swdm'
+            optionalDependency 'swem'
         }
     }
 }
