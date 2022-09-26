@@ -99,13 +99,22 @@ repositories {
         dirs 'lib'
     }
     maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.5-36.2.26'
-    implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.16.5:3.0.35")
-    implementation fg.deobf("com.alaharranhonor.swem:swem:${swem_version}")
-    implementation fg.deobf("com.alaharranhonor.swdm:swdm:${swdm_version}")
+    minecraft 'net.minecraftforge:forge:1.16.5-36.2.34'
+    implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.16.5:3.0.92")
+
+    //implementation fg.deobf("curse.maven:swem-582697:4005312")
+    //implementation fg.deobf("curse.maven:playeranimator-658587:3955873")
+
+    //implementation fg.deobf("curse.maven:swdm-568104:3794923")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
 }
