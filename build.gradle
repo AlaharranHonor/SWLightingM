@@ -158,3 +158,126 @@ publishing {
         }
     }
 }
+
+// Thanks to McJty
+String getCurseforgeChangelogText() {
+    def changelogFile = file('changelog.txt')
+    String str = ''
+    int lineCount = 0
+    boolean done = false
+    changelogFile.eachLine {
+        if (done || it == null) {
+            return
+        }
+        if (it.size() > 1) {
+            def temp = it
+            if (lineCount == 0) {
+                temp = "${modname} ${version}"
+                temp = "<h2>$temp</h2>"
+            } else if (it.startsWith('-')) {
+                temp = "&nbsp;&nbsp;&nbsp;$temp"
+                temp = temp.replaceAll("(\\S+\\/\\S+)#([0-9]+)\\b", "<a href=\"https://github.com/\$1/issues/\$2\">\$0</a>");
+                temp = temp.replaceAll("#([0-9]+)\\b(?!<\\/a>)", "<a href=\"https://github.com/$github_project/issues/\$1\">\$0</a>");
+            } else {
+                temp = "<h4>$temp</h4>"
+            }
+            str += "$temp<br/>"
+            lineCount++
+            return
+        } else {
+            done = true
+        }
+    }
+    return str
+}
+
+String getDiscordChangelog() {
+    def changelogFile = file('changelog.txt')
+    String str = ''
+    int lineCount = 0
+    boolean done = false
+    changelogFile.eachLine {
+        if (done || it == null) {
+            return
+        }
+        if (it.size() > 1) {
+            def temp = it
+
+            if (it.startsWith('-')) {
+                temp = temp.replaceAll("(\\S+\\/\\S+)#([0-9]+)\\b", "[\$0](https://github.com/\$1/issues/\$2)");
+                temp = temp.replaceAll("#([0-9]+)\\b(?!\\))", "[\$0](https://github.com/$github_project/issues/\$1)");
+            }
+            str += "$temp\n"
+            lineCount++
+            return
+        } else {
+            done = true
+        }
+    }
+    return str
+}
+
+import com.matthewprenger.cursegradle.CurseArtifact
+def stabilitySuffix = ""
+
+tasks.curseforge.enabled = project.hasProperty('curseforge_key')
+
+
+curseforge {
+    if (project.hasProperty('curseforge_key')) {
+        apiKey = project.curseforge_key
+    }
+
+    project {
+
+        id = project.projectId
+        changelog = System.getenv('CHANGELOG') == null || System.getenv('CHANGELOG').equals('none') ? getCurseforgeChangelogText() : System.getenv('CHANGELOG')
+        changelogType = 'html'
+        releaseType = project.curse_type
+        addGameVersion project.mc_version
+        mainArtifact(jar) {
+            displayName = "${modname} - ${version}"
+        }
+        relations {
+            optionalDependency 'swdm'
+        }
+    }
+}
+
+
+tasks.getByName("curseforge").doLast {
+    if (project.hasProperty('swe_announcements_hook')) {
+        println "Preparing webhook"
+        def fileId = (tasks.getByName("curseforge$project.projectId").property("mainArtifact") as CurseArtifact).fileID
+        def curseforge_download = "https://www.curseforge.com/minecraft/mc-mods/$project.curseforge_slug/files/$fileId"
+        def release_url = curseforge_download
+        def discordChangelog = getDiscordChangelog()
+
+        def result = DiscordBuilder.createForm {
+            embed {
+                color = Integer.decode(project.project_color)
+                author {
+                    name = project.project_name + stabilitySuffix
+                    url = project.project_url
+                }
+                thumbnail { url = project.project_logo }
+                title = "$project.project_name $project.version Released"
+                url = release_url
+                field {
+                    name = "Changes:"
+                    value = discordChangelog
+                }
+                field {
+                    name = "Downloads:"
+                    value = "[$curseforge_emote CurseForge]($curseforge_download)"
+                }
+                footer {
+                    text = "A $project.loader_name Mod"
+                    icon_url = project.loader_icon
+                }
+            }
+        }.send(project.property('swe_announcements_hook'))
+
+        println "Discord Webhook Response: " + result.responseCode
+    }
+}
