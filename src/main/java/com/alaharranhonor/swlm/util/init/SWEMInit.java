@@ -38,7 +38,7 @@ public class SWEMInit {
 			put(SWEMInit.WHITEWASH_LOG.getBlock().asItem(), ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swem", "whitewash_log")));
 			put(SWEMInit.RUBBER_MAT_LIGHT.getBlock().asItem(),  ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swem", "light_rubber_mat")));
 			put(SWEMInit.RUBBER_MAT_MEDIUM.getBlock().asItem(), ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swem", "medium_rubber_mat")));
-			put(SWEMInit.RUBBER_MAT_DARK.getBlock().asItem(), ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swem", "darK_rubber_mat")));
+			put(SWEMInit.RUBBER_MAT_DARK.getBlock().asItem(), ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swem", "dark_rubber_mat")));
 		}};
 		SWLMUtil.mappings.putAll(swemBlocks);
 	}
