@@ -1,3 +1,6 @@
+1.18.2-1.2.1
+- Render a star over each SWLM item
+
 1.18.2-1.2.0
 - Implement missing 1.18 blocks
 - Fix goop tags
