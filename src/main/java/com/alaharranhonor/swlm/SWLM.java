@@ -1,8 +1,8 @@
 package com.alaharranhonor.swlm;
 
 import com.alaharranhonor.swlm.config.ConfigHolder;
-import com.alaharranhonor.swlm.util.init.*;
-import com.alaharranhonor.swlm.world.gen.SWLMOreGen;
+import com.alaharranhonor.swlm.util.registry.*;
+import com.alaharranhonor.swlm.worldgen.SWLMOreGen;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -29,7 +29,7 @@ public class SWLM
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
 
-        BlockInit.init();
+        SWLMBlocks.init();
         SWLMConfiguredFeature.CONFIGURED_FEATURES.register(modEventBus);
         SWLMPlacedFeature.PLACED_FEATURES.register(modEventBus);
 
@@ -48,11 +48,11 @@ public class SWLM
             SWEMInit.init();
         }
     }
-    public static final CreativeModeTab SWLMTAB = new CreativeModeTab("SWLMTab") {
+    public static final CreativeModeTab SWLMTAB = new CreativeModeTab("swlm") {
 
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(BlockInit.STAR_WORM.get());
+            return new ItemStack(SWLMBlocks.STAR_WORM.get());
         }
 
         @Override

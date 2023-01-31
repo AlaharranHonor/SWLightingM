@@ -1,0 +1,107 @@
+{
+  "type": "block_column",
+  "config": {
+    "direction": "down",
+    "allowed_placement": {
+      "type": "matching_blocks",
+      "blocks": "minecraft:air"
+    },
+    "prioritize_tip": true,
+    "layers": [
+      {
+        "height": {
+          "type": "weighted_list",
+          "distribution": [
+            {
+              "data": {
+                "type": "uniform",
+                "value": {
+                  "min_inclusive": 0,
+                  "max_inclusive": 19
+                }
+              },
+              "weight": 2
+            },
+            {
+              "data": {
+                "type": "uniform",
+                "value": {
+                  "min_inclusive": 0,
+                  "max_inclusive": 2
+                }
+              },
+              "weight": 3
+            },
+            {
+              "data": {
+                "type": "uniform",
+                "value": {
+                  "min_inclusive": 0,
+                  "max_inclusive": 6
+                }
+              },
+              "weight": 10
+            }
+          ]
+        },
+        "provider": {
+          "type": "weighted_state_provider",
+          "entries": [
+            {
+              "data": {
+                "Name": "swlm:star_worm_vines_plant"
+              },
+              "weight": 4
+            },
+            {
+              "data": {
+                "Name": "swlm:star_worm_vines_plant",
+                "Properties": {
+                  "berries": "true"
+                }
+              },
+              "weight": 1
+            }
+          ]
+        }
+      },
+      {
+        "height": {
+          "type": "constant",
+          "value": 1
+        },
+        "provider": {
+          "type": "randomized_int_state_provider",
+          "property": "age",
+          "values": {
+            "type": "uniform",
+            "value": {
+              "min_inclusive": 23,
+              "max_inclusive": 25
+            }
+          },
+          "source": {
+            "type": "weighted_state_provider",
+            "entries": [
+              {
+                "data": {
+                  "Name": "swlm:star_worm_vines"
+                },
+                "weight": 4
+              },
+              {
+                "data": {
+                  "Name": "swlm:star_worm_vines",
+                  "Properties": {
+                    "berries": "true"
+                  }
+                },
+                "weight": 1
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 package com.alaharranhonor.swlm.util;
 
 import com.alaharranhonor.swlm.SWLM;
-import com.alaharranhonor.swlm.util.init.BlockInit;
+import com.alaharranhonor.swlm.util.registry.SWLMBlocks;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.color.item.ItemColors;
 import net.minecraft.client.renderer.BiomeColors;
@@ -19,7 +19,6 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = SWLM.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModEventBusSubscriber {
 
-
 	@Mod.EventBusSubscriber(modid = SWLM.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 	public static class ClientModBusHandler {
 		@SubscribeEvent
@@ -27,16 +26,16 @@ public class ModEventBusSubscriber {
 			BlockColors colors = event.getBlockColors();
 			colors.register((state, reader, pos, color) -> {
 				return reader != null && pos != null ? BiomeColors.getAverageFoliageColor(reader, pos) : FoliageColor.getDefaultColor();
-			}, BlockInit.ACACIA_LEAVES.get(), BlockInit.JUNGLE_LEAVES.get(), BlockInit.DARK_OAK_LEAVES.get(), BlockInit.OAK_LEAVES.get());
+			}, SWLMBlocks.ACACIA_LEAVES.get(), SWLMBlocks.JUNGLE_LEAVES.get(), SWLMBlocks.DARK_OAK_LEAVES.get(), SWLMBlocks.OAK_LEAVES.get());
 			colors.register((state, reader, pos, color) -> {
 				return FoliageColor.getEvergreenColor();
-			}, BlockInit.SPRUCE_LEAVES.get());
+			}, SWLMBlocks.SPRUCE_LEAVES.get());
 			colors.register((state, reader, pos, color) -> {
 				return FoliageColor.getBirchColor();
-			}, BlockInit.BIRCH_LEAVES.get());
+			}, SWLMBlocks.BIRCH_LEAVES.get());
 			colors.register((state, reader, pos, color) -> {
 				return reader != null && pos != null ? BiomeColors.getAverageGrassColor(reader, pos) : GrassColor.get(0.5D, 1.0D);
-			}, BlockInit.GRASS_BLOCK.get());
+			}, SWLMBlocks.GRASS_BLOCK.get());
 		}
 		@SubscribeEvent
 		public static void RegisterItemColors(ColorHandlerEvent.Item event) {
@@ -44,8 +43,8 @@ public class ModEventBusSubscriber {
 			colors.register((stack, color) -> {
 				BlockState blockstate = ((BlockItem)stack.getItem()).getBlock().defaultBlockState();
 				return event.getBlockColors().getColor(blockstate, (BlockAndTintGetter)null, (BlockPos)null, color);
-			}, BlockInit.GRASS_BLOCK.get(), BlockInit.ACACIA_LEAVES.get(), BlockInit.JUNGLE_LEAVES.get(), BlockInit.DARK_OAK_LEAVES.get(), BlockInit.OAK_LEAVES.get(),
-					BlockInit.SPRUCE_LEAVES.get(), BlockInit.BIRCH_LEAVES.get());
+			}, SWLMBlocks.GRASS_BLOCK.get(), SWLMBlocks.ACACIA_LEAVES.get(), SWLMBlocks.JUNGLE_LEAVES.get(), SWLMBlocks.DARK_OAK_LEAVES.get(), SWLMBlocks.OAK_LEAVES.get(),
+					SWLMBlocks.SPRUCE_LEAVES.get(), SWLMBlocks.BIRCH_LEAVES.get());
 		}
 	}
 }

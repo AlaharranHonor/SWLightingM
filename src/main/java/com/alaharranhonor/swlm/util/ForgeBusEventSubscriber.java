@@ -1,7 +1,7 @@
 package com.alaharranhonor.swlm.util;
 
 import com.alaharranhonor.swlm.SWLM;
-import com.alaharranhonor.swlm.world.gen.SWLMOreGen;
+import com.alaharranhonor.swlm.worldgen.SWLMOreGen;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

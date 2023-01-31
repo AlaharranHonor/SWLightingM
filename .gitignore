@@ -25,3 +25,5 @@ run
 forge*changelog.txt
 
 lib
+
+src/generated

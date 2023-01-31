@@ -55,7 +55,7 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
-            args "--username", "Mothfet", "--uuid", "6bdf23ef-4fe3-4964-a166-59a4c3f830ab"
+            property 'forge.enabledGameTestNamespaces', 'diversadditions'
 
             mods {
                 swlm {
@@ -73,6 +73,8 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
+            property 'forge.enabledGameTestNamespaces', 'diversadditions'
+
             mods {
                 swlm {
                     source sourceSets.main
@@ -84,12 +86,12 @@ minecraft {
             workingDirectory project.file('run')
 
             // Recommended logging data for a userdev environment
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.markers', 'REGISTRIES'
 
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'swlm', '--all', '--output', file('src/generated/resources/')
+            args '--mod', 'swlm', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
                 swlm {
@@ -112,6 +114,8 @@ repositories {
         }
     }
 }
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
