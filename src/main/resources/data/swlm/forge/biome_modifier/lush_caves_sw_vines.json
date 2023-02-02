@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "minecraft:lush_caves",
-  "features": "swlm:star_worm_vines",
+  "features": ["swlm:lush_caves_ceiling_vegetation", "swlm:star_worm_vines"],
   "step": "vegetal_decoration"
 }

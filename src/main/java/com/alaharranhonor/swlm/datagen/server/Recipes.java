@@ -56,6 +56,6 @@ public class Recipes extends RecipeProvider {
     }
 
     private boolean shouldSkip(Block block) {
-        return List.of("star_worm_cobble").contains(block.getRegistryName().getPath());
+        return List.of("star_worm_cobble", "star_worm_vines", "star_worm_vines_plant").contains(block.getRegistryName().getPath());
     }
 }
