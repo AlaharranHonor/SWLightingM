@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:warped_hyphae"
+    }
+  ],
+  "result": {
+    "item": "minecraft:warped_planks",
+    "count": 4
+  }
+}

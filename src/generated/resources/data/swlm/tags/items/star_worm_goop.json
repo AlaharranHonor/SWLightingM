@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "swlm:star_worm_goop",
+    {
+      "id": "swem:star_worm_goop",
+      "required": false
+    }
+  ]
+}

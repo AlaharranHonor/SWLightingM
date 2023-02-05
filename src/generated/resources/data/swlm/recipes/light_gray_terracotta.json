@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "swlm:star_worm_goop"
+    },
+    {
+      "item": "minecraft:light_gray_terracotta"
+    }
+  ],
+  "result": {
+    "item": "swlm:light_gray_terracotta"
+  }
+}

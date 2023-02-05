@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "swlm:star_worm_goop"
+    },
+    {
+      "item": "minecraft:mossy_stone_bricks"
+    }
+  ],
+  "result": {
+    "item": "swlm:mossy_stone_bricks"
+  }
+}

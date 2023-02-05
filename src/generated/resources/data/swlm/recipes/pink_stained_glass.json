@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "swlm:star_worm_goop"
+    },
+    {
+      "item": "minecraft:pink_stained_glass"
+    }
+  ],
+  "result": {
+    "item": "swlm:pink_stained_glass"
+  }
+}

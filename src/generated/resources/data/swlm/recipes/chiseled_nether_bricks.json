@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "swlm:star_worm_goop"
+    },
+    {
+      "item": "minecraft:chiseled_nether_bricks"
+    }
+  ],
+  "result": {
+    "item": "swlm:chiseled_nether_bricks"
+  }
+}

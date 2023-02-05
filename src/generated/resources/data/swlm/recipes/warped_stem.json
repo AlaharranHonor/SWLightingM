@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "swlm:star_worm_goop"
+    },
+    {
+      "item": "minecraft:warped_stem"
+    }
+  ],
+  "result": {
+    "item": "swlm:warped_stem"
+  }
+}

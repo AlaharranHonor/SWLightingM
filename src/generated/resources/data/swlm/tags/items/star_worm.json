@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "swlm:star_worm",
+    {
+      "id": "swem:star_worm",
+      "required": false
+    }
+  ]
+}
