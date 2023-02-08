@@ -1,4 +1,4 @@
-75428c90e7b95e730f462c266a7c94d4fa6d4da3 assets/swlm/models/item/star_worm_moth.json
+51d736d834ee301c3d12b64f2ff7a80b1a17ca69 assets/swlm/models/item/star_worm_moth.json
 a8bdf3d005f3e055450af4d345ea53c8b25aa030 data/minecraft/tags/blocks/moss_replaceable.json
 4ba06d2fb20262f3a7015ca96fc2cb8042b18aa0 data/swlm/advancements/recipes/building_blocks/no_glow_acacia_log_planks.json
 db594be359b4a967ed3f683ec372882dd6c75024 data/swlm/advancements/recipes/building_blocks/no_glow_acacia_wood_planks.json
@@ -60,6 +60,7 @@ ecff60142fb39a40786ff7889e32556d70e6fc53 data/swlm/advancements/recipes/swlm/blu
 b93c6fc3bf32bf70c99849f918cbb50b265145c8 data/swlm/advancements/recipes/swlm/blue_terracotta.json
 3f7106905169bce0dfe54aac9c00a8ff1aa04ec0 data/swlm/advancements/recipes/swlm/blue_wool.json
 5b6119f5b60fe0452675b01b3485be5639c9ad80 data/swlm/advancements/recipes/swlm/bone_block.json
+be96021c60ed6a4b7ab403d96b11de652fd2d60c data/swlm/advancements/recipes/swlm/brain_coral_block.json
 16f1005bedea6003a3781f4e21b1db84468be235 data/swlm/advancements/recipes/swlm/bricks.json
 1b091b7100d9e307083ade8f47755cd2e4457d60 data/swlm/advancements/recipes/swlm/brown_concrete.json
 237a9de8be2fe42e9ce82412304ee98fb6550868 data/swlm/advancements/recipes/swlm/brown_concrete_powder.json
@@ -68,6 +69,7 @@ e2b6e4728f1581f0d1da7314b28935c45d36c07c data/swlm/advancements/recipes/swlm/bro
 ace9dd4d3dbd61bfff0538b5e1dcae710ecde168 data/swlm/advancements/recipes/swlm/brown_stained_glass.json
 7aa24f1c1d74ea420fedf2938cade09d04c1e614 data/swlm/advancements/recipes/swlm/brown_terracotta.json
 e3f248314664a9f6a4d42b51bc9fccc81358eca3 data/swlm/advancements/recipes/swlm/brown_wool.json
+09821f4ad588253f9b9c2c5684d8ad9c18cc2357 data/swlm/advancements/recipes/swlm/bubble_coral_block.json
 8e6dad56c1da53420ef335e2168a635a6050dcd2 data/swlm/advancements/recipes/swlm/calcite.json
 048836c12960e2298079fd25f7a47c312fc1caa0 data/swlm/advancements/recipes/swlm/chiseled_deepslate.json
 2305cf0c9a2dd55a44fcf4dc71995621284762c4 data/swlm/advancements/recipes/swlm/chiseled_nether_bricks.json
@@ -106,6 +108,11 @@ d98775e62a75243278a1cfd448ac182f37a5f509 data/swlm/advancements/recipes/swlm/dar
 26f957b027b9c75c61d0be21cccd08aaf38dbd2f data/swlm/advancements/recipes/swlm/dark_oak_planks.json
 e832d54d38107605db3fe0b149426879f17c5ed0 data/swlm/advancements/recipes/swlm/dark_oak_wood.json
 5cdad5bd70b3d021f07c65adb9ac2c2bf7254eb2 data/swlm/advancements/recipes/swlm/dark_prismarine.json
+b873d48050a5f45cb937fa1c362734598ce3b291 data/swlm/advancements/recipes/swlm/dead_brain_coral_block.json
+ab0feeb5fc3f0f74ce752cae6419b5541f729301 data/swlm/advancements/recipes/swlm/dead_bubble_coral_block.json
+9c6d06ca484a878e41e559cbdc819de8a003ae83 data/swlm/advancements/recipes/swlm/dead_fire_coral_block.json
+9cdab37b82966c89ff3f41217f55928c730bc22d data/swlm/advancements/recipes/swlm/dead_horn_coral_block.json
+5a1e4c5b66feee418949ef078974176cb028eff1 data/swlm/advancements/recipes/swlm/dead_tube_coral_block.json
 80573bb2f443c7874b965e41e096d9005c1c236c data/swlm/advancements/recipes/swlm/deepslate.json
 aa7e7a573c5ea65d331f006ae4da5eeb6e0bbf19 data/swlm/advancements/recipes/swlm/deepslate_bricks.json
 9d0fba6cc0ed99906be51af73b02537d012c2538 data/swlm/advancements/recipes/swlm/deepslate_tiles.json
@@ -119,6 +126,7 @@ b6b38d937cf8e953e23f5a6fba5102569e259a1c data/swlm/advancements/recipes/swlm/end
 c564f486a8f89dbc8a6c2fda6395d392e2a55d04 data/swlm/advancements/recipes/swlm/end_stone_bricks.json
 1549408862db8fadb9c91df50e0359ad7d05a7f4 data/swlm/advancements/recipes/swlm/exposed_copper.json
 4557c49b2fa7480081a2f296a2ad30f240719383 data/swlm/advancements/recipes/swlm/exposed_cut_copper.json
+d64102629cd6aaf19d5eade21675092488e8af27 data/swlm/advancements/recipes/swlm/fire_coral_block.json
 f61691eacb2420902b71b9d7d48b38756ff85763 data/swlm/advancements/recipes/swlm/flowering_azalea_leaves.json
 0ce09be34ce2bd5c1890fc3e2c2d708264440d6e data/swlm/advancements/recipes/swlm/gilded_blackstone.json
 7d82fc276ae08b3bb0a1b2a9543e29dc26103f70 data/swlm/advancements/recipes/swlm/glass.json
@@ -139,6 +147,7 @@ f77119d637cc23d94281c04301a6fc17049f40f7 data/swlm/advancements/recipes/swlm/gra
 9c79b0c02c449082954a485370a4d6fccd1f4945 data/swlm/advancements/recipes/swlm/green_terracotta.json
 1d48e1eda88a761012ba0ebbf99edc7cd05d55e6 data/swlm/advancements/recipes/swlm/green_wool.json
 6ef00d00041104d4fc092e9fd5afd4dd808d9454 data/swlm/advancements/recipes/swlm/honeycomb.json
+ac83202fb2849ad0b8e302fdf4342c314efeade1 data/swlm/advancements/recipes/swlm/horn_coral_block.json
 aeac1fccc8b5a686c9d7ac5d11de8be2d438338d data/swlm/advancements/recipes/swlm/ice.json
 e5aa96667ac075e6b381d76b480e2a213b10a177 data/swlm/advancements/recipes/swlm/iron_block.json
 01ae38626968e151c8f79db8f89de79b72a5ed8b data/swlm/advancements/recipes/swlm/jungle_leaves.json
@@ -268,6 +277,7 @@ ac3a9bbec8ba9824fa3e79f8321c65af4d5f8a1a data/swlm/advancements/recipes/swlm/str
 95f0df5ade6386e4a4f0a6279473a04be300276e data/swlm/advancements/recipes/swlm/stripped_warped_stem.json
 9c56367611d8d378195524e7a31f2f0fd38a9468 data/swlm/advancements/recipes/swlm/terracotta.json
 63463aaa6483c97211721206992b34bfdb473bad data/swlm/advancements/recipes/swlm/tinted_glass.json
+07b1d52bca0080a2f969ba9fed844026899c72d7 data/swlm/advancements/recipes/swlm/tube_coral_block.json
 0f816b8eaa48c0ce8f85b482440ef4f6d99fbd38 data/swlm/advancements/recipes/swlm/tuff.json
 9c9ae97749f2f9cf1c6fab16e0cf9259daaa2ab4 data/swlm/advancements/recipes/swlm/warped_hyphae.json
 b711bcbef8cbf73f306fcc19ceac87c4f8c48f3a data/swlm/advancements/recipes/swlm/warped_nylium.json
@@ -324,6 +334,7 @@ d31d27114abd3698ce5535d0de047df9d413ee1e data/swlm/recipes/blue_ice.json
 036a99ef75df4d1321c85ad17361e6ffb6fe27db data/swlm/recipes/blue_terracotta.json
 092b74b65f0c6742ca6f46f9a1b295911e72a35f data/swlm/recipes/blue_wool.json
 515ec13f06c6a4c66f0198ae02ad4c668c111b21 data/swlm/recipes/bone_block.json
+b0649185474dafbeadad690af71c00f3c665480e data/swlm/recipes/brain_coral_block.json
 a42641852b7348d03d47c996ea8898d15497fda5 data/swlm/recipes/bricks.json
 2b88fa15654f99b2c0087f1fcebc2fcb8dd67a32 data/swlm/recipes/brown_concrete.json
 a37e7521ad610b151fcb9aee387cc09b12042eef data/swlm/recipes/brown_concrete_powder.json
@@ -332,6 +343,7 @@ e8232601460e14146ef3605d9bca3574e13c3be3 data/swlm/recipes/brown_glazed_terracot
 cddb78704f1d6fdde74f1375f6e2042a360f13c9 data/swlm/recipes/brown_stained_glass.json
 8ad5f0f930f929aeb82a7a1a7a8915f643b0f7ba data/swlm/recipes/brown_terracotta.json
 4b74f5e4cb3439b415355f788966f667012a06c4 data/swlm/recipes/brown_wool.json
+cf44cd97c67dd97e3db3b5877a7b95bb919eb09b data/swlm/recipes/bubble_coral_block.json
 f25edc401e05929d042994b024f949e2f39d0e6d data/swlm/recipes/calcite.json
 59fc90bb8e4f80a5cc9246dbd5f1c113964fe675 data/swlm/recipes/chiseled_deepslate.json
 89bec6b7ae14bb1a54dbc900060844d11a4a520a data/swlm/recipes/chiseled_nether_bricks.json
@@ -370,6 +382,11 @@ e95ed72958e23cb820f32d81386cbde20caf8a39 data/swlm/recipes/dark_oak_leaves.json
 7db5589a85d2cedb5710fc733818e98b0f2c36f0 data/swlm/recipes/dark_oak_planks.json
 51b6e041cdbe8d1eedc271513e0f25b2856c81e2 data/swlm/recipes/dark_oak_wood.json
 867bfd518699a8b76838016d5bd63d80b93b199b data/swlm/recipes/dark_prismarine.json
+37463f21196d0bb00c734e012e753b651cfeab9a data/swlm/recipes/dead_brain_coral_block.json
+23bb57185bfd49599531b861f8377e5ceec94c24 data/swlm/recipes/dead_bubble_coral_block.json
+401fc9562c99d1cf44e8de939a1ffd960b3485f4 data/swlm/recipes/dead_fire_coral_block.json
+9e65ce905d4c50655b53b1c6b9fe055824aaa584 data/swlm/recipes/dead_horn_coral_block.json
+66d1907cac90db8285311f2f25df46f06fa82242 data/swlm/recipes/dead_tube_coral_block.json
 9fe2e2a3d52b6701ec86b9598dcf06e83abb7727 data/swlm/recipes/deepslate.json
 7d4961c7210dceb5f23598fdaf76724e8ad8e2f4 data/swlm/recipes/deepslate_bricks.json
 1f3fbf6743ad39bd04604acf3043103db270d99d data/swlm/recipes/deepslate_tiles.json
@@ -383,6 +400,7 @@ fae1b9132f54a2d361f567c9294a57d0a29d5546 data/swlm/recipes/dried_kelp.json
 4de4d0748efbf937f731494c87271ce75eb6276d data/swlm/recipes/end_stone_bricks.json
 e61940b1fcd372c9671ee7377dfcfa7796112ef0 data/swlm/recipes/exposed_copper.json
 e8f1a47ab3d9f232ef41ae608afd3551c8e29feb data/swlm/recipes/exposed_cut_copper.json
+1a181245f583cb76cea0981a40e70e086ab8e5b9 data/swlm/recipes/fire_coral_block.json
 4b271d23d9988533067a9ff6955bfec2be1086d0 data/swlm/recipes/flowering_azalea_leaves.json
 bb025ac092ce912e11a0b072b9eb3f2cd05c92bc data/swlm/recipes/gilded_blackstone.json
 218ca128e29262e6754b06d60179b81c80a49a2f data/swlm/recipes/glass.json
@@ -403,6 +421,7 @@ d58aac661b4d9947f596817d1a89143855541f4b data/swlm/recipes/green_glazed_terracot
 fd321e1ea46edfbe86b781d7638dc20e66c63e23 data/swlm/recipes/green_terracotta.json
 fb83c3bc2879ae1ea229176200927631afa0eb55 data/swlm/recipes/green_wool.json
 700e2c73a066be888fc2e2f73b46d9fe19de12fd data/swlm/recipes/honeycomb.json
+2c1a7738b6441050d9ca27e1c013a83b7cac03ce data/swlm/recipes/horn_coral_block.json
 d1bfae5dda50e9decc45e216cc8518564c880d72 data/swlm/recipes/ice.json
 052e658b2082fe8f79929ea168ba7a4de0351210 data/swlm/recipes/iron_block.json
 6ca89b683f1dfe9d4fe42465e295d63f5ee34186 data/swlm/recipes/jungle_leaves.json
@@ -564,6 +583,7 @@ f4d75afec40af091505215dd62a001f1c423ec68 data/swlm/recipes/stripped_oak_wood.jso
 aa0683896d94954fb338f4e975178d54264c5e0d data/swlm/recipes/stripped_warped_stem.json
 8a27e7fd72db4220f17ff14ba49a32d449a216c7 data/swlm/recipes/terracotta.json
 152956c00a8eb86beacb2babae759ab13d9970e8 data/swlm/recipes/tinted_glass.json
+a2d8641574659265c9ca7a80a37245fcaa35da50 data/swlm/recipes/tube_coral_block.json
 f35f09dbc1d90ed371e9a2e9fbd5a2d3f11592f5 data/swlm/recipes/tuff.json
 1e865d2f8d1ff5b85b9886abf3dc91753877f475 data/swlm/recipes/warped_hyphae.json
 327d8261828a1619e314b21d5f9ee92be0c42f4c data/swlm/recipes/warped_nylium.json
@@ -593,5 +613,7 @@ f0063853f791c355903863be6dcc51253b9e4b42 data/swlm/recipes/yellow_concrete.json
 60a993498aff784029949d9110db1608692dbf47 data/swlm/recipes/yellow_terracotta.json
 1d246006e041c9671b7382ee81634f8b0f97226a data/swlm/recipes/yellow_wool.json
 1429e85b6782cd803f1569894eb0edcc3e4a384a data/swlm/tags/blocks/star_worm_cobble.json
+36908d03d2e66efa11b906358631a2489ebe6f28 data/swlm/tags/items/mortar_and_pestle.json
 437930c410f1d12e8229215fbfaafb2ef594ce87 data/swlm/tags/items/star_worm.json
+dde783397f2c50f5ea5d04ff26c90b706bc97f4f data/swlm/tags/items/star_worm_cobble.json
 943e17b5e4983fd064551287a90d77df6c3792a0 data/swlm/tags/items/star_worm_goop.json

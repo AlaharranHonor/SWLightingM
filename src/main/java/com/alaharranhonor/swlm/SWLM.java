@@ -47,6 +47,9 @@ public class SWLM
         if (ModList.get().isLoaded("swem")) {
             SWEMInit.init();
         }
+        if (ModList.get().isLoaded("swpm")) {
+            SWPMInit.init();
+        }
     }
     public static final CreativeModeTab SWLMTAB = new CreativeModeTab("swlm") {
 

@@ -12,6 +12,6 @@ public class ItemModels extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        this.singleTexture(SWLMBlocks.STAR_WORM_MOTH.getId().getPath(), mcLoc("item/generated"), modLoc("items/star_worm_moth"));
+        this.singleTexture(SWLMBlocks.STAR_WORM_MOTH.getId().getPath(), mcLoc("item/generated"), "layer0", modLoc("items/star_worm_moth"));
     }
 }

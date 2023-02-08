@@ -21,6 +21,7 @@
     "swlm:waxed_exposed_copper",
     "swlm:waxed_exposed_cut_copper",
     "swlm:waxed_oxidized_copper",
-    "swlm:waxed_oxidized_cut_copper"
+    "swlm:waxed_oxidized_cut_copper",
+    "swlm:cantazarite_block"
   ]
 }

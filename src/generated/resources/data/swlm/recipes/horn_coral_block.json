@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "swlm:star_worm_goop"
+    },
+    {
+      "item": "minecraft:horn_coral_block"
+    }
+  ],
+  "result": {
+    "item": "swlm:horn_coral_block"
+  }
+}

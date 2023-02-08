@@ -12,11 +12,14 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import javax.annotation.Nullable;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -332,7 +335,16 @@ public class SWLMBlocks {
     public static final RegistryObject<Block> WHITE_STAINED_GLASS = register("white_stained_glass", () -> new StainedGlassBlock(DyeColor.WHITE, BlockBehaviour.Properties.copy(Blocks.WHITE_STAINED_GLASS).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> YELLOW_STAINED_GLASS = register("yellow_stained_glass", () -> new StainedGlassBlock(DyeColor.YELLOW, BlockBehaviour.Properties.copy(Blocks.YELLOW_STAINED_GLASS).lightLevel((state) -> 15)));
 
-
+    public static final RegistryObject<Block> DEAD_TUBE_CORAL_BLOCK = register("dead_tube_coral_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> DEAD_BRAIN_CORAL_BLOCK = register("dead_brain_coral_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> DEAD_BUBBLE_CORAL_BLOCK = register("dead_bubble_coral_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> DEAD_FIRE_CORAL_BLOCK = register("dead_fire_coral_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> DEAD_HORN_CORAL_BLOCK = register("dead_horn_coral_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> TUBE_CORAL_BLOCK = register("tube_coral_block", () -> new CoralBlock(DEAD_TUBE_CORAL_BLOCK.get(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLUE).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> BRAIN_CORAL_BLOCK = register("brain_coral_block", () -> new CoralBlock(DEAD_BRAIN_CORAL_BLOCK.get(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_PINK).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> BUBBLE_CORAL_BLOCK = register("bubble_coral_block", () -> new CoralBlock(DEAD_BUBBLE_CORAL_BLOCK.get(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_PURPLE).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> FIRE_CORAL_BLOCK = register("fire_coral_block", () -> new CoralBlock(DEAD_FIRE_CORAL_BLOCK.get(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> HORN_CORAL_BLOCK = register("horn_coral_block", () -> new CoralBlock(DEAD_HORN_CORAL_BLOCK.get(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
     //** ITEMS START HERE**//
 
     //AAH! A MOTH!

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:charcoal_block"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:charcoal",
+    "count": 9
+  }
+}

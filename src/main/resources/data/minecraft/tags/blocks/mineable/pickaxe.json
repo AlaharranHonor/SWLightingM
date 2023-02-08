@@ -146,6 +146,18 @@
     "swlm:ice",
     "swlm:packed_ice",
     "swlm:blue_ice",
-    "swlm:amethyst_block"
+    "swlm:amethyst_block",
+    "swlm:charcoal_block",
+    "swlm:cantazarite_block",
+    "swlm:dead_brain_coral_block",
+    "swlm:dead_bubble_coral_block",
+    "swlm:dead_fire_coral_block",
+    "swlm:dead_horn_coral_block",
+    "swlm:dead_tube_coral_block",
+    "swlm:brain_coral_block",
+    "swlm:bubble_coral_block",
+    "swlm:fire_coral_block",
+    "swlm:horn_coral_block",
+    "swlm:tube_coral_block"
   ]
 }

@@ -20,8 +20,11 @@ public class SWLMTags {
     }
 
     public static class Items {
+        public static final TagKey<Item> STAR_WORM_COBBLE = tag("star_worm_cobble");
+
         public static final TagKey<Item> STAR_WORM_GOOP = tag("star_worm_goop");
         public static final TagKey<Item> STAR_WORM = tag("star_worm");
+        public static final TagKey<Item> MORTAR_AND_PESTLE = tag("mortar_and_pestle");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(SWLM.MOD_ID, name));

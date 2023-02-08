@@ -265,6 +265,16 @@
   "block.swlm.weathered_copper": "SW Weathered Copper",
   "block.swlm.weathered_cut_copper": "SW Weathered Cut Copper",
   "block.swlm.calcite": "SW Calcite",
+  "block.swlm.dead_brain_coral_block": "SW Dead Brain Coral Block",
+  "block.swlm.dead_bubble_coral_block": "SW Dead Bubble Coral Block",
+  "block.swlm.dead_fire_coral_block": "SW Dead Fire Coral Block",
+  "block.swlm.dead_horn_coral_block": "SW Dead Horn Coral Block",
+  "block.swlm.dead_tube_coral_block": "SW Dead Tube Coral Block",
+  "block.swlm.brain_coral_block": "SW Brain Coral Block",
+  "block.swlm.bubble_coral_block": "SW Bubble Coral Block",
+  "block.swlm.fire_coral_block": "SW Fire Coral Block",
+  "block.swlm.horn_coral_block": "SW Horn Coral Block",
+  "block.swlm.tube_coral_block": "SW Tube Coral Block",
 
   "block.swlm.bedrock": "SW Bedrock",
   "block.swlm.crimson_nylium": "SW Crimson Nylium",
@@ -278,6 +288,7 @@
   "block.swlm.fuel_block": "SW Fuel Block",
   "block.swlm.whitewash_log": "SW Whitewash Log",
   "block.swlm.whitewash_plank": "SW Whitewash Plank",
+  "block.swlm.cantazarite_block": "SW Cantazarite Block",
 
   "block.swlm.mossy_stone": "SW Mossy Stone",
   "block.swlm.more_mossy_stone": "SW More Mossy Stone",
@@ -358,6 +369,9 @@
   "block.swlm.dark_clay_block": "SW Dark Clay Block",
   "block.swlm.deepslate_bricks": "SW Deepslate Bricks",
 
+  "block.swlm.charcoal_block": "SW Charcoal Block",
+
   "item.swlm.star_worm_moth": "Star Worm Moth",
-  "tooltip.swlm.star_worm_moth.tooltip": "A light eating moth. It never runs out of moth!"
+  "tooltip.swlm.star_worm_moth.tooltip": "A light eating moth. It never runs out of moth!",
+  "itemGroup.swlm": "SWLM"
 }

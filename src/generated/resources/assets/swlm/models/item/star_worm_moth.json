@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "texture": "swlm:items/star_worm_moth"
+    "layer0": "swlm:items/star_worm_moth"
   }
 }

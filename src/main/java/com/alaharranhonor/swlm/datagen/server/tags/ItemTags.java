@@ -1,5 +1,6 @@
 package com.alaharranhonor.swlm.datagen.server.tags;
 
+import com.alaharranhonor.swlm.SWLM;
 import com.alaharranhonor.swlm.util.SWLMTags;
 import com.alaharranhonor.swlm.util.registry.SWLMBlocks;
 import net.minecraft.data.DataGenerator;
@@ -23,5 +24,12 @@ public class ItemTags extends ItemTagsProvider {
         tag(SWLMTags.Items.STAR_WORM)
             .add(SWLMBlocks.STAR_WORM.get())
             .addOptional(new ResourceLocation("swem", "star_worm"));
+
+        tag(SWLMTags.Items.STAR_WORM_COBBLE)
+                .add(SWLMBlocks.COBBLESTONE.get().asItem())
+                .addOptional(new ResourceLocation("swem", "star_worm_cobble"));
+
+        tag(SWLMTags.Items.MORTAR_AND_PESTLE)
+                .add(SWLMBlocks.PESTLE_MORTAR.get());
     }
 }

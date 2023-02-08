@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "modid": "swpm",
+          "type": "forge:mod_loaded"
+        }
+      ],
+
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "swpm:charcoal_block"
+          },
+          {
+            "tag": "swlm:star_worm_goop"
+          }
+        ],
+        "result": {
+          "item": "swlm:charcoal_block"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:cantazarite_block"
+    }
+  ],
+  "result":
+  {
+    "item": "swem:cantazarite",
+    "count": 9
+  }
+}
