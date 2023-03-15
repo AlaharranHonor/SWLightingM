@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GDG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "tag": "swlm:glass"
+    },
+    "D": {
+      "tag": "forge:dyes/lime"
+    }
+  },
+  "result": {
+    "item": "swlm:lime_stained_glass",
+    "count": 8
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "swlm:color_glass_to_blue"
+    ]
+  },
+  "criteria": {
+    "has_star_worm": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "swlm:star_worm_goop"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "swlm:color_glass_to_blue"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_star_worm",
+      "has_the_recipe"
+    ]
+  ]
+}
