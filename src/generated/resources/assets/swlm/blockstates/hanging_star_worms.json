@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "end=false": {
+      "model": "swlm:block/hanging_star_worms"
+    },
+    "end=true": {
+      "model": "swlm:block/hanging_star_worms_end"
+    }
+  }
+}

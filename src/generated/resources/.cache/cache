@@ -1,3 +1,6 @@
+6ce9ed622ad10dca3a4d7f372afc7e5c937d9b97 assets/swlm/blockstates/hanging_star_worms.json
+241c1c960a48652376f8acf79935073dce4916d8 assets/swlm/models/block/hanging_star_worms.json
+2765c3a3eefb812da9492885e8842dc1f53d70a2 assets/swlm/models/block/hanging_star_worms_end.json
 51d736d834ee301c3d12b64f2ff7a80b1a17ca69 assets/swlm/models/item/star_worm_moth.json
 4ba06d2fb20262f3a7015ca96fc2cb8042b18aa0 data/swlm/advancements/recipes/building_blocks/no_glow_acacia_log_planks.json
 db594be359b4a967ed3f683ec372882dd6c75024 data/swlm/advancements/recipes/building_blocks/no_glow_acacia_wood_planks.json
@@ -287,6 +290,7 @@ c74bd577349c648c8ca3b110755562a7eb29f8e4 data/swlm/advancements/recipes/swlm/spr
 566bc7fdff89fecb6cd0ddc3b0d9f6f6cf8c8590 data/swlm/advancements/recipes/swlm/spruce_log.json
 eb6508535bd9d362dd0a9a2fdb58bd59200c23cc data/swlm/advancements/recipes/swlm/spruce_planks.json
 d13a4df45371e7eea914c7cc1444d0029b9d809d data/swlm/advancements/recipes/swlm/spruce_wood.json
+7e317bc975823718b8b419f315518f3f1ef3809e data/swlm/advancements/recipes/swlm/star_worm.json
 492781f5adba7941dd910cf429e1bc76ffb3307e data/swlm/advancements/recipes/swlm/star_worm_moth.json
 99b877627ba01e4988f90bf8aa6a229762710979 data/swlm/advancements/recipes/swlm/stone.json
 9c27887f45d2c64d77213368a1040c5d6d11aff6 data/swlm/advancements/recipes/swlm/stone_bricks.json
@@ -625,6 +629,7 @@ ad934c7ea510cebcb5f38ad2c03206b5190a9408 data/swlm/recipes/spruce_leaves.json
 05e6eec3983be13fb6829b5121df96df73db3a17 data/swlm/recipes/spruce_log.json
 a76ee3561a060ccc9e4b686b3e2624827c140076 data/swlm/recipes/spruce_planks.json
 a6a5dffab9823f64117db3551402777d09fc0b02 data/swlm/recipes/spruce_wood.json
+f3352862ec3a4b6c57f03950140f6416a4429f79 data/swlm/recipes/star_worm.json
 033e1f069e8202e5efb0ca31d5f3d75626c1d971 data/swlm/recipes/star_worm_moth.json
 1ae992ba5a01bd1ff5c9174ba5016cc2086d73b0 data/swlm/recipes/stone.json
 613cffb85bb5d74af31d71a1328710c7935ae6a6 data/swlm/recipes/stone_bricks.json

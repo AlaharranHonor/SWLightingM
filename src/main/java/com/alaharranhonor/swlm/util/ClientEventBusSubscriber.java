@@ -14,6 +14,10 @@ public class ClientEventBusSubscriber {
 
     @SubscribeEvent
     public static void onCLientSetup(FMLClientSetupEvent event) {
+        // SWLM
+        ItemBlockRenderTypes.setRenderLayer(SWLMBlocks.HANGING_STAR_WORMS.get(), RenderType.cutout());
+
+        // OTHER
         ItemBlockRenderTypes.setRenderLayer(SWLMBlocks.ACACIA_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(SWLMBlocks.BIRCH_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(SWLMBlocks.DARK_OAK_LEAVES.get(), RenderType.cutout());

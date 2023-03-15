@@ -1,0 +1,63 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "type": "minecraft:uniform",
+                    "min": 1.0,
+                    "max": 2.0
+                  },
+                  "add": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "swlm:hanging_star_worms",
+                  "properties": {
+                    "end": true
+                  }
+                }
+              ],
+              "name": "swlm:star_worm"
+            },
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "type": "minecraft:uniform",
+                    "min": 2.0,
+                    "max": 3.0
+                  },
+                  "add": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "swlm:hanging_star_worms",
+                  "properties": {
+                    "end": false
+                  }
+                }
+              ],
+              "name": "swlm:star_worm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

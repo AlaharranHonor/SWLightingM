@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "swlm:blocks/hanging_star_worms"
+  }
+}

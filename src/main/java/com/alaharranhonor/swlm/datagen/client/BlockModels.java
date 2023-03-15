@@ -12,5 +12,6 @@ public class BlockModels extends BlockModelProvider {
 
     @Override
     protected void registerModels() {
+
     }
 }

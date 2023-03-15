@@ -1,6 +1,7 @@
 package com.alaharranhonor.swlm.util.registry;
 
 import com.alaharranhonor.swlm.SWLM;
+import com.alaharranhonor.swlm.block.HangingStarWormsBlock;
 import com.alaharranhonor.swlm.items.GlowMothItem;
 import com.alaharranhonor.swlm.items.PestleMortarItem;
 import net.minecraft.world.item.BlockItem;
@@ -32,6 +33,7 @@ public class SWLMBlocks {
 
     //HAHA WORM ROCKS
     public static final RegistryObject<Block> STAR_WORM_COBBLE = register("star_worm_cobble", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel((state) -> 7)));
+    public static final RegistryObject<Block> HANGING_STAR_WORMS = register("hanging_star_worms", () -> new HangingStarWormsBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS).lightLevel((state) -> 7)));
     //public static final RegistryObject<Block> STAR_WORM_VINES = registerNoItem("star_worm_vines", () -> new StarWormVinesBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().lightLevel(CaveVines.emission(14)).instabreak().sound(SoundType.CAVE_VINES)));
     //public static final RegistryObject<Block> STAR_WORM_VINES_PLANT = registerNoItem("star_worm_vines_plant", () -> new StarWormVinesPlantBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().lightLevel(CaveVines.emission(14)).instabreak().sound(SoundType.CAVE_VINES)));
 

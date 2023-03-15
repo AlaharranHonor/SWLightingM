@@ -1,5 +1,6 @@
 package com.alaharranhonor.swlm.worldgen;
 
+import com.alaharranhonor.swlm.SWLM;
 import com.alaharranhonor.swlm.util.registry.SWLMPlacedFeature;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -11,6 +12,10 @@ import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfigur
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.logging.LogManager;
 
 public class SWLMOreGen {
     public static Holder<PlacedFeature> SWLM_COBBLE_ORE;
@@ -35,6 +40,10 @@ public class SWLMOreGen {
             // End oregen
         } else {
             event.getGeneration().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, SWLMPlacedFeature.SWLM_ORE_GEN.getHolder().get());
+
+            if ("minecraft:lush_caves".equalsIgnoreCase(event.getName().toString())) {
+                event.getGeneration().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, SWLMPlacedFeature.SWLM_HANGING_STAR_WORMS.getHolder().get());
+            }
         }
     }
 
