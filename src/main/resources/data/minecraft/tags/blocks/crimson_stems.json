@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "swlm:crimson_stem",
+    "swlm:stripped_crimson_stem",
+    "swlm:crimson_hyphae",
+    "swlm:stripped_crimson_hyphae"
+  ]
+}

@@ -1,6 +1,8 @@
 package com.alaharranhonor.swlm.datagen;
 
 import com.alaharranhonor.swlm.SWLM;
+import com.alaharranhonor.swlm.datagen.client.BlockModels;
+import com.alaharranhonor.swlm.datagen.client.BlockStates;
 import com.alaharranhonor.swlm.datagen.client.ItemModels;
 import com.alaharranhonor.swlm.datagen.server.Recipes;
 import com.alaharranhonor.swlm.datagen.server.tags.BlockTags;
@@ -19,6 +21,8 @@ public class DataGenerators {
 
         if (event.includeClient()) {
             data.addProvider(new ItemModels(data, SWLM.MOD_ID, event.getExistingFileHelper()));
+            data.addProvider(new BlockModels(data, SWLM.MOD_ID, event.getExistingFileHelper()));
+            data.addProvider(new BlockStates(data, SWLM.MOD_ID, event.getExistingFileHelper()));
         }
         if (event.includeServer()) {
             data.addProvider(new Recipes(data));

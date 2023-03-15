@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "swlm:jungle_log",
+    "swlm:jungle_wood",
+    "swlm:stripped_jungle_log",
+    "swlm:stripped_jungle_wood"
+  ]
+}

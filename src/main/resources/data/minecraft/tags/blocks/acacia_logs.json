@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "swlm:acacia_log",
+    "swlm:acacia_wood",
+    "swlm:stripped_acacia_log",
+    "swlm:stripped_acacia_wood"
+  ]
+}

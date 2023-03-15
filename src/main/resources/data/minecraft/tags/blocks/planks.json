@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "swlm:oak_planks",
+    "swlm:spruce_planks",
+    "swlm:birch_planks",
+    "swlm:jungle_planks",
+    "swlm:acacia_planks",
+    "swlm:dark_oak_planks",
+    "swlm:crimson_planks",
+    "swlm:warped_planks"
+  ]
+}

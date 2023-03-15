@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "swlm:oak_log",
+    "swlm:oak_wood",
+    "swlm:stripped_oak_log",
+    "swlm:stripped_oak_wood"
+  ]
+}

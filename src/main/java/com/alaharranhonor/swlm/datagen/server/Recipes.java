@@ -8,10 +8,17 @@ import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.DyeItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -52,6 +59,28 @@ public class Recipes extends RecipeProvider {
                     .unlockedBy("has_star_worm", InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(SWLMTags.Items.STAR_WORM_GOOP).build()))
                     .save(pFinishedRecipeConsumer, new ResourceLocation(SWLM.MOD_ID, "no_glow_" + (swlmBlock.getId().getPath().contains("stripped") ? "stripped_" : "") + matcher.group("woodtype") + "_" + matcher.group("logtype") + "_planks"));
             }
+        }
+
+        for (DyeColor resultColor : DyeColor.values()) {
+            // Wool
+            Item resultWool = ForgeRegistries.ITEMS.getValue(SWLM.res(resultColor.getName() + "_wool"));
+            ShapelessRecipeBuilder.shapeless(resultWool)
+                .requires(SWLMTags.Items.WOOL)
+                .requires(resultColor.getTag())
+                .unlockedBy("has_star_worm", InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(SWLMTags.Items.STAR_WORM_GOOP).build()))
+                .save(pFinishedRecipeConsumer, SWLM.res("color_wool_to_" + resultColor.getName()));
+
+
+            // Glass
+            Item resultGlass = ForgeRegistries.ITEMS.getValue(SWLM.res(resultColor.getName() + "_stained_glass"));
+            ShapedRecipeBuilder.shaped(resultGlass, 8)
+                .pattern("GGG")
+                .pattern("GDG")
+                .pattern("GGG")
+                .define('G', SWLMTags.Items.GLASS)
+                .define('D', resultColor.getTag())
+                .unlockedBy("has_star_worm", InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(SWLMTags.Items.STAR_WORM_GOOP).build()))
+                .save(pFinishedRecipeConsumer, SWLM.res("color_glass_to_" + resultColor.getName()));
         }
     }
 

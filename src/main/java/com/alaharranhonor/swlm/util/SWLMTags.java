@@ -21,6 +21,8 @@ public class SWLMTags {
 
     public static class Items {
         public static final TagKey<Item> STAR_WORM_COBBLE = tag("star_worm_cobble");
+        public static final TagKey<Item> GLASS = tag("glass");
+        public static final TagKey<Item> WOOL = tag("wool");
 
         public static final TagKey<Item> STAR_WORM_GOOP = tag("star_worm_goop");
         public static final TagKey<Item> STAR_WORM = tag("star_worm");

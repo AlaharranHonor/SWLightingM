@@ -24,6 +24,10 @@ public class SWLM
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "swlm";
 
+    public static ResourceLocation res(String name) {
+        return new ResourceLocation(MOD_ID, name);
+    }
+
     public SWLM() {
         final ModLoadingContext modLoadingContext = ModLoadingContext.get();
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();

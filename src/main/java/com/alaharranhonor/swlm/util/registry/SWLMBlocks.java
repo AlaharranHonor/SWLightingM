@@ -1,8 +1,6 @@
 package com.alaharranhonor.swlm.util.registry;
 
 import com.alaharranhonor.swlm.SWLM;
-import com.alaharranhonor.swlm.block.StarWormVinesBlock;
-import com.alaharranhonor.swlm.block.StarWormVinesPlantBlock;
 import com.alaharranhonor.swlm.items.GlowMothItem;
 import com.alaharranhonor.swlm.items.PestleMortarItem;
 import net.minecraft.world.item.BlockItem;
@@ -13,13 +11,11 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import javax.annotation.Nullable;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -36,8 +32,8 @@ public class SWLMBlocks {
 
     //HAHA WORM ROCKS
     public static final RegistryObject<Block> STAR_WORM_COBBLE = register("star_worm_cobble", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel((state) -> 7)));
-    public static final RegistryObject<Block> STAR_WORM_VINES = registerNoItem("star_worm_vines", () -> new StarWormVinesBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().lightLevel(CaveVines.emission(14)).instabreak().sound(SoundType.CAVE_VINES)));
-    public static final RegistryObject<Block> STAR_WORM_VINES_PLANT = registerNoItem("star_worm_vines_plant", () -> new StarWormVinesPlantBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().lightLevel(CaveVines.emission(14)).instabreak().sound(SoundType.CAVE_VINES)));
+    //public static final RegistryObject<Block> STAR_WORM_VINES = registerNoItem("star_worm_vines", () -> new StarWormVinesBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().lightLevel(CaveVines.emission(14)).instabreak().sound(SoundType.CAVE_VINES)));
+    //public static final RegistryObject<Block> STAR_WORM_VINES_PLANT = registerNoItem("star_worm_vines_plant", () -> new StarWormVinesPlantBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().lightLevel(CaveVines.emission(14)).instabreak().sound(SoundType.CAVE_VINES)));
 
 
     //1.18 UPDATE BLOCKS
@@ -208,8 +204,8 @@ public class SWLMBlocks {
     public static final RegistryObject<Block> PURPUR_PILLAR = register("purpur_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).lightLevel((state) -> 15)));
 
     //NATURAL... EDIBLES?? (MISC)
-    public static final RegistryObject<Block> BROWN_MUSHROOM = register("brown_mushroom", () -> new HugeMushroomBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM_BLOCK).lightLevel((state) -> 15)));
-    public static final RegistryObject<Block> RED_MUSHROOM = register("red_mushroom", () -> new HugeMushroomBlock(BlockBehaviour.Properties.copy(Blocks.RED_MUSHROOM_BLOCK).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> BROWN_MUSHROOM = register("brown_mushroom_block", () -> new HugeMushroomBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM_BLOCK).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> RED_MUSHROOM = register("red_mushroom_block", () -> new HugeMushroomBlock(BlockBehaviour.Properties.copy(Blocks.RED_MUSHROOM_BLOCK).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> SNOW_BLOCK = register("snow_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.SNOW_BLOCK).lightLevel((state) -> 11)));
     public static final RegistryObject<Block> ICE = register("ice", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ICE).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> PACKED_ICE = register("packed_ice", () -> new Block(BlockBehaviour.Properties.copy(Blocks.PACKED_ICE).lightLevel((state) -> 15)));

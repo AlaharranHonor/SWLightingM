@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "swlm:birch_log",
+    "swlm:birch_wood",
+    "swlm:stripped_birch_log",
+    "swlm:stripped_birch_wood"
+  ]
+}

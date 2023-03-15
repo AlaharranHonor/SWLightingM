@@ -20,8 +20,5 @@ public class BlockTags extends BlockTagsProvider {
         tag(SWLMTags.Blocks.STAR_WORM_COBBLE)
             .add(SWLMBlocks.STAR_WORM_COBBLE.get())
             .addOptional(new ResourceLocation("swem", "star_worm_cobble"));
-
-        tag(net.minecraft.tags.BlockTags.MOSS_REPLACEABLE)
-            .add(SWLMBlocks.STAR_WORM_VINES.get());
     }
 }

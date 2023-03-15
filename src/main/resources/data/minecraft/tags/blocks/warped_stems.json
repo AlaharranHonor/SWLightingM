@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "swlm:warped_stem",
+    "swlm:stripped_warped_stem",
+    "swlm:warped_hyphae",
+    "swlm:stripped_warped_hyphae"
+  ]
+}

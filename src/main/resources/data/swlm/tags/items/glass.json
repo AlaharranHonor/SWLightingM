@@ -1,0 +1,21 @@
+{
+  "values": [
+    "swlm:glass",
+    "swlm:white_stained_glass",
+    "swlm:orange_stained_glass",
+    "swlm:magenta_stained_glass",
+    "swlm:light_blue_stained_glass",
+    "swlm:yellow_stained_glass",
+    "swlm:lime_stained_glass",
+    "swlm:pink_stained_glass",
+    "swlm:gray_stained_glass",
+    "swlm:light_gray_stained_glass",
+    "swlm:cyan_stained_glass",
+    "swlm:purple_stained_glass",
+    "swlm:blue_stained_glass",
+    "swlm:brown_stained_glass",
+    "swlm:green_stained_glass",
+    "swlm:red_stained_glass",
+    "swlm:black_stained_glass"
+  ]
+}
