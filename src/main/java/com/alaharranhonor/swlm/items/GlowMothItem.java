@@ -1,7 +1,7 @@
 package com.alaharranhonor.swlm.items;
 
 import com.alaharranhonor.swlm.SWLM;
-import com.alaharranhonor.swlm.util.registry.SWLMBlocks;
+import com.alaharranhonor.swlm.registry.SWLMBlocks;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;

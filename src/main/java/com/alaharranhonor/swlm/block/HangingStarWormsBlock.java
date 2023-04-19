@@ -1,7 +1,6 @@
 package com.alaharranhonor.swlm.block;
 
-import com.alaharranhonor.swlm.SWLM;
-import com.alaharranhonor.swlm.util.registry.SWLMBlocks;
+import com.alaharranhonor.swlm.registry.SWLMBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -13,7 +12,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.DripstoneThickness;
 
 import java.util.Random;
 

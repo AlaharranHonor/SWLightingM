@@ -50,6 +50,6 @@ SWLM is a function-focused lighting mod. Star Worms spawn below, mash them into 
     modId="swdm"
     mandatory=false
     versionRange="[1.18.2-2,]"
-    ordering="NONE"
+    ordering="AFTER"
     side="BOTH"
 

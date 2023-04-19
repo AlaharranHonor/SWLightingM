@@ -91,7 +91,7 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'swlm', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'swlm', '--existing-mod', 'swdm', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
                 swlm {
@@ -104,7 +104,7 @@ minecraft {
 
 repositories {
     flatDir {
-        dirs 'lib'
+        dirs 'libs'
     }
     maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
     maven {
@@ -122,6 +122,7 @@ dependencies {
     //implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.16.5:3.0.35")
     //implementation fg.deobf("com.alaharranhonor.swem:swem:${swem_version}")
     //implementation fg.deobf("curse.maven:swdm-381070:${swdm_slug}")
+    //implementation fg.deobf("_:swdm-1.18.2:+")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
 }

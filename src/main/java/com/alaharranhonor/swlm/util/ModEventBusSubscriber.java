@@ -1,7 +1,7 @@
 package com.alaharranhonor.swlm.util;
 
 import com.alaharranhonor.swlm.SWLM;
-import com.alaharranhonor.swlm.util.registry.SWLMBlocks;
+import com.alaharranhonor.swlm.registry.SWLMBlocks;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.color.item.ItemColors;
 import net.minecraft.client.renderer.BiomeColors;

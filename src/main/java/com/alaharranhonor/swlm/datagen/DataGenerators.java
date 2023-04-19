@@ -1,12 +1,13 @@
 package com.alaharranhonor.swlm.datagen;
 
 import com.alaharranhonor.swlm.SWLM;
-import com.alaharranhonor.swlm.datagen.client.BlockModels;
-import com.alaharranhonor.swlm.datagen.client.BlockStates;
-import com.alaharranhonor.swlm.datagen.client.ItemModels;
-import com.alaharranhonor.swlm.datagen.server.Recipes;
-import com.alaharranhonor.swlm.datagen.server.tags.BlockTags;
-import com.alaharranhonor.swlm.datagen.server.tags.ItemTags;
+import com.alaharranhonor.swlm.datagen.client.BlockStateGen;
+import com.alaharranhonor.swlm.datagen.client.ItemModelGen;
+import com.alaharranhonor.swlm.datagen.client.EnUsLangGen;
+import com.alaharranhonor.swlm.datagen.server.LootTableGen;
+import com.alaharranhonor.swlm.datagen.server.RecipeGen;
+import com.alaharranhonor.swlm.datagen.server.tags.BlockTagGen;
+import com.alaharranhonor.swlm.datagen.server.tags.ItemTagGen;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -20,16 +21,17 @@ public class DataGenerators {
         DataGenerator data = event.getGenerator();
 
         if (event.includeClient()) {
-            data.addProvider(new ItemModels(data, SWLM.MOD_ID, event.getExistingFileHelper()));
-            data.addProvider(new BlockModels(data, SWLM.MOD_ID, event.getExistingFileHelper()));
-            data.addProvider(new BlockStates(data, SWLM.MOD_ID, event.getExistingFileHelper()));
+            data.addProvider(new ItemModelGen(data, SWLM.MOD_ID, event.getExistingFileHelper()));
+            data.addProvider(new EnUsLangGen(data, SWLM.MOD_ID));
+            data.addProvider(new BlockStateGen(data, SWLM.MOD_ID, event.getExistingFileHelper()));
         }
         if (event.includeServer()) {
-            data.addProvider(new Recipes(data));
+            data.addProvider(new RecipeGen(data));
+            data.addProvider(new LootTableGen(data));
 
-            BlockTags blockTags = new BlockTags(data, SWLM.MOD_ID, event.getExistingFileHelper());
+            BlockTagGen blockTags = new BlockTagGen(data, SWLM.MOD_ID, event.getExistingFileHelper());
             data.addProvider(blockTags);
-            data.addProvider(new ItemTags(data, blockTags, SWLM.MOD_ID, event.getExistingFileHelper()));
+            data.addProvider(new ItemTagGen(data, blockTags, SWLM.MOD_ID, event.getExistingFileHelper()));
         }
     }
 }

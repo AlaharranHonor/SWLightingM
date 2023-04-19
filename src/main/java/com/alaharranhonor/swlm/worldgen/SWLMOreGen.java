@@ -1,7 +1,6 @@
 package com.alaharranhonor.swlm.worldgen;
 
-import com.alaharranhonor.swlm.SWLM;
-import com.alaharranhonor.swlm.util.registry.SWLMPlacedFeature;
+import com.alaharranhonor.swlm.registry.SWLMPlacedFeature;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.world.level.biome.Biome;
@@ -12,10 +11,6 @@ import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfigur
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.util.logging.LogManager;
 
 public class SWLMOreGen {
     public static Holder<PlacedFeature> SWLM_COBBLE_ORE;

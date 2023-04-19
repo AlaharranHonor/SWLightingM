@@ -1,11 +1,13 @@
 package com.alaharranhonor.swlm.util;
 
 import com.alaharranhonor.swlm.SWLM;
+import com.alaharranhonor.swlm.config.BlockConfigList;
 import com.alaharranhonor.swlm.worldgen.SWLMOreGen;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.TagsUpdatedEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -17,6 +19,19 @@ public class ForgeBusEventSubscriber {
 	@SubscribeEvent
 	public static void setup(FMLCommonSetupEvent event) {
 		event.enqueueWork(SWLMOreGen::registerConfiguredFeatures);
+	}
+
+	@SubscribeEvent
+	public static void updateGenTags(TagsUpdatedEvent event) {
+		BlockConfigList.REGISTERED_BLOCKS.forEach((baseId, block) -> {
+			Block baseBlock = ForgeRegistries.BLOCKS.getValue(baseId);
+			block.builtInRegistryHolder().bindTags(baseBlock.builtInRegistryHolder().tags().toList());
+		});
+
+		BlockConfigList.REGISTERED_ITEMS.forEach((baseId, item) -> {
+			Item baseItem = ForgeRegistries.ITEMS.getValue(baseId);
+			item.builtInRegistryHolder().bindTags(baseItem.builtInRegistryHolder().tags().toList());
+		});
 	}
 
 	@SubscribeEvent

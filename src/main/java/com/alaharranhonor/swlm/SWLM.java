@@ -1,7 +1,8 @@
 package com.alaharranhonor.swlm;
 
+import com.alaharranhonor.swlm.config.BlockConfigList;
 import com.alaharranhonor.swlm.config.ConfigHolder;
-import com.alaharranhonor.swlm.util.registry.*;
+import com.alaharranhonor.swlm.registry.*;
 import com.alaharranhonor.swlm.worldgen.SWLMOreGen;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -18,8 +19,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod("swlm")
-public class SWLM
-{
+public class SWLM {
     // Directly reference a log4j logger.
     public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "swlm";
@@ -41,12 +41,12 @@ public class SWLM
         MinecraftForge.EVENT_BUS.addListener(SWLMOreGen::onBiomeLoadingEvent);
 
         modLoadingContext.registerConfig(ModConfig.Type.SERVER, ConfigHolder.SERVER_SPEC);
+        BlockConfigList.loadConfigBlocks();
     }
 
-    private void setup(final FMLLoadCompleteEvent event)
-    {
+    private void setup(final FMLLoadCompleteEvent event) {
         if (ModList.get().isLoaded("swdm")) {
-            SWDMInit.init();
+            //SWDMInit.init();
         }
         if (ModList.get().isLoaded("swem")) {
             SWEMInit.init();
@@ -55,7 +55,8 @@ public class SWLM
             SWPMInit.init();
         }
     }
-    public static final CreativeModeTab SWLMTAB = new CreativeModeTab("swlm") {
+
+    public static final CreativeModeTab TAB = new CreativeModeTab("swlm") {
 
         @Override
         public ItemStack makeIcon() {
