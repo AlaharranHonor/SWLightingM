@@ -4,7 +4,6 @@ import com.alaharranhonor.swlm.config.BlockConfigList;
 import com.alaharranhonor.swlm.registry.SWLMBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
-import net.minecraftforge.registries.ForgeRegistries;
 
 public class EnUsLangGen extends LanguageProvider {
 
@@ -15,11 +14,14 @@ public class EnUsLangGen extends LanguageProvider {
     @Override
     protected void addTranslations() {
         this.add("item.swlm.star_worm_moth", "Star Worm Moth");
+        this.add("item.swlm.star_worm", "Star Worm");
+        this.add("item.swlm.star_worm_goop", "Star Worm Goop");
+        this.add("item.swlm.pestle_mortar", "Mortar & Pestle");
         this.add("tooltip.swlm.star_worm_moth.tooltip", "A light eating moth. It never runs out of moth!");
         this.add("itemGroup.swlm", "SWLM");
 
         BlockConfigList.REGISTERED_BLOCKS.forEach((baseId, block) -> {
-            this.add(block, "SW " + ForgeRegistries.BLOCKS.getValue(baseId).getName().getString());
+            this.add(block, "SW " + this.sanitizedName(baseId.getPath()));
         });
 
         SWLMBlocks.BLOCKS.getEntries().forEach(rb -> {

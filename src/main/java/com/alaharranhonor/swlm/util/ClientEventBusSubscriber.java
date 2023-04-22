@@ -6,17 +6,20 @@ import com.alaharranhonor.swlm.registry.SWLMBlocks;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
 @Mod.EventBusSubscriber(modid = SWLM.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientEventBusSubscriber {
 
     @SubscribeEvent
-    public static void onClientSetup(FMLClientSetupEvent event) {
+    public static void onClientSetup(FMLLoadCompleteEvent event) {
         // SWLM
         ItemBlockRenderTypes.setRenderLayer(SWLMBlocks.HANGING_STAR_WORMS.get(), RenderType.cutout());
 
@@ -53,9 +56,10 @@ public class ClientEventBusSubscriber {
 
         BlockConfigList.REGISTERED_BLOCKS.forEach((id, block) -> {
             Block baseBlock = ForgeRegistries.BLOCKS.getValue(id);
-            if (ItemBlockRenderTypes.canRenderInLayer(baseBlock.defaultBlockState(), RenderType.cutoutMipped())) {
+            BlockState baseState = baseBlock.defaultBlockState();
+            if (ItemBlockRenderTypes.canRenderInLayer(baseState, RenderType.cutoutMipped())) {
                 ItemBlockRenderTypes.setRenderLayer(block, RenderType.cutoutMipped());
-            } else if (ItemBlockRenderTypes.canRenderInLayer(baseBlock.defaultBlockState(), RenderType.cutout())) {
+            } else if (ItemBlockRenderTypes.canRenderInLayer(baseState, RenderType.cutout())) {
                 ItemBlockRenderTypes.setRenderLayer(block, RenderType.cutout());
             }
         });

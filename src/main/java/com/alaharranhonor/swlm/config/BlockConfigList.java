@@ -1,6 +1,8 @@
 package com.alaharranhonor.swlm.config;
 
 import com.alaharranhonor.swlm.SWLM;
+import com.google.common.collect.BiMap;
+import com.google.common.collect.HashBiMap;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import net.minecraft.ResourceLocationException;
@@ -36,16 +38,19 @@ public class BlockConfigList {
     public static final Map<ResourceLocation, Block> REGISTERED_BLOCKS = new HashMap<>();
     public static final Map<ResourceLocation, Item> REGISTERED_ITEMS = new HashMap<>();
 
+    public static final BiMap<ResourceLocation, ResourceLocation> BLOCK_EQUIVALENCE = HashBiMap.create();
+
     public static void loadConfigBlocks() {
+        SWLM.LOGGER.info("Loading Blocks for {} addons", BLOCK_CONFIG_FOLDER.listFiles().length);
         for (File file : BLOCK_CONFIG_FOLDER.listFiles()) {
             if (!file.getName().contains(".txt")) {
                 continue;
             }
 
             String mod = file.getName().substring(0, file.getName().length() - 4);
-
+            SWLM.LOGGER.info("Loading LM Blocks for {}", mod);
             if (!ModList.get().isLoaded(mod)) {
-                //continue;
+                SWLM.LOGGER.info("{} is not loaded", mod);
             }
 
             String line = null;
@@ -60,14 +65,18 @@ public class BlockConfigList {
             } catch (ResourceLocationException rle) {
                 SWLM.LOGGER.warn("Invalid block id '{}'", line);
             }
+
+            SWLM.LOGGER.info("Loaded {} LM Blocks for {}", BLOCK_LIST.get(mod).size(), mod);
         }
     }
 
     @SubscribeEvent
     public static void registerConfigBlocks(RegistryEvent.Register<Block> event) {
-        BLOCK_LIST.values().forEach(blockName -> {
-            ResourceLocation path = SWLM.res(blockName.getPath());
-            Block base = event.getRegistry().getValue(blockName);
+        loadConfigBlocks(); // Load config blocks here so that every addon mod is able to create the .txt file with their blocks.
+
+        BLOCK_LIST.values().forEach(addonBlockName -> {
+            ResourceLocation swlmBlockName = SWLM.res(addonBlockName.getPath());
+            Block base = event.getRegistry().getValue(addonBlockName);
             BlockBehaviour.Properties properties = BlockBehaviour.Properties.copy(base).lightLevel(s -> 15);
             Block block;
             if (base instanceof RotatedPillarBlock) {
@@ -78,9 +87,11 @@ public class BlockConfigList {
                 block = new Block(properties);
             }
             block.builtInRegistryHolder().bindTags(base.builtInRegistryHolder().tags().toList());
-            event.getRegistry().register(block.setRegistryName(path));
-            REGISTERED_BLOCKS.put(blockName, block);
+            event.getRegistry().register(block.setRegistryName(swlmBlockName));
+            REGISTERED_BLOCKS.put(addonBlockName, block);
+            BLOCK_EQUIVALENCE.put(addonBlockName, swlmBlockName);
         });
+        SWLM.LOGGER.info("Registered {} addon blocks", REGISTERED_BLOCKS.size());
     }
 
     @SubscribeEvent

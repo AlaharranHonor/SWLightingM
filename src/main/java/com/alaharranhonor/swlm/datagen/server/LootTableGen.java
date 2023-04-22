@@ -1,6 +1,5 @@
 package com.alaharranhonor.swlm.datagen.server;
 
-import com.alaharranhonor.swdm.registry.BlockSetup;
 import com.alaharranhonor.swlm.config.BlockConfigList;
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;

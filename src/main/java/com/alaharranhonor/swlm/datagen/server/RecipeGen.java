@@ -1,6 +1,7 @@
 package com.alaharranhonor.swlm.datagen.server;
 
 import com.alaharranhonor.swlm.SWLM;
+import com.alaharranhonor.swlm.config.BlockConfigList;
 import com.alaharranhonor.swlm.util.SWLMTags;
 import com.alaharranhonor.swlm.registry.SWLMBlocks;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
@@ -29,23 +30,24 @@ public class RecipeGen extends RecipeProvider {
     }
 
     @Override
-    protected void buildCraftingRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
+    protected void buildCraftingRecipes(Consumer<FinishedRecipe> builder) {
         ShapelessRecipeBuilder.shapeless(SWLMBlocks.STAR_WORM_MOTH.get())
             .requires(SWLMTags.Items.STAR_WORM)
             .requires(Items.LANTERN)
             .unlockedBy("has_star_worm", InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(SWLMTags.Items.STAR_WORM).build()))
-            .save(pFinishedRecipeConsumer);
+            .save(builder);
 
         for (RegistryObject<Block> swlmBlock : SWLMBlocks.BLOCKS.getEntries()) {
-            if (shouldSkip(swlmBlock.get())) {
+            if (!ForgeRegistries.BLOCKS.containsKey(BlockConfigList.BLOCK_EQUIVALENCE.inverse().get(swlmBlock.getId()))) {
                 continue;
             }
 
+            Block baseBlock = ForgeRegistries.BLOCKS.getValue(BlockConfigList.BLOCK_EQUIVALENCE.inverse().get(swlmBlock.getId()));
             ShapelessRecipeBuilder.shapeless(swlmBlock.get())
                 .requires(SWLMTags.Items.STAR_WORM_GOOP)
-                .requires(ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", swlmBlock.getId().getPath())))
+                .requires(baseBlock)
                 .unlockedBy("has_star_worm", InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(SWLMTags.Items.STAR_WORM_GOOP).build()))
-                .save(pFinishedRecipeConsumer);
+                .save(builder);
 
             Pattern pattern = Pattern.compile("(stripped_)?(?<woodtype>acacia|oak|spruce|birch|jungle|dark_oak|crimson|warped)_(?<logtype>wood|log|hyphae|stem)");
             Matcher matcher = pattern.matcher(swlmBlock.getId().getPath());
@@ -53,7 +55,7 @@ public class RecipeGen extends RecipeProvider {
                 ShapelessRecipeBuilder.shapeless(ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", matcher.group("woodtype") + "_planks")), 4)
                     .requires(swlmBlock.get())
                     .unlockedBy("has_star_worm", InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(SWLMTags.Items.STAR_WORM_GOOP).build()))
-                    .save(pFinishedRecipeConsumer, new ResourceLocation(SWLM.MOD_ID, "no_glow_" + (swlmBlock.getId().getPath().contains("stripped") ? "stripped_" : "") + matcher.group("woodtype") + "_" + matcher.group("logtype") + "_planks"));
+                    .save(builder, new ResourceLocation(SWLM.MOD_ID, "no_glow_" + (swlmBlock.getId().getPath().contains("stripped") ? "stripped_" : "") + matcher.group("woodtype") + "_" + matcher.group("logtype") + "_planks"));
             }
         }
 
@@ -64,7 +66,7 @@ public class RecipeGen extends RecipeProvider {
                 .requires(SWLMTags.Items.WOOL)
                 .requires(resultColor.getTag())
                 .unlockedBy("has_star_worm", InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(SWLMTags.Items.STAR_WORM_GOOP).build()))
-                .save(pFinishedRecipeConsumer, SWLM.res("color_wool_to_" + resultColor.getName()));
+                .save(builder, SWLM.res("color_wool_to_" + resultColor.getName()));
 
 
             // Glass
@@ -76,13 +78,20 @@ public class RecipeGen extends RecipeProvider {
                 .define('G', SWLMTags.Items.GLASS)
                 .define('D', resultColor.getTag())
                 .unlockedBy("has_star_worm", InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(SWLMTags.Items.STAR_WORM_GOOP).build()))
-                .save(pFinishedRecipeConsumer, SWLM.res("color_glass_to_" + resultColor.getName()));
+                .save(builder, SWLM.res("color_glass_to_" + resultColor.getName()));
         }
 
-        // TODO Add modded blocks (swdm etc.)
+        BlockConfigList.REGISTERED_BLOCKS.forEach((baseId, block) -> {
+            Block baseBlock = ForgeRegistries.BLOCKS.getValue(baseId);
+            ShapelessRecipeBuilder.shapeless(block)
+                .requires(SWLMTags.Items.STAR_WORM_GOOP)
+                .requires(baseBlock)
+                .unlockedBy("has_block", has(block))
+                .save(builder);
+        });
     }
 
     private boolean shouldSkip(Block block) {
-        return List.of("star_worm_cobble", "star_worm_vines", "star_worm_vines_plant").contains(block.getRegistryName().getPath());
+        return List.of("star_worm_cobble", "star_worm_vines", "hanging_star_worms").contains(block.getRegistryName().getPath());
     }
 }

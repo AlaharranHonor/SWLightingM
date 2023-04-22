@@ -70,9 +70,4 @@ public class HangingStarWormsBlock extends Block {
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         pBuilder.add(END);
     }
-
-    @Override
-    public Item asItem() {
-        return SWLMBlocks.STAR_WORM.get();
-    }
 }

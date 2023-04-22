@@ -15,7 +15,6 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = SWLM.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SWPMInit {
 
-
 	public static Block CHARCOAL_BLOCK;
 
 	public static void init() {

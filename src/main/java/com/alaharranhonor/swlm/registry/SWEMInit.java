@@ -16,13 +16,10 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = SWLM.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SWEMInit {
 
-
 	public static Block RUBBER_MAT_LIGHT;
 	public static Block RUBBER_MAT_MEDIUM;
 	public static Block RUBBER_MAT_DARK;
 	public static Block FUEL_BLOCK;
-	public static Block WHITEWASH_LOG;
-	public static Block WHITEWASH_PLANK;
 	public static Block CANTAZARITE_BLOCK;
 
 	public static void init() {
@@ -52,10 +49,6 @@ public class SWEMInit {
 			item.getRegistry().register(RUBBER_MAT_DARK);
 			FUEL_BLOCK = new Block(Block.Properties.of(Material.DECORATION).strength(2.0f, 6.0f).sound(SoundType.STONE).lightLevel((state) -> 15)).setRegistryName("fuel_block"); // .harvestTool(ToolType.PICKAXE).harvestLevel(1)
 			item.getRegistry().register(FUEL_BLOCK);
-			WHITEWASH_LOG = new RotatedPillarBlock(Block.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0F, 3.0F).lightLevel((state) -> 15)).setRegistryName("whitewash_log"); // .harvestTool(ToolType.AXE)
-			item.getRegistry().register(WHITEWASH_LOG);
-			WHITEWASH_PLANK = new Block(Block.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0F, 3.0F).lightLevel((state) -> 15)).setRegistryName("whitewash_plank"); //.harvestTool(ToolType.AXE)
-			item.getRegistry().register(WHITEWASH_PLANK);
 			CANTAZARITE_BLOCK = new Block(BlockBehaviour.Properties.of(Material.METAL).strength(2.0f, 6.0f).sound(SoundType.STONE).lightLevel(state -> 15)).setRegistryName("cantazarite_block");
 			item.getRegistry().register(CANTAZARITE_BLOCK);
 		}
@@ -72,8 +65,6 @@ public class SWEMInit {
 			item.getRegistry().register(new BlockItem(RUBBER_MAT_MEDIUM, new Item.Properties().tab(SWLM.TAB)).setRegistryName(RUBBER_MAT_MEDIUM.getRegistryName()));
 			item.getRegistry().register(new BlockItem(RUBBER_MAT_DARK, new Item.Properties().tab(SWLM.TAB)).setRegistryName(RUBBER_MAT_DARK.getRegistryName()));
 			item.getRegistry().register(new BlockItem(FUEL_BLOCK, new Item.Properties().tab(SWLM.TAB)).setRegistryName(FUEL_BLOCK.getRegistryName()));
-			item.getRegistry().register(new BlockItem(WHITEWASH_LOG, new Item.Properties().tab(SWLM.TAB)).setRegistryName(WHITEWASH_LOG.getRegistryName()));
-			item.getRegistry().register(new BlockItem(WHITEWASH_PLANK, new Item.Properties().tab(SWLM.TAB)).setRegistryName(WHITEWASH_PLANK.getRegistryName()));
 			item.getRegistry().register(new BlockItem(CANTAZARITE_BLOCK, new Item.Properties().tab(SWLM.TAB)).setRegistryName(CANTAZARITE_BLOCK.getRegistryName()));
 
 		}

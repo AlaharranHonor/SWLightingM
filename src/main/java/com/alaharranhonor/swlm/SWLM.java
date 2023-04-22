@@ -4,8 +4,11 @@ import com.alaharranhonor.swlm.config.BlockConfigList;
 import com.alaharranhonor.swlm.config.ConfigHolder;
 import com.alaharranhonor.swlm.registry.*;
 import com.alaharranhonor.swlm.worldgen.SWLMOreGen;
+import net.minecraft.core.NonNullList;
+import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,6 +18,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.RegistryObject;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -41,7 +45,6 @@ public class SWLM {
         MinecraftForge.EVENT_BUS.addListener(SWLMOreGen::onBiomeLoadingEvent);
 
         modLoadingContext.registerConfig(ModConfig.Type.SERVER, ConfigHolder.SERVER_SPEC);
-        BlockConfigList.loadConfigBlocks();
     }
 
     private void setup(final FMLLoadCompleteEvent event) {
@@ -61,6 +64,17 @@ public class SWLM {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(SWLMBlocks.STAR_WORM.get());
+        }
+
+        @Override
+        public void fillItemList(NonNullList<ItemStack> pItems) {
+            for(RegistryObject<Item> item : SWLMBlocks.ITEMS.getEntries()) {
+                item.get().fillItemCategory(this, pItems);
+            }
+
+            for(Item item : BlockConfigList.REGISTERED_ITEMS.values()) {
+                item.fillItemCategory(this, pItems);
+            }
         }
 
         @Override

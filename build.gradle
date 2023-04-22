@@ -122,7 +122,8 @@ dependencies {
     //implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.16.5:3.0.35")
     //implementation fg.deobf("com.alaharranhonor.swem:swem:${swem_version}")
     //implementation fg.deobf("curse.maven:swdm-381070:${swdm_slug}")
-    //implementation fg.deobf("_:swdm-1.18.2:+")
+
+    implementation fg.deobf("_:swdm-1.18.2:+")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
 }
