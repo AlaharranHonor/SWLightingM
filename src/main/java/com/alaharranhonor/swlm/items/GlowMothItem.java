@@ -46,8 +46,9 @@ public class GlowMothItem extends Item {
     }
 
     private static BlockState getGlowing(BlockState fromState) {
-        Block target = ForgeRegistries.BLOCKS.getValue(BlockConfigList.BLOCK_EQUIVALENCE.inverse().get(fromState.getBlock().getRegistryName()));
-        if (target == null) return null;
+        ResourceLocation targetId = BlockConfigList.BLOCK_EQUIVALENCE.inverse().get(fromState.getBlock().getRegistryName());
+        if (targetId == null) return null;
+        Block target = ForgeRegistries.BLOCKS.getValue(targetId);
 
         BlockState targetState = target.defaultBlockState();
         for (ImmutableMap.Entry<Property<?>, Comparable<?>> entry : fromState.getValues().entrySet()) {

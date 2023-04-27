@@ -168,7 +168,7 @@ public class SWLMBlocks {
     public static final RegistryObject<Block> PRISMARINE = registerAddonBlock("minecraft", "prismarine", () -> new Block(BlockBehaviour.Properties.copy(Blocks.PRISMARINE).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> PRISMARINE_BRICKS = registerAddonBlock("minecraft", "prismarine_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.PRISMARINE_BRICKS).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> DARK_PRISMARINE = registerAddonBlock("minecraft", "dark_prismarine", () -> new Block(BlockBehaviour.Properties.copy(Blocks.PRISMARINE).lightLevel((state) -> 15)));
-    public static final RegistryObject<Block> DRIED_KELP = registerAddonBlock("minecraft", "dried_kelp", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DRIED_KELP_BLOCK).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> DRIED_KELP = registerAddonBlock("minecraft", "dried_kelp_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DRIED_KELP_BLOCK).lightLevel((state) -> 15)));
 
     //NETHER DIMENSION
     public static final RegistryObject<Block> OBSIDIAN = registerAddonBlock("minecraft", "obsidian", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).lightLevel((state) -> 15)));
@@ -182,7 +182,7 @@ public class SWLMBlocks {
     public static final RegistryObject<Block> CRACKED_POLISHED_BLACKSTONE_BRICKS = registerAddonBlock("minecraft", "cracked_polished_blackstone_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> CHISELED_POLISHED_BLACKSTONE = registerAddonBlock("minecraft", "chiseled_polished_blackstone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CHISELED_POLISHED_BLACKSTONE).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> GILDED_BLACKSTONE = registerAddonBlock("minecraft", "gilded_blackstone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.GILDED_BLACKSTONE).lightLevel((state) -> 15)));
-    public static final RegistryObject<Block> NETHER_WART = registerAddonBlock("minecraft", "nether_wart", () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_WART_BLOCK).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> NETHER_WART = registerAddonBlock("minecraft", "nether_wart_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_WART_BLOCK).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> CRIMSON_STEM = registerAddonBlock("minecraft", "crimson_stem", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_STEM).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> STRIPPED_CRIMSON_STEM = registerAddonBlock("minecraft", "stripped_crimson_stem", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_CRIMSON_STEM).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> CRIMSON_HYPHAE = registerAddonBlock("minecraft", "crimson_hyphae", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_HYPHAE).lightLevel((state) -> 15)));
@@ -198,7 +198,7 @@ public class SWLMBlocks {
     public static final RegistryObject<Block> SOUL_SOIL = registerAddonBlock("minecraft", "soul_soil", () -> new Block(BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> QUARTZ_BLOCK = registerAddonBlock("minecraft", "quartz_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> QUARTZ_PILLAR = registerAddonBlock("minecraft", "quartz_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR).lightLevel((state) -> 15)));
-    public static final RegistryObject<Block> CHISELED_QUARTZ = registerAddonBlock("minecraft", "chiseled_quartz", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CHISELED_QUARTZ_BLOCK).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> CHISELED_QUARTZ = registerAddonBlock("minecraft", "chiseled_quartz_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CHISELED_QUARTZ_BLOCK).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> SMOOTH_QUARTZ = registerAddonBlock("minecraft", "smooth_quartz", () -> new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_QUARTZ).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> QUARTZ_BRICKS = registerAddonBlock("minecraft", "quartz_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> BASALT = registerAddonBlock("minecraft", "basalt", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.BASALT).lightLevel((state) -> 15)));
@@ -207,7 +207,7 @@ public class SWLMBlocks {
     //END DIMENSION
     public static final RegistryObject<Block> END_STONE = registerAddonBlock("minecraft", "end_stone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.END_STONE).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> END_STONE_BRICKS = registerAddonBlock("minecraft", "end_stone_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.END_STONE_BRICKS).lightLevel((state) -> 15)));
-    public static final RegistryObject<Block> PURPUR = registerAddonBlock("minecraft", "purpur", () -> new Block(BlockBehaviour.Properties.copy(Blocks.PURPUR_BLOCK).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> PURPUR = registerAddonBlock("minecraft", "purpur_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.PURPUR_BLOCK).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> PURPUR_PILLAR = registerAddonBlock("minecraft", "purpur_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR).lightLevel((state) -> 15)));
 
     //NATURAL... EDIBLES?? (MISC)
@@ -217,7 +217,7 @@ public class SWLMBlocks {
     public static final RegistryObject<Block> ICE = registerAddonBlock("minecraft", "ice", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ICE).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> PACKED_ICE = registerAddonBlock("minecraft", "packed_ice", () -> new Block(BlockBehaviour.Properties.copy(Blocks.PACKED_ICE).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> BLUE_ICE = registerAddonBlock("minecraft", "blue_ice", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BLUE_ICE).lightLevel((state) -> 15)));
-    public static final RegistryObject<Block> HONEYCOMB = registerAddonBlock("minecraft", "honeycomb", () -> new Block(BlockBehaviour.Properties.copy(Blocks.HONEYCOMB_BLOCK).lightLevel((state) -> 15)));
+    public static final RegistryObject<Block> HONEYCOMB = registerAddonBlock("minecraft", "honeycomb_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.HONEYCOMB_BLOCK).lightLevel((state) -> 15)));
 
     //DYEABLE BLOCKS
     //TERRACOTTA
