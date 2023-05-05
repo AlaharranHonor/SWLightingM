@@ -350,31 +350,31 @@ public class SWLMBlocks {
     public static final RegistryObject<Block> HORN_CORAL_BLOCK = registerAddonBlock("minecraft", "horn_coral_block", () -> new CoralBlock(DEAD_HORN_CORAL_BLOCK.get(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
     //** ITEMS START HERE**//
 
-    private static <T extends Block> RegistryObject<T> registerAddonBlock(String addon, String name, Supplier<? extends T> sup) {
+    public static <T extends Block> RegistryObject<T> registerAddonBlock(String addon, String name, Supplier<? extends T> sup) {
         RegistryObject<T> block = register(name, sup);
         BlockConfigList.BLOCK_EQUIVALENCE.put(new ResourceLocation(addon, name), block.getId());
         return block;
     }
 
-    private static <T extends Block> RegistryObject<T> register(String name, Supplier<? extends T> sup) {
+    public static <T extends Block> RegistryObject<T> register(String name, Supplier<? extends T> sup) {
         return register(name, sup, SWLMBlocks::itemDefault);
     }
 
-    private static <T extends Block> RegistryObject<T> register(String name, Supplier<? extends T> sup, Function<RegistryObject<T>, Supplier<? extends Item>> itemCreator) {
+    public static <T extends Block> RegistryObject<T> register(String name, Supplier<? extends T> sup, Function<RegistryObject<T>, Supplier<? extends Item>> itemCreator) {
         RegistryObject<T> ret = registerNoItem(name, sup);
         ITEMS.register(name, itemCreator.apply(ret));
         return ret;
     }
 
-    private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<? extends T> sup) {
+    public static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<? extends T> sup) {
         return BLOCKS.register(name, sup);
     }
 
-    private static Supplier<BlockItem> itemDefault(final RegistryObject<? extends Block> block) {
+    public static Supplier<BlockItem> itemDefault(final RegistryObject<? extends Block> block) {
         return item(block, SWLM.TAB);
     }
 
-    private static Supplier<BlockItem> item(final RegistryObject<? extends Block> block, final CreativeModeTab itemGroup) {
+    public static Supplier<BlockItem> item(final RegistryObject<? extends Block> block, final CreativeModeTab itemGroup) {
         return () -> new BlockItem(block.get(), new Item.Properties().tab(itemGroup));
     }
 

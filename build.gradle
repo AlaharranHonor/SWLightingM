@@ -91,7 +91,7 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'swlm', '--existing-mod', 'swdm', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'swlm', '--existing-mod', 'swdm', '--existing-mod', 'swpm', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
                 swlm {
@@ -117,13 +117,22 @@ repositories {
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
+repositories {
+    maven {
+        name = "KosmX's maven"
+        url = "https://maven.kosmx.dev/"
+    }
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+}
+
 dependencies {
     minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
-    //implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.16.5:3.0.35")
-    //implementation fg.deobf("com.alaharranhonor.swem:swem:${swem_version}")
-    //implementation fg.deobf("curse.maven:swdm-381070:${swdm_slug}")
+    implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.18:3.0.57")
+    implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:0.4.0+1.18")
 
     implementation fg.deobf("_:swdm-1.18.2:+")
+    implementation fg.deobf("_:swpm-1.18.2:+")
+    implementation fg.deobf("_:swem-1.18.2:+")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
 }

@@ -4,8 +4,10 @@ import com.alaharranhonor.swlm.config.BlockConfigList;
 import com.alaharranhonor.swlm.config.ConfigHolder;
 import com.alaharranhonor.swlm.registry.*;
 import com.alaharranhonor.swlm.worldgen.SWLMOreGen;
+import com.google.common.collect.Maps;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -18,9 +20,15 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Mod("swlm")
 public class SWLM {
@@ -45,9 +53,7 @@ public class SWLM {
         MinecraftForge.EVENT_BUS.addListener(SWLMOreGen::onBiomeLoadingEvent);
 
         modLoadingContext.registerConfig(ModConfig.Type.SERVER, ConfigHolder.SERVER_SPEC);
-    }
 
-    private void setup(final FMLLoadCompleteEvent event) {
         if (ModList.get().isLoaded("swdm")) {
             //SWDMInit.init();
         }
@@ -59,6 +65,10 @@ public class SWLM {
         }
     }
 
+    private void setup(final FMLLoadCompleteEvent event) {
+
+    }
+
     public static final CreativeModeTab TAB = new CreativeModeTab("swlm") {
 
         @Override
@@ -68,11 +78,21 @@ public class SWLM {
 
         @Override
         public void fillItemList(NonNullList<ItemStack> pItems) {
+            HashMap<ResourceLocation, Item> allEntries = ForgeRegistries.ITEMS.getEntries().stream().collect(HashMap::new, (map, entry) -> {
+               map.put(entry.getKey().getRegistryName(), entry.getValue());
+            }, HashMap::putAll);
+
             for(RegistryObject<Item> item : SWLMBlocks.ITEMS.getEntries()) {
                 item.get().fillItemCategory(this, pItems);
+                allEntries.remove(item.getId());
             }
 
             for(Item item : BlockConfigList.REGISTERED_ITEMS.values()) {
+                item.fillItemCategory(this, pItems);
+                allEntries.remove(item.getRegistryName());
+            }
+
+            for (Item item : allEntries.values()) {
                 item.fillItemCategory(this, pItems);
             }
         }
