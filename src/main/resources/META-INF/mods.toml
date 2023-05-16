@@ -4,7 +4,7 @@ loaderVersion="[40,)"
 
 license="All Rights Reserved"
 
-issueTrackerURL="http://my.issue.tracker/"
+# issueTrackerURL="http://my.issue.tracker/"
 
 [[mods]]
 
@@ -14,11 +14,11 @@ version="${file.jarVersion}"
 
 displayName="Star Worm Lighting Mod"
 
-updateJSONURL="http://myurl.me/"
+# updateJSONURL="http://myurl.me/"
 
 displayURL="https://github.com/AlaharranHonor/StarWormLightingMod"
 
-logoFile="examplemod.png"
+logoFile="logo.png"
 
 credits="Silverwolf11420, legenden"
 

@@ -1,13 +1,27 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "item": "swlm:cantazarite_block"
+      "conditions": [
+        {
+          "modid": "swem",
+          "type": "forge:mod_loaded"
+        }
+      ],
+
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "swlm:cantazarite_block"
+          }
+        ],
+        "result":
+        {
+          "item": "swem:cantazarite",
+          "count": 9
+        }
+      }
     }
-  ],
-  "result":
-  {
-    "item": "swem:cantazarite",
-    "count": 9
-  }
+  ]
 }

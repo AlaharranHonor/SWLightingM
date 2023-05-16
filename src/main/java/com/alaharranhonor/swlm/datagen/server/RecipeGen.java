@@ -16,6 +16,8 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.crafting.ConditionalRecipe;
+import net.minecraftforge.common.crafting.conditions.ModLoadedCondition;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -43,11 +45,17 @@ public class RecipeGen extends RecipeProvider {
             }
 
             Block baseBlock = ForgeRegistries.BLOCKS.getValue(BlockConfigList.BLOCK_EQUIVALENCE.inverse().get(swlmBlock.getId()));
-            ShapelessRecipeBuilder.shapeless(swlmBlock.get())
-                .requires(SWLMTags.Items.STAR_WORM_GOOP)
-                .requires(baseBlock)
-                .unlockedBy("has_star_worm", InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(SWLMTags.Items.STAR_WORM_GOOP).build()))
-                .save(builder);
+            ConditionalRecipe.builder()
+                .addCondition(new ModLoadedCondition(baseBlock.getRegistryName().getNamespace()))
+                .addRecipe(writer -> {
+                    ShapelessRecipeBuilder.shapeless(swlmBlock.get())
+                        .requires(SWLMTags.Items.STAR_WORM_GOOP)
+                        .requires(baseBlock)
+                        .unlockedBy("has_star_worm", InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(SWLMTags.Items.STAR_WORM_GOOP).build()))
+                        .save(writer);
+                })
+                .build(builder, swlmBlock.getId());
+
 
             Pattern pattern = Pattern.compile("(stripped_)?(?<woodtype>acacia|oak|spruce|birch|jungle|dark_oak|crimson|warped)_(?<logtype>wood|log|hyphae|stem)");
             Matcher matcher = pattern.matcher(swlmBlock.getId().getPath());
@@ -83,11 +91,17 @@ public class RecipeGen extends RecipeProvider {
 
         BlockConfigList.REGISTERED_BLOCKS.forEach((baseId, block) -> {
             Block baseBlock = ForgeRegistries.BLOCKS.getValue(baseId);
-            ShapelessRecipeBuilder.shapeless(block)
-                .requires(SWLMTags.Items.STAR_WORM_GOOP)
-                .requires(baseBlock)
-                .unlockedBy("has_block", has(block))
-                .save(builder);
+            ConditionalRecipe.builder()
+                .addCondition(new ModLoadedCondition(baseId.getNamespace()))
+                .addRecipe(writer -> {
+                    ShapelessRecipeBuilder.shapeless(block)
+                        .requires(SWLMTags.Items.STAR_WORM_GOOP)
+                        .requires(baseBlock)
+                        .unlockedBy("has_block", has(block))
+                        .save(writer);
+                })
+                .build(builder, block.getRegistryName());
+
         });
     }
 

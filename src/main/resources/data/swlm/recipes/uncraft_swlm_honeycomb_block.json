@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "swlm:honeycomb_block"
+    }
+  ],
+  "result":
+  {
+    "item": "minecraft:honeycomb",
+    "count": 4
+  }
+}
