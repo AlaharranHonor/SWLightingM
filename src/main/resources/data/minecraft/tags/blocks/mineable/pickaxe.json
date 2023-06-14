@@ -147,8 +147,6 @@
     "swlm:packed_ice",
     "swlm:blue_ice",
     "swlm:amethyst_block",
-    "swlm:charcoal_block",
-    "swlm:cantazarite_block",
     "swlm:dead_brain_coral_block",
     "swlm:dead_bubble_coral_block",
     "swlm:dead_fire_coral_block",
@@ -158,6 +156,18 @@
     "swlm:bubble_coral_block",
     "swlm:fire_coral_block",
     "swlm:horn_coral_block",
-    "swlm:tube_coral_block"
+    "swlm:tube_coral_block",
+    {
+      "id": "comment:modded_blocks_below",
+      "required": false
+    },
+    {
+      "id": "swlm:charcoal_block",
+      "required": false
+    },
+    {
+      "id": "swlm:cantazarite_block",
+      "required": false
+    }
   ]
 }

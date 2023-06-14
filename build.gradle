@@ -25,6 +25,10 @@ apply plugin: "net.dumbcode.gradlehook"
 
 apply from: 'https://raw.githubusercontent.com/SizableShrimp/Forge-Class-Remapper/main/classremapper.gradle'
 
+mixin {
+    add sourceSets.main, "swlm.refmap.json"
+    config 'swlm.mixins.json'
+}
 
 group = 'com.alaharranhonor.swlm' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'swlm'
@@ -133,13 +137,9 @@ dependencies {
     implementation fg.deobf("_:swdm-1.18.2:+")
     implementation fg.deobf("_:swpm-1.18.2:+")
     implementation fg.deobf("_:swem-1.18.2:+")
+    implementation fg.deobf("_:worldedit-mod:7.2.10")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
-}
-
-mixin {
-    add sourceSets.main, "swlm.refmap.json"
-    config 'swlm.mixins.json'
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..
@@ -152,8 +152,7 @@ jar {
                 "Implementation-Title": project.name,
                 "Implementation-Version": "${version}",
                 "Implementation-Vendor" :"swlmalaharranhonor",
-                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-                "MixinConfigs": "swlm.mixins.json"
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
 }
