@@ -136,7 +136,7 @@ dependencies {
 
     implementation fg.deobf("_:swdm-1.18.2:+")
     implementation fg.deobf("_:swpm-1.18.2:+")
-    implementation fg.deobf("_:swem-1.18.2:+")
+    implementation fg.deobf("_:swem-forge-1.18.2:+")
     implementation fg.deobf("_:worldedit-mod:7.2.10")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
