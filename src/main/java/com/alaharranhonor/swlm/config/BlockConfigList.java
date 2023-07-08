@@ -51,6 +51,7 @@ public class BlockConfigList {
             SWLM.LOGGER.info("Loading LM Blocks for {}", mod);
             if (!ModList.get().isLoaded(mod)) {
                 SWLM.LOGGER.info("{} is not loaded", mod);
+                continue;
             }
 
             String line = null;
