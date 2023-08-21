@@ -1,23 +1,26 @@
 package com.alaharranhonor.swlm.datagen.server.tags;
 
-import com.alaharranhonor.swlm.registry.SWLMBlocks;
+import com.alaharranhonor.swlm.registry.BlockSetup;
 import com.alaharranhonor.swlm.util.SWLMTags;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.concurrent.CompletableFuture;
+
 public class BlockTagGen extends BlockTagsProvider {
 
-    public BlockTagGen(DataGenerator pGenerator, String modId, @Nullable ExistingFileHelper existingFileHelper) {
-        super(pGenerator, modId, existingFileHelper);
+    public BlockTagGen(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, String modId, @Nullable ExistingFileHelper existingFileHelper) {
+        super(output, lookupProvider, modId, existingFileHelper);
     }
 
     @Override
-    protected void addTags() {
+    protected void addTags(HolderLookup.Provider pProvider) {
         tag(SWLMTags.Blocks.STAR_WORM_COBBLE)
-            .add(SWLMBlocks.STAR_WORM_COBBLE.get())
+            .add(BlockSetup.STAR_WORM_COBBLE.get())
             .addOptional(new ResourceLocation("swem", "star_worm_cobble"));
     }
 }

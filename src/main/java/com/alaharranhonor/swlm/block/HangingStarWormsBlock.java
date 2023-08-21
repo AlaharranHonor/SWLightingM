@@ -1,10 +1,9 @@
 package com.alaharranhonor.swlm.block;
 
-import com.alaharranhonor.swlm.registry.SWLMBlocks;
+import com.alaharranhonor.swlm.registry.BlockSetup;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
@@ -20,11 +19,11 @@ public class HangingStarWormsBlock extends Block {
     public static final BooleanProperty END = BooleanProperty.create("end");
 
     public static BlockState bodyBlockState() {
-        return SWLMBlocks.HANGING_STAR_WORMS.get().defaultBlockState();
+        return BlockSetup.HANGING_STAR_WORMS.get().defaultBlockState();
     }
 
     public static BlockState endBlockState() {
-        return SWLMBlocks.HANGING_STAR_WORMS.get().defaultBlockState().setValue(END, true);
+        return BlockSetup.HANGING_STAR_WORMS.get().defaultBlockState().setValue(END, true);
     }
 
     public HangingStarWormsBlock(Properties properties) {

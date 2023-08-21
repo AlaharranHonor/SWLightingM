@@ -10,12 +10,12 @@ public class PestleMortarItem extends Item {
     }
 
     @Override
-    public ItemStack getContainerItem(ItemStack itemStack) {
-        return new ItemStack(itemStack.getItem());
+    public boolean hasCraftingRemainingItem(ItemStack stack) {
+        return true;
     }
 
     @Override
-    public boolean hasContainerItem(ItemStack stack) {
-        return true;
+    public ItemStack getCraftingRemainingItem(ItemStack stack) {
+        return stack.copy();
     }
 }

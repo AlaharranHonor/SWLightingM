@@ -1,21 +1,13 @@
 package com.alaharranhonor.swlm.registry;
 
-import com.alaharranhonor.swlm.SWLM;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
+import com.alaharranhonor.swlm.ModRef;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
-@Mod.EventBusSubscriber(modid = SWLM.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = ModRef.ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SWEMInit {
 
     public static RegistryObject<Block> RUBBER_MAT_LIGHT;
@@ -24,53 +16,10 @@ public class SWEMInit {
     public static RegistryObject<Block> CANTAZARITE_BLOCK;
 
     public static void init() {
-		/*Map<Item, Block> swemBlocks = new HashMap() {{
-			put(SWEMInit.FUEL_BLOCK.asItem(), SWEMBlocks.FUEL_BLOCK.get());
-			put(SWEMInit.WHITEWASH_PLANK.asItem(), SWEMBlocks.WHITEWASH_PLANK.get());
-			put(SWEMInit.WHITEWASH_LOG.asItem(), SWEMBlocks.WHITEWASH_LOG.get());
-			put(SWEMInit.RUBBER_MAT_LIGHT.asItem(), SWEMBlocks.LIGHT_RUBBER_MAT.get());
-			put(SWEMInit.RUBBER_MAT_MEDIUM.asItem(), SWEMBlocks.MEDIUM_RUBBER_MAT.get());
-			put(SWEMInit.RUBBER_MAT_DARK.asItem(), SWEMBlocks.DARK_RUBBER_MAT.get());
-		}};
-		SWLMUtil.mappings.putAll(swemBlocks);*/
+        RUBBER_MAT_LIGHT = BlockSetup.registerAddonBlock("swem", "light_rubber_mat", () -> new Block(Block.Properties.of().strength(1.0f, 3.0f).sound(SoundType.STONE).lightLevel((state) -> 15)));
+        RUBBER_MAT_MEDIUM = BlockSetup.registerAddonBlock("swem", "medium_rubber_mat", () -> new Block(Block.Properties.of().strength(1.0f, 3.0f).sound(SoundType.STONE).lightLevel((state) -> 15)));
+        RUBBER_MAT_DARK = BlockSetup.registerAddonBlock("swem", "dark_rubber_mat", () -> new Block(Block.Properties.of().strength(1.0f, 3.0f).sound(SoundType.STONE).lightLevel((state) -> 15)));
 
-        //CHARCOAL_BLOCK = SWLMBlocks.registerAddonBlock("swpm", "charcoal_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK).requiresCorrectToolForDrops().strength(5.0F, 6.0F).lightLevel(state -> 15)));
-        RUBBER_MAT_LIGHT = SWLMBlocks.registerAddonBlock("swem", "light_rubber_mat", () -> new Block(Block.Properties.of(Material.STONE).strength(1.0f, 3.0f).sound(SoundType.STONE).lightLevel((state) -> 15)));
-        RUBBER_MAT_MEDIUM = SWLMBlocks.registerAddonBlock("swem", "medium_rubber_mat", () -> new Block(Block.Properties.of(Material.STONE).strength(1.0f, 3.0f).sound(SoundType.STONE).lightLevel((state) -> 15)));
-        RUBBER_MAT_DARK = SWLMBlocks.registerAddonBlock("swem", "dark_rubber_mat", () -> new Block(Block.Properties.of(Material.STONE).strength(1.0f, 3.0f).sound(SoundType.STONE).lightLevel((state) -> 15)));
-
-        CANTAZARITE_BLOCK = SWLMBlocks.registerAddonBlock("swem", "cantazarite_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(2.0f, 6.0f).sound(SoundType.STONE).lightLevel(state -> 15)));
+        CANTAZARITE_BLOCK = BlockSetup.registerAddonBlock("swem", "cantazarite_block", () -> new Block(BlockBehaviour.Properties.of().strength(2.0f, 6.0f).sound(SoundType.STONE).lightLevel(state -> 15)));
     }
-
-    /* Blocks are intialized first.
-     * Store the reference to the block, and then in the item initialization register the items and block items.
-     */
-    @SubscribeEvent
-    public static void intializeModBlocks(RegistryEvent.Register<Block> item) {
-        if (ModList.get().isLoaded("swem")) {
-            //RUBBER_MAT_LIGHT = new Block(Block.Properties.of(Material.STONE).strength(1.0f, 3.0f).sound(SoundType.STONE).lightLevel((state) -> 15)).setRegistryName("light_rubber_mat"); //item.getRegistry().register(RUBBER_MAT_LIGHT);
-            //RUBBER_MAT_MEDIUM = new Block(Block.Properties.of(Material.STONE).strength(1.0f, 3.0f).sound(SoundType.STONE).lightLevel((state) -> 15)).setRegistryName("medium_rubber_mat"); //item.getRegistry().register(RUBBER_MAT_MEDIUM);
-            //RUBBER_MAT_DARK = new Block(Block.Properties.of(Material.STONE).strength(1.0f, 3.0f).sound(SoundType.STONE).lightLevel((state) -> 15)).setRegistryName("dark_rubber_mat"); //item.getRegistry().register(RUBBER_MAT_DARK);
-            //FUEL_BLOCK = new Block(Block.Properties.of(Material.STONE).strength(2.0f, 6.0f).sound(SoundType.STONE).lightLevel((state) -> 15)).setRegistryName("fuel_block"); // .harvestTool(ToolType.PICKAXE).harvestLevel(1) //item.getRegistry().register(FUEL_BLOCK);
-            //CANTAZARITE_BLOCK = new Block(BlockBehaviour.Properties.of(Material.METAL).strength(2.0f, 6.0f).sound(SoundType.STONE).lightLevel(state -> 15)).setRegistryName("cantazarite_block"); //item.getRegistry().register(CANTAZARITE_BLOCK);
-        }
-    }
-
-    @SubscribeEvent
-    public static void intializeModItems(RegistryEvent.Register<Item> item) {
-        if (ModList.get().isLoaded("swem")) {
-            // Register stand alone items.
-            //item.getRegistry().register(new MedicalItem(new Item.Properties().tab(SWLM.SWLMTAB), 20, 0).setRegistryName("test_item"));
-
-            // Register block items.
-            //item.getRegistry().register(new BlockItem(RUBBER_MAT_LIGHT, new Item.Properties().tab(SWLM.TAB)).setRegistryName(RUBBER_MAT_LIGHT.getRegistryName()));
-            //item.getRegistry().register(new BlockItem(RUBBER_MAT_MEDIUM, new Item.Properties().tab(SWLM.TAB)).setRegistryName(RUBBER_MAT_MEDIUM.getRegistryName()));
-            //item.getRegistry().register(new BlockItem(RUBBER_MAT_DARK, new Item.Properties().tab(SWLM.TAB)).setRegistryName(RUBBER_MAT_DARK.getRegistryName()));
-            //item.getRegistry().register(new BlockItem(FUEL_BLOCK, new Item.Properties().tab(SWLM.TAB)).setRegistryName(FUEL_BLOCK.getRegistryName()));
-            //item.getRegistry().register(new BlockItem(CANTAZARITE_BLOCK, new Item.Properties().tab(SWLM.TAB)).setRegistryName(CANTAZARITE_BLOCK.getRegistryName()));
-
-        }
-    }
-
-
 }

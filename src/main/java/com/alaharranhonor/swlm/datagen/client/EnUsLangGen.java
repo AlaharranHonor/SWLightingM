@@ -1,14 +1,14 @@
 package com.alaharranhonor.swlm.datagen.client;
 
 import com.alaharranhonor.swlm.config.BlockConfigList;
-import com.alaharranhonor.swlm.registry.SWLMBlocks;
-import net.minecraft.data.DataGenerator;
+import com.alaharranhonor.swlm.registry.BlockSetup;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
 public class EnUsLangGen extends LanguageProvider {
 
-    public EnUsLangGen(DataGenerator gen, String modid) {
-        super(gen, modid, "en_us");
+    public EnUsLangGen(PackOutput output, String modid) {
+        super(output, modid, "en_us");
     }
 
     @Override
@@ -18,13 +18,13 @@ public class EnUsLangGen extends LanguageProvider {
         this.add("item.swlm.star_worm_goop", "Star Worm Goop");
         this.add("item.swlm.pestle_mortar", "Mortar & Pestle");
         this.add("tooltip.swlm.star_worm_moth.tooltip", "A light eating moth. It never runs out of moth!");
-        this.add("itemGroup.swlm", "SWLM");
+        this.add("item_group.swlm.main", "SWLM");
 
         BlockConfigList.REGISTERED_BLOCKS.forEach((baseId, block) -> {
             this.add(block, "SW " + this.sanitizedName(baseId.getPath()));
         });
 
-        SWLMBlocks.BLOCKS.getEntries().forEach(rb -> {
+        BlockSetup.REGISTRY.getEntries().forEach(rb -> {
             this.add(rb.get(), "SW " + this.sanitizedName(rb.getId().getPath()));
         });
     }

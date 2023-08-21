@@ -1,0 +1,29 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven {
+            name = 'MinecraftForge'
+            url = 'https://maven.minecraftforge.net/'
+        }
+        maven {
+            name = 'NeoForged'
+            url = 'https://maven.neoforged.net/releases'
+        }
+        maven {
+            name = 'Parchment MC'
+            url = 'https://maven.parchmentmc.org'
+        }
+        maven {
+            name = "DumbCode GradleHook"
+            url "https://plugins.gradle.org/m2/"
+        }
+        maven {
+            name = 'SpongePowered'
+            url = 'https://repo.spongepowered.org/repository/maven-public/'
+        }
+    }
+}
+
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.5.0'
+}

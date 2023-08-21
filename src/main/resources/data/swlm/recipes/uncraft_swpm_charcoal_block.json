@@ -1,13 +1,18 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
+  "type": "forge:conditional",
+  "recipes": [
     {
-      "item": "swlm:charcoal_block"
+      "type": "minecraft:crafting_shapeless",
+      "ingredients": [
+        {
+          "item": "swlm:charcoal_block"
+        }
+      ],
+      "result":
+      {
+        "item": "minecraft:charcoal",
+        "count": 9
+      }
     }
-  ],
-  "result":
-  {
-    "item": "minecraft:charcoal",
-    "count": 9
-  }
+  ]
 }

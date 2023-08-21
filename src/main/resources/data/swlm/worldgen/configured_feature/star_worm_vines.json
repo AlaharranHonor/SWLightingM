@@ -10,100 +10,28 @@
     "layers": [
       {
         "height": {
-          "type": "minecraft:weighted_list",
-          "distribution": [
-            {
-              "weight": 2,
-              "data": {
-                "type": "minecraft:uniform",
-                "value": {
-                  "min_inclusive": 0,
-                  "max_inclusive": 19
-                }
-              }
-            },
-            {
-              "weight": 3,
-              "data": {
-                "type": "minecraft:uniform",
-                "value": {
-                  "min_inclusive": 0,
-                  "max_inclusive": 2
-                }
-              }
-            },
-            {
-              "weight": 10,
-              "data": {
-                "type": "minecraft:uniform",
-                "value": {
-                  "min_inclusive": 0,
-                  "max_inclusive": 6
-                }
-              }
-            }
-          ]
+          "type": "minecraft:uniform",
+          "value": {
+            "min_inclusive": 1,
+            "max_inclusive": 4
+          }
         },
         "provider": {
-          "type": "minecraft:weighted_state_provider",
-          "entries": [
-            {
-              "weight": 4,
-              "data": {
-                "Name": "swlm:star_worm_vines_plant",
-                "Properties": {
-                  "berries": "false"
-                }
-              }
-            },
-            {
-              "weight": 1,
-              "data": {
-                "Name": "swlm:star_worm_vines_plant",
-                "Properties": {
-                  "berries": "true"
-                }
-              }
-            }
-          ]
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "swlm:hanging_star_worms"
+          }
         }
       },
       {
         "height": 1,
         "provider": {
-          "type": "minecraft:randomized_int_state_provider",
-          "property": "age",
-          "values": {
-            "type": "minecraft:uniform",
-            "value": {
-              "min_inclusive": 23,
-              "max_inclusive": 25
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "swlm:hanging_star_worms",
+            "Properties": {
+              "end": "true"
             }
-          },
-          "source": {
-            "type": "minecraft:weighted_state_provider",
-            "entries": [
-              {
-                "weight": 4,
-                "data": {
-                  "Name": "swlm:star_worm_vines",
-                  "Properties": {
-                    "age": "0",
-                    "berries": "false"
-                  }
-                }
-              },
-              {
-                "weight": 1,
-                "data": {
-                  "Name": "swlm:star_worm_vines",
-                  "Properties": {
-                    "age": "0",
-                    "berries": "true"
-                  }
-                }
-              }
-            ]
           }
         }
       }

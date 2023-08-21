@@ -1,19 +1,14 @@
 package com.alaharranhonor.swlm.registry;
 
-import com.alaharranhonor.swlm.SWLM;
+import com.alaharranhonor.swlm.ModRef;
 import com.alaharranhonor.swlm.block.HangingStarWormsBlock;
 import com.alaharranhonor.swlm.config.BlockConfigList;
-import com.alaharranhonor.swlm.items.GlowMothItem;
-import com.alaharranhonor.swlm.items.PestleMortarItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -23,21 +18,13 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 
-public class SWLMBlocks {
+public class BlockSetup {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SWLM.MOD_ID);
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, SWLM.MOD_ID);
+    public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, ModRef.ID);
 
     public static void init() {
-        ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        REGISTRY.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
-
-    //AAH! A MOTH!
-    public static final RegistryObject<Item> STAR_WORM = ITEMS.register("star_worm", () -> new Item(new Item.Properties().tab(SWLM.TAB)));
-    public static final RegistryObject<Item> PESTLE_MORTAR = ITEMS.register("pestle_mortar", () -> new PestleMortarItem(new Item.Properties().stacksTo(1).tab(SWLM.TAB)));
-    public static final RegistryObject<Item> STAR_WORM_GOOP = ITEMS.register("star_worm_goop", () -> new Item(new Item.Properties().tab(SWLM.TAB)));
-    public static final RegistryObject<Item> STAR_WORM_MOTH = ITEMS.register("star_worm_moth", () -> new GlowMothItem(new Item.Properties().stacksTo(1).tab(SWLM.TAB)));
 
     //HAHA WORM ROCKS
     public static final RegistryObject<Block> STAR_WORM_COBBLE = register("star_worm_cobble", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel((state) -> 7)));
@@ -338,16 +325,16 @@ public class SWLMBlocks {
     public static final RegistryObject<Block> WHITE_STAINED_GLASS = registerAddonBlock("minecraft", "white_stained_glass", () -> new StainedGlassBlock(DyeColor.WHITE, BlockBehaviour.Properties.copy(Blocks.WHITE_STAINED_GLASS).lightLevel((state) -> 15)));
     public static final RegistryObject<Block> YELLOW_STAINED_GLASS = registerAddonBlock("minecraft", "yellow_stained_glass", () -> new StainedGlassBlock(DyeColor.YELLOW, BlockBehaviour.Properties.copy(Blocks.YELLOW_STAINED_GLASS).lightLevel((state) -> 15)));
 
-    public static final RegistryObject<Block> DEAD_TUBE_CORAL_BLOCK = registerAddonBlock("minecraft", "dead_tube_coral_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
-    public static final RegistryObject<Block> DEAD_BRAIN_CORAL_BLOCK = registerAddonBlock("minecraft", "dead_brain_coral_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
-    public static final RegistryObject<Block> DEAD_BUBBLE_CORAL_BLOCK = registerAddonBlock("minecraft", "dead_bubble_coral_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
-    public static final RegistryObject<Block> DEAD_FIRE_CORAL_BLOCK = registerAddonBlock("minecraft", "dead_fire_coral_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
-    public static final RegistryObject<Block> DEAD_HORN_CORAL_BLOCK = registerAddonBlock("minecraft", "dead_horn_coral_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
-    public static final RegistryObject<Block> TUBE_CORAL_BLOCK = registerAddonBlock("minecraft", "tube_coral_block", () -> new CoralBlock(DEAD_TUBE_CORAL_BLOCK.get(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLUE).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
-    public static final RegistryObject<Block> BRAIN_CORAL_BLOCK = registerAddonBlock("minecraft", "brain_coral_block", () -> new CoralBlock(DEAD_BRAIN_CORAL_BLOCK.get(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_PINK).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
-    public static final RegistryObject<Block> BUBBLE_CORAL_BLOCK = registerAddonBlock("minecraft", "bubble_coral_block", () -> new CoralBlock(DEAD_BUBBLE_CORAL_BLOCK.get(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_PURPLE).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
-    public static final RegistryObject<Block> FIRE_CORAL_BLOCK = registerAddonBlock("minecraft", "fire_coral_block", () -> new CoralBlock(DEAD_FIRE_CORAL_BLOCK.get(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
-    public static final RegistryObject<Block> HORN_CORAL_BLOCK = registerAddonBlock("minecraft", "horn_coral_block", () -> new CoralBlock(DEAD_HORN_CORAL_BLOCK.get(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> DEAD_TUBE_CORAL_BLOCK = registerAddonBlock("minecraft", "dead_tube_coral_block", () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> DEAD_BRAIN_CORAL_BLOCK = registerAddonBlock("minecraft", "dead_brain_coral_block", () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> DEAD_BUBBLE_CORAL_BLOCK = registerAddonBlock("minecraft", "dead_bubble_coral_block", () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> DEAD_FIRE_CORAL_BLOCK = registerAddonBlock("minecraft", "dead_fire_coral_block", () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> DEAD_HORN_CORAL_BLOCK = registerAddonBlock("minecraft", "dead_horn_coral_block", () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> TUBE_CORAL_BLOCK = registerAddonBlock("minecraft", "tube_coral_block", () -> new CoralBlock(DEAD_TUBE_CORAL_BLOCK.get(), BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> BRAIN_CORAL_BLOCK = registerAddonBlock("minecraft", "brain_coral_block", () -> new CoralBlock(DEAD_BRAIN_CORAL_BLOCK.get(), BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> BUBBLE_CORAL_BLOCK = registerAddonBlock("minecraft", "bubble_coral_block", () -> new CoralBlock(DEAD_BUBBLE_CORAL_BLOCK.get(), BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> FIRE_CORAL_BLOCK = registerAddonBlock("minecraft", "fire_coral_block", () -> new CoralBlock(DEAD_FIRE_CORAL_BLOCK.get(), BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> HORN_CORAL_BLOCK = registerAddonBlock("minecraft", "horn_coral_block", () -> new CoralBlock(DEAD_HORN_CORAL_BLOCK.get(), BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
     //** ITEMS START HERE**//
 
     public static <T extends Block> RegistryObject<T> registerAddonBlock(String addon, String name, Supplier<? extends T> sup) {
@@ -357,25 +344,21 @@ public class SWLMBlocks {
     }
 
     public static <T extends Block> RegistryObject<T> register(String name, Supplier<? extends T> sup) {
-        return register(name, sup, SWLMBlocks::itemDefault);
+        return register(name, sup, BlockSetup::itemDefault);
     }
 
     public static <T extends Block> RegistryObject<T> register(String name, Supplier<? extends T> sup, Function<RegistryObject<T>, Supplier<? extends Item>> itemCreator) {
         RegistryObject<T> ret = registerNoItem(name, sup);
-        ITEMS.register(name, itemCreator.apply(ret));
+        ItemSetup.REGISTRY.register(name, itemCreator.apply(ret));
         return ret;
     }
 
     public static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<? extends T> sup) {
-        return BLOCKS.register(name, sup);
+        return REGISTRY.register(name, sup);
     }
 
     public static Supplier<BlockItem> itemDefault(final RegistryObject<? extends Block> block) {
-        return item(block, SWLM.TAB);
-    }
-
-    public static Supplier<BlockItem> item(final RegistryObject<? extends Block> block, final CreativeModeTab itemGroup) {
-        return () -> new BlockItem(block.get(), new Item.Properties().tab(itemGroup));
+        return () -> new BlockItem(block.get(), new Item.Properties());
     }
 
 }

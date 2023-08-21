@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "swlm:items/star_worm_moth"
+    "layer0": "swlm:item/star_worm_moth"
   }
 }

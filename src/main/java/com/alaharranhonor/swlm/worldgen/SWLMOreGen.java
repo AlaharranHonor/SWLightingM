@@ -1,34 +1,32 @@
 package com.alaharranhonor.swlm.worldgen;
 
-import com.alaharranhonor.swlm.registry.SWLMPlacedFeature;
+import com.alaharranhonor.swlm.config.ConfigHolder;
+import com.alaharranhonor.swlm.registry.ConfiguredFeatureSetup;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraft.world.level.levelgen.placement.*;
 
 public class SWLMOreGen {
-    public static Holder<PlacedFeature> SWLM_COBBLE_ORE;
+    /*public static Holder<PlacedFeature> SW_COBBLE_GEN;
 
     public static void registerConfiguredFeatures() {
-        /*SWLM_COBBLE_ORE = registerPlacedFeature("star_worm_cobble", SWLMConfiguredFeature.SWLM_ORE_GEN.getHolder().get(),
+        SW_COBBLE_GEN = registerPlacedFeature("star_worm_cobble", ConfiguredFeatureSetup.SW_COBBLE_GEN.getHolder().get(),
             CountPlacement.of(ConfigHolder.SERVER.serverSWLMCobbleVeinSize.get()),
             InSquarePlacement.spread(),
             BiomeFilter.biome(),
-            HeightRangePlacement.uniform(VerticalAnchor.absolute(ConfigHolder.SERVER.serverSWLMCobbleBottomHeight.get()), VerticalAnchor.absolute(ConfigHolder.SERVER.serverSWLMCobbleMaxHeight.get())));*/
+            HeightRangePlacement.uniform(VerticalAnchor.absolute(ConfigHolder.SERVER.serverSWLMCobbleBottomHeight.get()), VerticalAnchor.absolute(ConfigHolder.SERVER.serverSWLMCobbleMaxHeight.get())));
     }
 
     private static <C extends FeatureConfiguration, F extends Feature<C>> Holder<PlacedFeature> registerPlacedFeature(String registryName, Holder<ConfiguredFeature<C, F>> feature, PlacementModifier... placementModifiers) {
-
         return PlacementUtils.register(registryName, feature, placementModifiers);
-    }
+    }*/
 
-    public static void onBiomeLoadingEvent(BiomeLoadingEvent event) {
+    // TODO
+    /*public static void onBiomeLoadingEvent(BiomeLoadingEvent event) {
         if (event.getCategory() == Biome.BiomeCategory.NETHER) {
             // Nether oregen
         } else if (event.getCategory() == Biome.BiomeCategory.THEEND) {
@@ -40,7 +38,7 @@ public class SWLMOreGen {
                 event.getGeneration().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, SWLMPlacedFeature.SWLM_HANGING_STAR_WORMS.getHolder().get());
             }
         }
-    }
+    }*/
 
 
 }
