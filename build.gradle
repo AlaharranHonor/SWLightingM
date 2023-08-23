@@ -33,7 +33,7 @@ minecraft {
     // Simply re-run your setup task after changing the mappings to update your workspace.
     mappings channel: mapping_channel, version: "${mapping_version}-${mc_version}"
     copyIdeResources = true
-    
+
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     // Default run configurations.
@@ -132,12 +132,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "swlm",
-                "Specification-Vendor": "swlmalaharranhonor",
-                "Specification-Version": "1", // We are version 1 of ourselves
-                "Implementation-Title": project.name,
-                "Implementation-Version": "${version}",
-                "Implementation-Vendor" :"swlmalaharranhonor",
+                "Specification-Title"     : "swlm",
+                "Specification-Vendor"    : "swlmalaharranhonor",
+                "Specification-Version"   : "1", // We are version 1 of ourselves
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : "${version}",
+                "Implementation-Vendor"   : "swlmalaharranhonor",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
@@ -145,7 +145,7 @@ jar {
 
 // Example configuration to allow publishing using the maven-publish task
 // This is the preferred method to reobfuscate your jar file
-jar.finalizedBy('reobfJar') 
+jar.finalizedBy('reobfJar')
 // However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing
 //publish.dependsOn('reobfJar')
 
@@ -206,7 +206,7 @@ String getDiscordChangelog() {
         if (it.size() > 1) {
             def temp = it
 
-           if (it.startsWith('-')) {
+            if (it.startsWith('-')) {
                 temp = temp.replaceAll("(\\S+\\/\\S+)#([0-9]+)\\b", "[\$0](https://github.com/\$1/issues/\$2)");
                 temp = temp.replaceAll("#([0-9]+)\\b(?!\\))", "[\$0](https://github.com/$github_project/issues/\$1)");
             }
