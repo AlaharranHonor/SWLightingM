@@ -30,7 +30,7 @@ public class PlacedFeatureSetup {
                 CountPlacement.of(7),
                 InSquarePlacement.spread(),
                 BiomeFilter.biome(),
-                HeightRangePlacement.uniform(VerticalAnchor.absolute(ConfigHolder.SERVER.serverSWLMCobbleBottomHeight.get()), VerticalAnchor.absolute(ConfigHolder.SERVER.serverSWLMCobbleMaxHeight.get())))
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(50), VerticalAnchor.absolute(128)))
         );
     }
 

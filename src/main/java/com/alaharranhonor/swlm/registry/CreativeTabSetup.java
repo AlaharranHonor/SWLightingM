@@ -1,6 +1,7 @@
 package com.alaharranhonor.swlm.registry;
 
 import com.alaharranhonor.swlm.ModRef;
+import com.alaharranhonor.swlm.config.BlockConfigList;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,6 +21,7 @@ public class CreativeTabSetup {
             ItemSetup.REGISTRY.getEntries().forEach(item -> {
                 output.accept(item.get());
             });
+            BlockConfigList.REGISTERED_ITEMS.values().forEach(output::accept);
         })
         .build()
     );

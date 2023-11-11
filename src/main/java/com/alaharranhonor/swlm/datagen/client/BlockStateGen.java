@@ -35,7 +35,7 @@ public class BlockStateGen extends BlockStateProvider {
 
         BlockConfigList.REGISTERED_BLOCKS.forEach((baseId, block) -> {
             if (block instanceof RotatedPillarBlock) {
-                ModelFile model = this.models().getExistingFile(baseId);
+                ModelFile model = new ModelFile.UncheckedModelFile(new ResourceLocation(baseId.getNamespace(), "block/" + baseId.getPath()));
                 this.getVariantBuilder(block)
                     .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y)
                     .modelForState().modelFile(model).addModel()
@@ -44,7 +44,7 @@ public class BlockStateGen extends BlockStateProvider {
                     .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X)
                     .modelForState().modelFile(model).rotationX(90).rotationY(90).addModel();
             } else {
-                this.simpleBlock(block, this.models().getExistingFile(baseId));
+                this.simpleBlock(block, new ModelFile.UncheckedModelFile(new ResourceLocation(baseId.getNamespace(), "block/" + baseId.getPath())));
             }
         });
     }

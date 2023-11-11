@@ -99,8 +99,8 @@ public class RecipeGen extends RecipeProvider {
                         .unlockedBy("has_block", has(block))
                         .save(writer);
                 })
-                .build(builder, baseId);
-
+                .generateAdvancement()
+                .build(builder, ModRef.res(baseId.getPath()));
         });
     }
 }

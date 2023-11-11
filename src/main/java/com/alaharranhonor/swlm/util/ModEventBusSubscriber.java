@@ -1,6 +1,7 @@
 package com.alaharranhonor.swlm.util;
 
 import com.alaharranhonor.swlm.ModRef;
+import com.alaharranhonor.swlm.config.BlockConfigList;
 import com.alaharranhonor.swlm.registry.BlockSetup;
 import com.alaharranhonor.swlm.registry.ItemSetup;
 import net.minecraft.client.color.block.BlockColors;
@@ -27,6 +28,17 @@ public class ModEventBusSubscriber {
 		ItemSetup.REGISTRY.getEntries().forEach(item -> {
 			if (item.get() instanceof BlockItem && !item.getId().equals(BlockSetup.STAR_WORM_COBBLE.getId())) {
 				event.register(item.get(), (guiGraphics, font, stack, xOffset, yOffset) -> {
+					//RenderSystem.disableDepthTest();
+					//RenderSystem.disableBlend();
+					guiGraphics.blit(new ResourceLocation(ModRef.ID, "textures/item_star.png"), xOffset, yOffset, 200, 0, 0, 16, 16, 16, 16);
+					return true;
+				});
+			}
+		});
+
+		BlockConfigList.REGISTERED_ITEMS.values().forEach(item -> {
+			if (item instanceof BlockItem) {
+				event.register(item, (guiGraphics, font, stack, xOffset, yOffset) -> {
 					//RenderSystem.disableDepthTest();
 					//RenderSystem.disableBlend();
 					guiGraphics.blit(new ResourceLocation(ModRef.ID, "textures/item_star.png"), xOffset, yOffset, 200, 0, 0, 16, 16, 16, 16);
