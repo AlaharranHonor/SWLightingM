@@ -2,7 +2,7 @@ buildscript {
     repositories {
         maven { url = 'https://files.minecraftforge.net/maven' }
         maven { url = 'https://maven.parchmentmc.org' }
-        maven { url='https://repo.spongepowered.org/repository/maven-public/' }
+        maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
         maven { url 'https://plugins.gradle.org/m2/' }
         jcenter()
         mavenCentral()
@@ -31,7 +31,8 @@ mixin {
 }
 
 group = 'com.alaharranhonor.swlm' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'swlm'
+version = mod_version
+archivesBaseName = "swlm-${mc_version}"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17) // MC 1.18.2 = Java 17
 
@@ -44,7 +45,7 @@ minecraft {
     // Simply re-run your setup task after changing the mappings to update your workspace.
     mappings channel: 'parchment', version: "${parchment_version}-${mc_version}"
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
-    
+
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     // Default run configurations.
@@ -135,9 +136,9 @@ dependencies {
     implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:0.4.0+1.18")
 
     implementation fg.deobf("_:swdm-1.18.2:+")
-    implementation fg.deobf("_:swpm-1.18.2:+")
-    implementation fg.deobf("_:swem-forge-1.18.2:+")
-    implementation fg.deobf("_:worldedit-mod:7.2.10")
+    //implementation fg.deobf("_:swpm-1.18.2:+")
+    //implementation fg.deobf("_:swem-forge-1.18.2:+")
+    //implementation fg.deobf("_:worldedit-mod:7.2.10")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
 }
@@ -146,12 +147,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "swlm",
-                "Specification-Vendor": "swlmalaharranhonor",
-                "Specification-Version": "1", // We are version 1 of ourselves
-                "Implementation-Title": project.name,
-                "Implementation-Version": "${version}",
-                "Implementation-Vendor" :"swlmalaharranhonor",
+                "Specification-Title"     : "swlm",
+                "Specification-Vendor"    : "swlmalaharranhonor",
+                "Specification-Version"   : "1", // We are version 1 of ourselves
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : "${version}",
+                "Implementation-Vendor"   : "swlmalaharranhonor",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
@@ -159,7 +160,7 @@ jar {
 
 // Example configuration to allow publishing using the maven-publish task
 // This is the preferred method to reobfuscate your jar file
-jar.finalizedBy('reobfJar') 
+jar.finalizedBy('reobfJar')
 // However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing
 //publish.dependsOn('reobfJar')
 
@@ -220,7 +221,7 @@ String getDiscordChangelog() {
         if (it.size() > 1) {
             def temp = it
 
-           if (it.startsWith('-')) {
+            if (it.startsWith('-')) {
                 temp = temp.replaceAll("(\\S+\\/\\S+)#([0-9]+)\\b", "[\$0](https://github.com/\$1/issues/\$2)");
                 temp = temp.replaceAll("#([0-9]+)\\b(?!\\))", "[\$0](https://github.com/$github_project/issues/\$1)");
             }
@@ -235,6 +236,7 @@ String getDiscordChangelog() {
 }
 
 import com.matthewprenger.cursegradle.CurseArtifact
+
 def stabilitySuffix = ""
 
 tasks.curseforge.enabled = project.hasProperty('curseforge_key')
