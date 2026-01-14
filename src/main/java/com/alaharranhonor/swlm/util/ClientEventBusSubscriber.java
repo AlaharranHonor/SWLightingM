@@ -1,19 +1,18 @@
 package com.alaharranhonor.swlm.util;
 
-import com.alaharranhonor.swlm.ModRef;
 import com.alaharranhonor.swlm.config.BlockConfigList;
 import com.alaharranhonor.swlm.registry.BlockSetup;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
 
-@Mod.EventBusSubscriber(modid = ModRef.ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(value = Dist.CLIENT)
 public class ClientEventBusSubscriber {
 
     @SubscribeEvent
@@ -53,7 +52,7 @@ public class ClientEventBusSubscriber {
         ItemBlockRenderTypes.setRenderLayer(BlockSetup.TINTED_GLASS.get(), RenderType.translucent());
 
         BlockConfigList.REGISTERED_BLOCKS.forEach((id, block) -> {
-            Block baseBlock = ForgeRegistries.BLOCKS.getValue(id);
+            Block baseBlock = BuiltInRegistries.BLOCK.get(id);
             BlockState baseState = baseBlock.defaultBlockState();
             // TODO
             /*if (ItemBlockRenderTypes.canRenderInLayer(baseState, RenderType.cutoutMipped())) {

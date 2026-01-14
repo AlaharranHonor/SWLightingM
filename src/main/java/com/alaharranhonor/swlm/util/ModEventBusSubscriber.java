@@ -14,13 +14,13 @@ import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.GrassColor;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.RegisterColorHandlersEvent;
-import net.minecraftforge.client.event.RegisterItemDecorationsEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.neoforge.client.event.RegisterItemDecorationsEvent;
 
-@Mod.EventBusSubscriber(modid = ModRef.ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class ModEventBusSubscriber {
 
 	@SubscribeEvent
@@ -30,7 +30,7 @@ public class ModEventBusSubscriber {
 				event.register(item.get(), (guiGraphics, font, stack, xOffset, yOffset) -> {
 					//RenderSystem.disableDepthTest();
 					//RenderSystem.disableBlend();
-					guiGraphics.blit(new ResourceLocation(ModRef.ID, "textures/item_star.png"), xOffset, yOffset, 200, 0, 0, 16, 16, 16, 16);
+					guiGraphics.blit(ModRef.res("textures/item_star.png"), xOffset, yOffset, 200, 0, 0, 16, 16, 16, 16);
 					return true;
 				});
 			}
@@ -41,14 +41,14 @@ public class ModEventBusSubscriber {
 				event.register(item, (guiGraphics, font, stack, xOffset, yOffset) -> {
 					//RenderSystem.disableDepthTest();
 					//RenderSystem.disableBlend();
-					guiGraphics.blit(new ResourceLocation(ModRef.ID, "textures/item_star.png"), xOffset, yOffset, 200, 0, 0, 16, 16, 16, 16);
+					guiGraphics.blit(ModRef.res("textures/item_star.png"), xOffset, yOffset, 200, 0, 0, 16, 16, 16, 16);
 					return true;
 				});
 			}
 		});
 	}
 
-	@Mod.EventBusSubscriber(modid = ModRef.ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
+	@EventBusSubscriber(value = Dist.CLIENT)
 	public static class ClientModBusHandler {
 		@SubscribeEvent
 		public static void registerBlockColors(RegisterColorHandlersEvent.Block event) {

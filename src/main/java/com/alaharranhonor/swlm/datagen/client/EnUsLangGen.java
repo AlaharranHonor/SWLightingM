@@ -1,14 +1,15 @@
 package com.alaharranhonor.swlm.datagen.client;
 
+import com.alaharranhonor.swlm.ModRef;
 import com.alaharranhonor.swlm.config.BlockConfigList;
 import com.alaharranhonor.swlm.registry.BlockSetup;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.LanguageProvider;
+import net.neoforged.neoforge.common.data.LanguageProvider;
 
 public class EnUsLangGen extends LanguageProvider {
 
-    public EnUsLangGen(PackOutput output, String modid) {
-        super(output, modid, "en_us");
+    public EnUsLangGen(PackOutput output) {
+        super(output, ModRef.ID, "en_us");
     }
 
     @Override

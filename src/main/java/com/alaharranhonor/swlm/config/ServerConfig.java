@@ -1,10 +1,10 @@
 package com.alaharranhonor.swlm.config;
 
-import net.minecraftforge.common.ForgeConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
 public class ServerConfig {
 
-	ServerConfig(ForgeConfigSpec.Builder builder) {
+	ServerConfig(ModConfigSpec.Builder builder) {
 
 	}
 }

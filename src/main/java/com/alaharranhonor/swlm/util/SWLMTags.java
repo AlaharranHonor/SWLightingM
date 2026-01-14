@@ -13,7 +13,7 @@ public class SWLMTags {
         public static final TagKey<Block> STAR_WORM_COBBLE = tag("star_worm_cobble");
 
         private static TagKey<Block> tag(String name) {
-            return BlockTags.create(new ResourceLocation(ModRef.ID, name));
+            return BlockTags.create(ModRef.res(name));
         }
     }
 
@@ -27,7 +27,7 @@ public class SWLMTags {
         public static final TagKey<Item> MORTAR_AND_PESTLE = tag("mortar_and_pestle");
 
         private static TagKey<Item> tag(String name) {
-            return ItemTags.create(new ResourceLocation(ModRef.ID, name));
+            return ItemTags.create(ModRef.res(name));
         }
 
     }

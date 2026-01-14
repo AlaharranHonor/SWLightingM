@@ -27,3 +27,4 @@ forge*changelog.txt
 lib
 /libs/
 /src/generated/
+/SECRET.txt

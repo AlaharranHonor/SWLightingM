@@ -1,59 +1,47 @@
 package com.alaharranhonor.swlm.util;
 
-import com.alaharranhonor.swlm.ModRef;
 import com.alaharranhonor.swlm.config.BlockConfigList;
-import com.alaharranhonor.swlm.worldgen.SWLMOreGen;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.ListMultimap;
+import com.google.common.collect.Multimaps;
+import net.minecraft.core.Holder;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.event.TagsUpdatedEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.MissingMappingsEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.TagsUpdatedEvent;
 
-@Mod.EventBusSubscriber(modid = ModRef.ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@EventBusSubscriber
 public class ForgeBusEventSubscriber {
 
 	@SubscribeEvent
-	public static void setup(FMLCommonSetupEvent event) {
-		//event.enqueueWork(SWLMOreGen::registerConfiguredFeatures);
-	}
-
-	@SubscribeEvent
 	public static void updateGenTags(TagsUpdatedEvent event) {
-		BlockConfigList.REGISTERED_BLOCKS.forEach((baseId, block) -> {
-			Block baseBlock = ForgeRegistries.BLOCKS.getValue(baseId);
-			block.builtInRegistryHolder().bindTags(baseBlock.builtInRegistryHolder().tags().toList());
+        // Copy block tags
+        ListMultimap<TagKey<Block>, Holder<Block>> blockTags = ArrayListMultimap.create();
+        BuiltInRegistries.BLOCK.getTags().forEach(p -> blockTags.putAll(p.getFirst(), p.getSecond().stream().toList()));
+		BlockConfigList.BLOCK_EQUIVALENCE.forEach((baseId, lmId) -> {
+            // Add the tags of the base block to the new block
+            BuiltInRegistries.BLOCK.getHolder(baseId).ifPresent(baseRef -> {
+                BuiltInRegistries.BLOCK.getHolder(lmId).ifPresent(ref -> {
+                    baseRef.tags().forEach(tag -> blockTags.put(tag, ref));
+                });
+            });
 		});
+        BuiltInRegistries.BLOCK.bindTags(Multimaps.asMap(blockTags));
 
-		BlockConfigList.REGISTERED_ITEMS.forEach((baseId, item) -> {
-			Item baseItem = ForgeRegistries.ITEMS.getValue(baseId);
-			item.builtInRegistryHolder().bindTags(baseItem.builtInRegistryHolder().tags().toList());
+        // Copy item tags
+        ListMultimap<TagKey<Item>, Holder<Item>> itemTags = ArrayListMultimap.create();
+        BuiltInRegistries.ITEM.getTags().forEach(p -> itemTags.putAll(p.getFirst(), p.getSecond().stream().toList()));
+		BlockConfigList.BLOCK_EQUIVALENCE.forEach((baseId, lmId) -> {
+            // Add the tags of the base block to the new block
+            BuiltInRegistries.ITEM.getHolder(baseId).ifPresent(baseRef -> {
+                BuiltInRegistries.ITEM.getHolder(lmId).ifPresent(ref -> {
+                    baseRef.tags().forEach(tag -> itemTags.put(tag, ref));
+                });
+            });
 		});
-	}
-
-	@SubscribeEvent
-	public static void onBlockMissingMappings(MissingMappingsEvent event) {
-		for (MissingMappingsEvent.Mapping<Block> mapping : event.getAllMappings(Registries.BLOCK)) {
-			if (mapping.getKey().getNamespace().equalsIgnoreCase("swem")) {
-				if (mapping.getKey().getPath().contains("star_worm_block")) {
-					mapping.remap(ForgeRegistries.BLOCKS.getValue(new ResourceLocation("swlm", mapping.getKey().getPath().substring(16))));
-				}
-			}
-		}
-	}
-
-	@SubscribeEvent
-	public static void onItemMissingMappings(MissingMappingsEvent event) {
-		for (MissingMappingsEvent.Mapping<Item> mapping : event.getAllMappings(Registries.ITEM)) {
-			if (mapping.getKey().getNamespace().equalsIgnoreCase("swem")) {
-				if (mapping.getKey().getPath().contains("star_worm_block")) {
-					mapping.remap(ForgeRegistries.ITEMS.getValue(new ResourceLocation("swlm", mapping.getKey().getPath().substring(16))));
-				}
-			}
-		}
+        BuiltInRegistries.ITEM.bindTags(Multimaps.asMap(itemTags));
 	}
 }

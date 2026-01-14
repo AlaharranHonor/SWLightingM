@@ -25,7 +25,6 @@ public class SWLMOreGen {
         return PlacementUtils.register(registryName, feature, placementModifiers);
     }*/
 
-    // TODO
     /*public static void onBiomeLoadingEvent(BiomeLoadingEvent event) {
         if (event.getCategory() == Biome.BiomeCategory.NETHER) {
             // Nether oregen

@@ -7,19 +7,16 @@ import com.alaharranhonor.swlm.registry.BlockSetup;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.client.model.generators.ModelProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class BlockStateGen extends BlockStateProvider {
 
-    public BlockStateGen(PackOutput output, String modid, ExistingFileHelper exFileHelper) {
-        super(output, modid, exFileHelper);
+    public BlockStateGen(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, ModRef.ID, exFileHelper);
     }
 
     @Override
@@ -35,7 +32,7 @@ public class BlockStateGen extends BlockStateProvider {
 
         BlockConfigList.REGISTERED_BLOCKS.forEach((baseId, block) -> {
             if (block instanceof RotatedPillarBlock) {
-                ModelFile model = new ModelFile.UncheckedModelFile(new ResourceLocation(baseId.getNamespace(), "block/" + baseId.getPath()));
+                ModelFile model = new ModelFile.UncheckedModelFile(ResourceLocation.fromNamespaceAndPath(baseId.getNamespace(), "block/" + baseId.getPath()));
                 this.getVariantBuilder(block)
                     .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y)
                     .modelForState().modelFile(model).addModel()
@@ -44,7 +41,7 @@ public class BlockStateGen extends BlockStateProvider {
                     .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X)
                     .modelForState().modelFile(model).rotationX(90).rotationY(90).addModel();
             } else {
-                this.simpleBlock(block, new ModelFile.UncheckedModelFile(new ResourceLocation(baseId.getNamespace(), "block/" + baseId.getPath())));
+                this.simpleBlock(block, new ModelFile.UncheckedModelFile(ResourceLocation.fromNamespaceAndPath(baseId.getNamespace(), "block/" + baseId.getPath())));
             }
         });
     }
