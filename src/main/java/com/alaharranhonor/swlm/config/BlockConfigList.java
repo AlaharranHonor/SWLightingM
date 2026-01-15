@@ -13,6 +13,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CoralBlock;
 import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -90,6 +91,10 @@ public class BlockConfigList {
                     block = new RotatedPillarBlock(properties);
                 } else if (base instanceof FallingBlock) {
                     block = new LightFallingBlock(properties);
+                }else if (base instanceof CoralBlock) {
+                    // Assume dead coral blocks are registered first.
+                    Block deadBlock = REGISTERED_BLOCKS.get(swlmBlockName.withPrefix("dead_"));
+                    block = new CoralBlock(deadBlock, properties);
                 } else {
                     block = new Block(properties);
                 }

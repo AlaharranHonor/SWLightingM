@@ -326,7 +326,7 @@ public class BlockSetup {
     public static final DeferredBlock<Block> WHITE_STAINED_GLASS = registerAddonBlock("minecraft", "white_stained_glass", () -> new StainedGlassBlock(DyeColor.WHITE, BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS).lightLevel((state) -> 15)));
     public static final DeferredBlock<Block> YELLOW_STAINED_GLASS = registerAddonBlock("minecraft", "yellow_stained_glass", () -> new StainedGlassBlock(DyeColor.YELLOW, BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS).lightLevel((state) -> 15)));
 
-    public static final DeferredBlock<Block> DEAD_TUBE_CORAL_BLOCK = registerAddonBlock("minecraft", "dead_tube_coral_block", () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
+    public static final DeferredBlock<Block> DEAD_TUBE_CORAL_BLOCK = registerAddonBlock("minecraft", "dead_tube_coral_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEAD_TUBE_CORAL_BLOCK).requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
     public static final DeferredBlock<Block> DEAD_BRAIN_CORAL_BLOCK = registerAddonBlock("minecraft", "dead_brain_coral_block", () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
     public static final DeferredBlock<Block> DEAD_BUBBLE_CORAL_BLOCK = registerAddonBlock("minecraft", "dead_bubble_coral_block", () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
     public static final DeferredBlock<Block> DEAD_FIRE_CORAL_BLOCK = registerAddonBlock("minecraft", "dead_fire_coral_block", () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).lightLevel(state -> 15)));
@@ -336,6 +336,21 @@ public class BlockSetup {
     public static final DeferredBlock<Block> BUBBLE_CORAL_BLOCK = registerAddonBlock("minecraft", "bubble_coral_block", () -> new CoralBlock(DEAD_BUBBLE_CORAL_BLOCK.get(), BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
     public static final DeferredBlock<Block> FIRE_CORAL_BLOCK = registerAddonBlock("minecraft", "fire_coral_block", () -> new CoralBlock(DEAD_FIRE_CORAL_BLOCK.get(), BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
     public static final DeferredBlock<Block> HORN_CORAL_BLOCK = registerAddonBlock("minecraft", "horn_coral_block", () -> new CoralBlock(DEAD_HORN_CORAL_BLOCK.get(), BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK).lightLevel(state -> 15)));
+
+    // 1.21.1
+    public static final DeferredBlock<Block> CHISELED_COPPER = registerAddonBlock("minecraft", "chiseled_copper", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CHISELED_COPPER).lightLevel(state -> 15)));
+    public static final DeferredBlock<Block> WEATHERED_CHISELED_COPPER = registerAddonBlock("minecraft", "weathered_chiseled_copper", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WEATHERED_CHISELED_COPPER).lightLevel((state) -> 15)));
+    public static final DeferredBlock<Block> EXPOSED_CHISELED_COPPER = registerAddonBlock("minecraft", "exposed_chiseled_copper", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.EXPOSED_CHISELED_COPPER).lightLevel((state) -> 15)));
+    public static final DeferredBlock<Block> OXIDIZED_CHISELED_COPPER = registerAddonBlock("minecraft", "oxidized_chiseled_copper", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OXIDIZED_CHISELED_COPPER).lightLevel((state) -> 15)));
+    public static final DeferredBlock<Block> WAXED_CHISELED_COPPER = registerAddonBlock("minecraft", "waxed_chiseled_copper", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WAXED_CHISELED_COPPER).lightLevel((state) -> 15)));
+    public static final DeferredBlock<Block> WAXED_OXIDIZED_CHISELED_COPPER = registerAddonBlock("minecraft", "waxed_oxidized_chiseled_copper", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WAXED_OXIDIZED_CHISELED_COPPER).lightLevel((state) -> 15)));
+    public static final DeferredBlock<Block> WAXED_EXPOSED_CHISELED_COPPER = registerAddonBlock("minecraft", "waxed_exposed_chiseled_copper", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WAXED_EXPOSED_CHISELED_COPPER).lightLevel((state) -> 15)));
+    public static final DeferredBlock<Block> WAXED_WEATHERED_CHISELED_COPPER = registerAddonBlock("minecraft", "waxed_weathered_chiseled_copper", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WAXED_WEATHERED_CHISELED_COPPER).lightLevel((state) -> 15)));
+    public static final DeferredBlock<Block> CHISELED_TUFF = registerAddonBlock("minecraft", "chiseled_tuff", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CHISELED_TUFF).lightLevel(state -> 15)));
+    public static final DeferredBlock<Block> CHISELED_TUFF_BRICKS = registerAddonBlock("minecraft", "chiseled_tuff_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CHISELED_TUFF_BRICKS).lightLevel(state -> 15)));
+    public static final DeferredBlock<Block> POLISHED_TUFF = registerAddonBlock("minecraft", "polished_tuff", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_TUFF).lightLevel(state -> 15)));
+    public static final DeferredBlock<Block> TUFF_BRICKS = registerAddonBlock("minecraft", "tuff_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_BRICKS).lightLevel(state -> 15)));
+
     //** ITEMS START HERE**//
 
     public static <T extends Block> DeferredBlock<T> registerAddonBlock(String addon, String name, Supplier<? extends T> sup) {

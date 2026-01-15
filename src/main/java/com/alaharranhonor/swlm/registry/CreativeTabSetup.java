@@ -17,6 +17,7 @@ public class CreativeTabSetup {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = REGISTRY.register("main", () -> CreativeModeTab.builder()
         .title(Component.translatable("item_group." + ModRef.ID + ".main"))
         .icon(() -> new ItemStack(ItemSetup.STAR_WORM.get()))
+        .withSearchBar()
         .displayItems((params, output) -> {
             ItemSetup.REGISTRY.getEntries().forEach(item -> {
                 output.accept(item.get());
